@@ -21,9 +21,36 @@
             background-color: pink;
         }
 
-
         .ks-content {
             flex: 1;
         }
+    }
+}
+
+.ks-menu {
+    padding: 10px;
+}
+
+.ks-navigation-item {
+    > a, > span {
+        padding: 2px;
+
+        display: block;
+
+        &.active {
+            font-weight: bold;
+        }
+    }
+}
+
+.ks-navigation-item-level-1 {
+    li {
+        padding-left: 10px;
+    }
+}
+
+.ks-navigation-item-level-0 {
+    > a {
+        display: none;
     }
 }

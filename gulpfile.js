@@ -11,6 +11,6 @@ gulp.task('compile', function() {
 });
 
 
-gulp.task('watch', function() {
+gulp.task('watch', ['compile'], function() {
     gulp.watch(['example/templates/**/*', 'jade/**/*', 'sass/**/*'], ['compile']);
 });

@@ -3,14 +3,14 @@ mixin itemLink(element)
     = element.name
 
 mixin navigation(element, depth)
-  li
+  li(class='ks-navigation-item ks-navigation-item-level-' + depth)
     if element.children
       if (element.index)
         +itemLink(element.index)
       else
-        =element.name
-      each child in element.children
-        ul
+        span=element.name
+      ul.list-unstyled
+        each child in element.children
           +navigation(child, depth + 1)
     else
       +itemLink(element)
@@ -30,5 +30,5 @@ html(lang="en")
         !=templateHtml
       .ks-menu
         .ks
-          ul
+          ul.list-unstyled
             +navigation(tree, 0)
