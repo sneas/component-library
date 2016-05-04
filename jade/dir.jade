@@ -1,0 +1,34 @@
+mixin itemLink(element)
+  a(href=baseUrl + element.path, class=element.path === current.path ? 'active' : undefined)
+    = element.name
+
+mixin navigation(element, depth)
+  li
+    if element.children
+      if (element.index)
+        +itemLink(element.index)
+      else
+        =element.name
+      each child in element.children
+        ul
+          +navigation(child, depth + 1)
+    else
+      +itemLink(element)
+
+doctype html
+html(lang="en")
+  head
+    title= title
+    link(href=baseUrl + 'css/ks.css', rel='stylesheet')
+  body.ks-body
+    .ks
+      h1=title
+    .ks-layout
+      .ks-content
+        if (current.name)
+          h1.ks-content-title=current.name
+        !=templateHtml
+      .ks-menu
+        .ks
+          ul
+            +navigation(tree, 0)

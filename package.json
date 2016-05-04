@@ -1,0 +1,11 @@
+{
+  "name": "kitchen",
+  "version": "1.0.0",
+  "description": "",
+  "main": "public/js/main.js",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  },
+  "author": "",
+  "license": "ISC"
+}

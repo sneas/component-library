@@ -1,0 +1,29 @@
+.ks {
+    @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
+
+    font-family: $font-family-base;
+    font-size: $font-size-base;
+    line-height: $line-height-base;
+    color: $text-color;
+}
+
+.ks-body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+
+    .ks-layout {
+        display: flex;
+        flex: 1;
+
+        .ks-menu {
+            order: -1;
+            background-color: pink;
+        }
+
+
+        .ks-content {
+            flex: 1;
+        }
+    }
+}

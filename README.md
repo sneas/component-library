@@ -1,2 +1,0 @@
-# components-library
-Components library
