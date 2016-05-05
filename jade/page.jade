@@ -11,7 +11,7 @@ html(lang="en")
     .ks-layout
       .ks-content
         if (current.children)
-          +tree(current)
+          +tree(current, 1)
         else
           +template(current)
       .ks-navigation

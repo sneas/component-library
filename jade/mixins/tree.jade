@@ -1,8 +1,10 @@
 include template.jade
 
-mixin tree(element)
+mixin tree(element, depth)
   if (element.children)
+    //ToDo: output appropriate header tag according to depth
+    h1=element.name
     each child in element.children
-      +tree(child)
+      +tree(child, depth + 1)
   else
     +template(element)
