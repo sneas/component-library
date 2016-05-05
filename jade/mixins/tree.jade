@@ -1,0 +1,8 @@
+include template.jade
+
+mixin tree(element)
+  if (element.children)
+    each child in element.children
+      +tree(child)
+  else
+    +template(element)

@@ -1,4 +1,6 @@
 include mixins/navigation.jade
+include mixins/template.jade
+include mixins/tree.jade
 
 doctype html
 html(lang="en")
@@ -7,13 +9,15 @@ html(lang="en")
     link(href=baseUrl + 'css/ks.css', rel='stylesheet')
   body.ks-body
     .ks
-      h1=title
+      a(href=baseUrl +'index.html')=title
     .ks-layout
       .ks-content
-        if (current.name)
-          h1.ks-content-title=current.name
-        !=templateRender(current.path)
+        if (current.children)
+          +tree(current)
+        else
+          +template(current)
       .ks-menu
         .ks
           ul.list-unstyled
+
             +navigation(tree, 0)

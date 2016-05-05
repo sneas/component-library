@@ -1,0 +1,4 @@
+mixin template(element)
+  if (element.name)
+    h1.ks-content-title=element.name
+  !=templateRender(element.path)

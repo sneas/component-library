@@ -19,32 +19,24 @@ module.exports = function(options) {
         page = jade.compile(fs.readFileSync(pageFilePath), {
             filename: pageFilePath,
             pretty: true
-        }),
-        index;
+        });
 
     (function refinePatternsTree(item, parent) {
-        if (item.name === 'index.html') {
-            item.name = parent.name;
-            parent.index = item;
-            _.remove(parent.children, item);
-        } else {
-            item.name = _.capitalize(_.replace(item.name.split('.').shift(), '-', ' '));
+        item.name = _.capitalize(_.replace(item.name.split('.').shift(), '-', ' '));
+        item.path = path.relative(options.patternsDir, item.path);
+
+        if (item.children) {
+            item.path += '/index.html';
         }
 
-        item.path = path.relative(options.patternsDir, item.path);
         _.each(item.children, child => refinePatternsTree(child, item));
     }(patternsTree));
 
     (function compile(item) {
         var outputPath = path.format({dir: options.outputDir, base: item.path});
 
-        if (item.index) {
-            compile(item.index);
-        }
-
         if (item.children) {
             _.each(item.children, child => compile(child));
-            return;
         }
 
         writefile(outputPath, page(

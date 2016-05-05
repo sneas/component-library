@@ -4,13 +4,8 @@ mixin itemLink(element)
 
 mixin navigation(element, depth)
   li(class='ks-navigation-item ks-navigation-item-level-' + depth)
+    +itemLink(element)
     if element.children
-      if (element.index)
-        +itemLink(element.index)
-      else
-        span=element.name
       ul.list-unstyled
         each child in element.children
           +navigation(child, depth + 1)
-    else
-      +itemLink(element)
