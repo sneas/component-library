@@ -14,11 +14,13 @@ module.exports = function(options) {
         title: 'Kitchen Sink'
     });
 
-    var patternsTree = dirTree(options.patternsDir);
-    var jadeDir = jade.compile(fs.readFileSync(path.format({dir: __dirname, base: 'jade/dir.jade'})), {
-        pretty: true
-    });
-    var index;
+    var patternsTree = dirTree(options.patternsDir),
+        pageFilePath = path.format({dir: __dirname, base: 'jade/page.jade'}),
+        page = jade.compile(fs.readFileSync(pageFilePath), {
+            filename: pageFilePath,
+            pretty: true
+        }),
+        index;
 
     (function refinePatternsTree(item, parent) {
         if (item.name === 'index.html') {
@@ -45,13 +47,15 @@ module.exports = function(options) {
             return;
         }
 
-        writefile(outputPath, jadeDir(
+        writefile(outputPath, page(
             {
                 tree: patternsTree,
                 baseUrl: options.baseUrl,
                 current: item,
-                templateHtml: fs.readFileSync(path.format({dir: options.patternsDir, base: item.path})),
-                title: options.title
+                title: options.title,
+                templateRender: function (templatePath) {
+                    return fs.readFileSync(path.format({dir: options.patternsDir, base: templatePath}));
+                }
             }
         ));
     }(patternsTree));

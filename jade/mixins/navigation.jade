@@ -14,21 +14,3 @@ mixin navigation(element, depth)
           +navigation(child, depth + 1)
     else
       +itemLink(element)
-
-doctype html
-html(lang="en")
-  head
-    title= title
-    link(href=baseUrl + 'css/ks.css', rel='stylesheet')
-  body.ks-body
-    .ks
-      h1=title
-    .ks-layout
-      .ks-content
-        if (current.name)
-          h1.ks-content-title=current.name
-        !=templateHtml
-      .ks-menu
-        .ks
-          ul.list-unstyled
-            +navigation(tree, 0)
