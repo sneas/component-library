@@ -8,16 +8,14 @@ html(lang="en")
     title= title
     link(href=baseUrl + 'css/ks.css', rel='stylesheet')
   body.ks-body
-    .ks
-      a(href=baseUrl +'index.html')=title
     .ks-layout
       .ks-content
         if (current.children)
           +tree(current)
         else
           +template(current)
-      .ks-menu
-        .ks
-          ul.list-unstyled
-
-            +navigation(tree, 0)
+      .ks-navigation
+        .ks-menu
+          .ks
+            ul.list-unstyled
+              +navigation(tree, 0)

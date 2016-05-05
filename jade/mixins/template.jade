@@ -1,4 +1,5 @@
 mixin template(element)
-  if (element.name)
-    h1.ks-content-title=element.name
-  !=templateRender(element.path)
+  .ks-template
+    .ks
+      h3.ks-template-title=element.name
+    !=templateRender(element.path)

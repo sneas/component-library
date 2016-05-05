@@ -21,7 +21,7 @@ module.exports = function(options) {
             pretty: true
         });
 
-    (function refinePatternsTree(item, parent) {
+    (function refinePatternsTree(item) {
         item.name = _.capitalize(_.replace(item.name.split('.').shift(), '-', ' '));
         item.path = path.relative(options.patternsDir, item.path);
 
@@ -31,6 +31,8 @@ module.exports = function(options) {
 
         _.each(item.children, child => refinePatternsTree(child, item));
     }(patternsTree));
+
+    patternsTree.name = 'Overview';
 
     (function compile(item) {
         var outputPath = path.format({dir: options.outputDir, base: item.path});

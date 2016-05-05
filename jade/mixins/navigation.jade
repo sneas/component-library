@@ -3,7 +3,7 @@ mixin itemLink(element)
     = element.name
 
 mixin navigation(element, depth)
-  li(class='ks-navigation-item ks-navigation-item-level-' + depth)
+  li(class='ks-menu-item ks-menu-item-level-' + depth)
     +itemLink(element)
     if element.children
       ul.list-unstyled

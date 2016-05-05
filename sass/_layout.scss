@@ -1,0 +1,17 @@
+.ks-body {
+    display: flex;
+    flex-direction: column;
+
+    .ks-layout {
+        display: flex;
+        flex: 1;
+
+        .ks-navigation {
+            order: -1;
+        }
+
+        .ks-content {
+            flex: 1;
+        }
+    }
+}

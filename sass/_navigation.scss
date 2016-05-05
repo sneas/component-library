@@ -1,0 +1,27 @@
+.ks-navigation {
+    padding-right: 10px;
+}
+
+.ks-menu {
+    padding: 10px;
+    background-color: #eaeaea;
+    border-radius: 10px;
+}
+
+.ks-menu-item {
+    > a, > span {
+        padding: 2px;
+
+        display: block;
+
+        &.active {
+            font-weight: bold;
+        }
+    }
+}
+
+.ks-menu-item-level-1 {
+    li {
+        padding-left: 10px;
+    }
+}
