@@ -2,3 +2,5 @@
 *
 # Except this file
 !.gitignore
+!external.js
+!external.css

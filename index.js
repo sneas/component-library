@@ -11,7 +11,9 @@ module.exports = function(options) {
         patternsDir: '',
         outputDir: '',
         baseUrl: '/',
-        title: 'Kitchen Sink'
+        title: 'Kitchen Sink',
+        js: [],
+        css: []
     });
 
     var patternsTree = dirTree(options.patternsDir),
@@ -49,6 +51,8 @@ module.exports = function(options) {
                 baseUrl: options.baseUrl,
                 current: item,
                 title: options.title,
+                js: options.js,
+                css: options.css,
                 templateRender: function (templatePath) {
                     return fs.readFileSync(path.format({dir: options.patternsDir, base: templatePath}));
                 }

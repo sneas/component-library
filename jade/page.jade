@@ -6,6 +6,8 @@ doctype html
 html(lang="en")
   head
     title= title
+    each cssFile in css
+      link(href=cssFile, rel='stylesheet')
     link(href=baseUrl + 'css/ks.css', rel='stylesheet')
   body.ks-body
     .ks-layout
@@ -19,3 +21,5 @@ html(lang="en")
           .ks
             ul.list-unstyled
               +navigation(tree, 0)
+      each jsFile in js
+        script(src=jsFile)
