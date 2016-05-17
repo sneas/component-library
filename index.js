@@ -22,11 +22,13 @@ module.exports = function(options) {
         });
 
     (function refinePatternsTree(item) {
-        item.name = _.capitalize(_.replace(item.name.split('.').shift(), '-', ' '));
+        //Remove firsts numbers and extensions
+        var prettyName = item.name.replace(/^\d+\./, '').split('.').shift().replace('-', ' ');
+        item.name = _.capitalize(prettyName);
         item.path = path.relative(options.patternsDir, item.path);
 
         if (item.children) {
-            item.path += '/index.html';
+            item.path += (item.path ? '/' : '') +  'index.html';
         }
 
         _.each(item.children, child => refinePatternsTree(child, item));
