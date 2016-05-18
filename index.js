@@ -62,6 +62,12 @@ module.exports = function(options) {
 
     //Compile SASS
     sass.render({
-        file: path.format({dir: __dirname, base: 'sass/ks.scss'})
-    }, (err, result) => writefile(path.format({dir: options.outputDir, base: 'css/ks.css'}), result.css));
+            file: path.format({dir: __dirname, base: 'sass/ks.scss'})
+        }, function (err, result) {
+            if (err) {
+                console.log(err);
+            } else {
+                writefile(path.format({dir: options.outputDir, base: 'css/ks.css'}), result.css);
+            }
+        });
 };
