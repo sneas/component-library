@@ -21,5 +21,6 @@ html(lang="en")
           .ks
             ul.list-unstyled
               +navigation(tree, 0)
+      script(src=baseUrl + 'js/cl.js')
       each jsFile in js
         script(src=jsFile)

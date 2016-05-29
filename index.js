@@ -4,7 +4,8 @@ var _ = require('lodash'),
     dirTree = require('directory-tree'),
     path = require('path'),
     writefile = require('writefile'),
-    sass = require('node-sass');
+    sass = require('node-sass'),
+    gulp = require('gulp');
 
 module.exports = function(options) {
     _.defaults(options, {
@@ -70,4 +71,8 @@ module.exports = function(options) {
                 writefile(path.format({dir: options.outputDir, base: 'css/ks.css'}), result.css);
             }
         });
+
+    //Copy assets
+    gulp.src('assets/**/*')
+        .pipe(gulp.dest(options.outputDir));
 };
