@@ -9,18 +9,19 @@ html(lang="en")
     each cssFile in css
       link(href=cssFile, rel='stylesheet')
     link(href=baseUrl + 'css/ks.css', rel='stylesheet')
-  body.ks-body
-    .ks-layout
-      .ks-content
-        if (current.children)
-          +tree(current, 1)
-        else
-          +template(current)
-      .ks-navigation
-        .ks-menu
-          .ks
-            ul.list-unstyled
-              +navigation(tree, 0)
-      script(src=baseUrl + 'js/cl.js')
-      each jsFile in js
-        script(src=jsFile)
+  body
+    header.ks.ks-menu-toggle
+      a.ks-menu-toggle-button(href="#close")='Menu'
+    #cl-navigation.ks-navigation
+      .ks.ks-menu
+        ul.list-unstyled
+          +navigation(tree, 0)
+    .ks-content
+      if (current.children)
+        +tree(current, 1)
+      else
+        +template(current)
+    script(src=baseUrl + 'vendor.js')
+    script(src=baseUrl + 'js/cl.js')
+    each jsFile in js
+      script(src=jsFile)

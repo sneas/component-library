@@ -5,7 +5,8 @@ var _ = require('lodash'),
     path = require('path'),
     writefile = require('writefile'),
     sass = require('node-sass'),
-    gulp = require('gulp');
+    gulp = require('gulp'),
+    concat = require('gulp-concat');
 
 module.exports = function(options) {
     _.defaults(options, {
@@ -71,6 +72,13 @@ module.exports = function(options) {
                 writefile(path.format({dir: options.outputDir, base: 'css/ks.css'}), result.css);
             }
         });
+
+    //Generate vendors
+    gulp.src([
+            'bower_components/jquery/dist/jquery.js'
+        ])
+        .pipe(concat('vendor.js'))
+        .pipe(gulp.dest(options.outputDir));
 
     //Copy assets
     gulp.src('assets/**/*')
