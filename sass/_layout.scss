@@ -1,31 +1,31 @@
 @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/variables";
 
 @media (min-width: $screen-md-min) {
-    .ks-menu-toggle {
+    .cl-menu-toggle {
         display: none;
     }
 
-    .ks-navigation {
+    .cl-navigation {
         float:left;
         width: 20%;
     }
 
-    .ks-menu {
+    .cl-menu {
         margin-right: 10px;
     }
 
-    .ks-content {
+    .cl-content {
         float:left;
         width: 80%;
     }
 }
 
 @media (max-width: $screen-md-min) {
-    .ks-navigation {
+    .cl-navigation {
         display: none;
     }
 
-    .ks-navigation-visible {
+    .cl-navigation-visible {
         display: block;
     }
 }

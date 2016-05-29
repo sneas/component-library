@@ -8,15 +8,15 @@ html(lang="en")
     title= title
     each cssFile in css
       link(href=cssFile, rel='stylesheet')
-    link(href=baseUrl + 'css/ks.css', rel='stylesheet')
+    link(href=baseUrl + 'css/cl.css', rel='stylesheet')
   body
-    header.ks.ks-menu-toggle
-      a.ks-menu-toggle-button(href="#close")='Menu'
-    #cl-navigation.ks-navigation
-      .ks.ks-menu
+    header.cl.cl-menu-toggle
+      a.cl-menu-toggle-button(href="#close")='Menu'
+    #cl-navigation.cl-navigation
+      .cl.cl-menu
         ul.list-unstyled
           +navigation(tree, 0)
-    .ks-content
+    .cl-content
       if (current.children)
         +tree(current, 1)
       else
