@@ -1,9 +1,9 @@
 'use strict';
 
 jQuery(function($) {
-    $('.ks-menu-toggle-button').click(function() {
+    $('.cl-menu-toggle-button').click(function() {
         function toggle(visible) {
-            $('#cl-navigation').toggleClass('ks-navigation-visible', !visible);
+            $('#cl-navigation').toggleClass('cl-navigation-visible', !visible);
         }
 
         toggle($('#cl-navigation').is(':visible'));

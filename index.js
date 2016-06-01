@@ -81,6 +81,10 @@ module.exports = function(options) {
         .pipe(gulp.dest(options.outputDir));
 
     //Copy assets
-    gulp.src('assets/**/*')
+    gulp.src(['assets/**/*'])
         .pipe(gulp.dest(options.outputDir));
+
+    //Fonts
+    gulp.src('node_modules/font-awesome/fonts/**')
+        .pipe(gulp.dest(path.format({dir: options.outputDir, base: 'fonts'})))
 };
