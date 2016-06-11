@@ -3,7 +3,7 @@ include template.jade
 mixin tree(element, depth)
   if (element.children)
     //ToDo: output appropriate header tag according to depth
-    .ks
+    .cl
       h1=element.name
     each child in element.children
       +tree(child, depth + 1)

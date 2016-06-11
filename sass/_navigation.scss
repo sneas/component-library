@@ -1,15 +1,7 @@
-.cl-menu {
-    padding: 10px;
-    background-color: #eaeaea;
-    border-radius: 10px;
-}
-
 .cl-menu-item {
     > a, > span {
-        padding: 2px;
-
         display: block;
-
+        padding: 0.2em 0 0.2em 0.2em;
         &.active {
             font-weight: bold;
         }

@@ -10,18 +10,20 @@ html(lang="en")
       link(href=cssFile, rel='stylesheet')
     link(href=baseUrl + 'css/cl.css', rel='stylesheet')
   body
-    header.cl.cl-menu-toggle
-      a.cl-menu-toggle-button(href="#close")
+    div#cl-layout
+      a#cl-menuLink.cl.cl-menu-link(href="#menu")
         i.cl-fa.cl-fa-bars
-    #cl-navigation.cl-navigation
-      .cl.cl-menu
-        ul.list-unstyled
-          +navigation(tree, 0)
-    .cl-content
-      if (current.children)
-        +tree(current, 1)
-      else
-        +template(current)
+      div#cl-menu
+        .cl-navigation
+          .cl.cl-menu
+            ul.list-unstyled
+              +navigation(tree, 0)
+      div#cl-main
+        .cl-content
+          if (current.children)
+            +tree(current, 1)
+          else
+            +template(current)
     script(src=baseUrl + 'vendor.js')
     script(src=baseUrl + 'js/cl.js')
     each jsFile in js
