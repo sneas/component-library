@@ -75,7 +75,7 @@ module.exports = function(options) {
 
     //Generate vendors
     gulp.src([
-            'bower_components/jquery/dist/jquery.js'
+            'node_modules/jquery/dist/jquery.js'
         ])
         .pipe(concat('vendor.js'))
         .pipe(gulp.dest(options.outputDir));
