@@ -1,7 +1,11 @@
 mixin template(element)
   .cl-template
-    .ks
+    .cl
       h3.cl-template-title=element.name
     !=templateRender(element.path)
-    .cl-template-code
-      =templateRender(element.path)
+    .cl.cl-template-code
+      button.btn.btn-default.btn-xs.cl-template-code-toggle
+        i.cl-fa.cl-fa-code
+      pre.cl-template-code-content
+        code.html
+          =templateRender(element.path)

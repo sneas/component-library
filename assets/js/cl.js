@@ -10,4 +10,8 @@ jQuery(function($) {
 
         return false;
     });
+
+    $('.cl-template-code-toggle').click(function() {
+        $(this).next('.cl-template-code-content').toggleClass('cl-template-code-content-show');
+    });
 });

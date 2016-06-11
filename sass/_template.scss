@@ -7,4 +7,19 @@
     .cl-template-title {
         margin-top: 0;
     }
+
+    .cl-template-code {
+        margin-top: 10px;
+        padding-top: 10px;
+        border-top: 1px dotted #eaeaea;
+
+        .cl-template-code-content {
+            margin-top: 20px;
+            display: none;
+
+            &.cl-template-code-content-show {
+                display: block;
+            }
+        }
+    }
 }
