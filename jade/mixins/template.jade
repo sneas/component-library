@@ -1,5 +1,7 @@
 mixin template(element)
-  .ks-template
+  .cl-template
     .ks
-      h3.ks-template-title=element.name
+      h3.cl-template-title=element.name
     !=templateRender(element.path)
+    .cl-template-code
+      =templateRender(element.path)
