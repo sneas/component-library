@@ -25,6 +25,6 @@
   },
   "scripts": {
     "prestart": "gulp compile --gulpfile demo/gulpfile.js",
-    "start": "node_modules/.bin/ws -d ./demo/public -c"
+    "start": "ws -d ./demo/public -c"
   }
 }
