@@ -8,6 +8,10 @@
     "type": "git",
     "url": "git://github.com/sneas/component-library.git"
   },
+  "keywords": [
+    "ui",
+    "component-library"
+  ],
   "dependencies": {
     "bootstrap-sass": "^3.3.6",
     "directory-tree": "^1.0.0",
