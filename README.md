@@ -1,5 +1,3 @@
-## Components Library
-
 An easy way to create HTML components library for your project.
 
 ## Motivation
