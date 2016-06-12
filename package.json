@@ -25,6 +25,6 @@
   },
   "scripts": {
     "prestart": "gulp compile --gulpfile demo/gulpfile.js",
-    "start": "http-server ./demo/public -a localhost -p 8000 -c-1"
+    "start": "http-server ./demo/public -a localhost -c-1"
   }
 }
