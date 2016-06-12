@@ -1,10 +1,10 @@
 var gulp = require('gulp'),
     path = require('path'),
-    //componentsLibrary = require('components-library')
-    componentsLibrary = require('../index.js');
+    //componentLibrary = require('component-library')
+    componentLibrary = require('../index.js');
 
 gulp.task('compile', function() {
-    componentsLibrary({
+    componentLibrary({
         templatesDir: path.format({dir: __dirname, base: 'templates'}),
         outputDir: path.format({dir: __dirname, base: 'public'}),
         baseUrl: '/',

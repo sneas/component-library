@@ -1,10 +1,10 @@
-An easy way to create HTML components library for your project.
+An easy way to create HTML component library for your project.
 
 ## Motivation
 
 Most of web projects consist of components. It could be simple basic components like texts, icons, buttons or form inputs. Or it could be complex components like video player, sophisticated inputs (i.e. typeahead), menus, popovers, etc.
 Any large project reaches a certain point when it's hard to remember and control all the pages and it's components.
-Components library has been created as a special place to store and manage all the components of the web site in one place.
+Component library has been created as a special place to store and manage all the components of the web site in one place.
 
 Requirements:
 * easy to install
@@ -14,13 +14,13 @@ Requirements:
 ## Installation
 
 ```bash
-npm install components-library
+npm install component-library
 ```
 
 ## Demo
 
 ```bash
-cd components-library
+cd component-library
 npm start
 ```
 
@@ -30,13 +30,13 @@ As a reference I've used Gulp but it's easy to add components library into any b
 
 ```javascript
 var gulp = require('gulp'),
-    componentsLibrary = require('components-library');
+    componentLibrary = require('component-library');
 
 gulp.task('cl', function() {
-    componentsLibrary({
+    componentLibrary({
         templatesDir: '/project/templates/dir',
-        outputDir: '/project/components-library/public',
-        baseUrl: '/components-library/',
+        outputDir: '/project/component-library/public',
+        baseUrl: '/component-library/',
         js: [
             //List of your project's JS files goes here
             '/project/js/file.js'

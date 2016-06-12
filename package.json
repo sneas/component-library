@@ -1,12 +1,12 @@
 {
-  "name": "components-library",
+  "name": "component-library",
   "version": "0.6.1",
-  "description": "An easy way to create HTML components library for your project.",
+  "description": "An easy way to create HTML component library for your project.",
   "author": "Dima Snisarenko <snisarenkodima@gmail.com>",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git://github.com/sneas/components-library.git"
+    "url": "git://github.com/sneas/component-library.git"
   },
   "dependencies": {
     "bootstrap-sass": "^3.3.6",
