@@ -5211,7 +5211,8 @@ Hides the menu at `48em`, but modify this based on your app's needs.
   text-align: center; }
   .cl-icon-list li {
     display: inline-block;
-    min-width: 220px;
+    width: 220px;
+    white-space: nowrap;
     background-color: #ccc;
     height: 40px;
     line-height: 40px;

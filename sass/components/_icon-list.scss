@@ -4,7 +4,8 @@
 
     li {
         display: inline-block;
-        min-width: 220px;
+        width: 220px;
+        white-space: nowrap;
         background-color: #ccc;
         height: 40px;
         line-height: 40px;
