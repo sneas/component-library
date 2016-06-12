@@ -21,7 +21,7 @@
 <meta name="theme-color" content="#ffffff">
     <link href="/external.css" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
-    <link href="/css/cl.css" rel="stylesheet">
+    <link href="/component-library/css/cl.css" rel="stylesheet">
   </head>
   <body>
     <div id="cl-layout"><a id="cl-menuLink" href="#menu" class="cl cl-menu-link"><i class="cl-fa cl-fa-bars"></i></a>
@@ -29,19 +29,19 @@
         <div class="cl-navigation">
           <div class="cl cl-menu">
             <ul class="list-unstyled">
-              <li class="cl-menu-item cl-menu-item-level-0"><a href="/index.html">Overview</a>
+              <li class="cl-menu-item cl-menu-item-level-0"><a href="/component-library/index.html">Overview</a>
                 <ul class="list-unstyled">
-                  <li class="cl-menu-item cl-menu-item-level-1"><a href="/colors.html">Colors</a>
+                  <li class="cl-menu-item cl-menu-item-level-1"><a href="/component-library/colors.html">Colors</a>
                   </li>
-                  <li class="cl-menu-item cl-menu-item-level-1"><a href="/form-elements/index.html">Form elements</a>
+                  <li class="cl-menu-item cl-menu-item-level-1"><a href="/component-library/form-elements/index.html" class="active">Form elements</a>
                     <ul class="list-unstyled">
-                      <li class="cl-menu-item cl-menu-item-level-2"><a href="/form-elements/1.input-text.html">Input text</a>
+                      <li class="cl-menu-item cl-menu-item-level-2"><a href="/component-library/form-elements/1.input-text.html">Input text</a>
                       </li>
-                      <li class="cl-menu-item cl-menu-item-level-2"><a href="/form-elements/2.textarea.html" class="active">Textarea</a>
+                      <li class="cl-menu-item cl-menu-item-level-2"><a href="/component-library/form-elements/2.textarea.html">Textarea</a>
                       </li>
                     </ul>
                   </li>
-                  <li class="cl-menu-item cl-menu-item-level-1"><a href="/icons.html">Icons</a>
+                  <li class="cl-menu-item cl-menu-item-level-1"><a href="/component-library/icons.html">Icons</a>
                   </li>
                 </ul>
               </li>
@@ -51,6 +51,19 @@
       </div>
       <div id="cl-main">
         <div class="cl-content">
+          <!--ToDo: output appropriate header tag according to depth-->
+          <div class="cl">
+            <h1>Form elements</h1>
+          </div>
+          <div class="cl-template">
+            <div class="cl">
+              <h3 class="cl-template-title">Input text</h3>
+            </div><input type="text" name="example">
+            <div class="cl cl-template-code">
+              <button class="btn btn-default btn-xs cl-template-code-toggle"><i class="cl-fa cl-fa-code"></i></button>
+              <pre class="cl-template-code-content"><code class="html">&lt;input type=&quot;text&quot; name=&quot;example&quot;&gt;</code></pre>
+            </div>
+          </div>
           <div class="cl-template">
             <div class="cl">
               <h3 class="cl-template-title">Textarea</h3>
@@ -63,8 +76,8 @@
         </div>
       </div>
     </div>
-    <script src="/vendor.js"></script>
-    <script src="/js/cl.js"></script>
+    <script src="/component-library/vendor.js"></script>
+    <script src="/component-library/js/cl.js"></script>
     <script src="/external.js"></script>
   </body>
 </html>

@@ -21,7 +21,7 @@
 <meta name="theme-color" content="#ffffff">
     <link href="/external.css" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
-    <link href="/css/cl.css" rel="stylesheet">
+    <link href="/component-library/css/cl.css" rel="stylesheet">
   </head>
   <body>
     <div id="cl-layout"><a id="cl-menuLink" href="#menu" class="cl cl-menu-link"><i class="cl-fa cl-fa-bars"></i></a>
@@ -29,19 +29,19 @@
         <div class="cl-navigation">
           <div class="cl cl-menu">
             <ul class="list-unstyled">
-              <li class="cl-menu-item cl-menu-item-level-0"><a href="/index.html">Overview</a>
+              <li class="cl-menu-item cl-menu-item-level-0"><a href="/component-library/index.html" class="active">Overview</a>
                 <ul class="list-unstyled">
-                  <li class="cl-menu-item cl-menu-item-level-1"><a href="/colors.html">Colors</a>
+                  <li class="cl-menu-item cl-menu-item-level-1"><a href="/component-library/colors.html">Colors</a>
                   </li>
-                  <li class="cl-menu-item cl-menu-item-level-1"><a href="/form-elements/index.html">Form elements</a>
+                  <li class="cl-menu-item cl-menu-item-level-1"><a href="/component-library/form-elements/index.html">Form elements</a>
                     <ul class="list-unstyled">
-                      <li class="cl-menu-item cl-menu-item-level-2"><a href="/form-elements/1.input-text.html">Input text</a>
+                      <li class="cl-menu-item cl-menu-item-level-2"><a href="/component-library/form-elements/1.input-text.html">Input text</a>
                       </li>
-                      <li class="cl-menu-item cl-menu-item-level-2"><a href="/form-elements/2.textarea.html">Textarea</a>
+                      <li class="cl-menu-item cl-menu-item-level-2"><a href="/component-library/form-elements/2.textarea.html">Textarea</a>
                       </li>
                     </ul>
                   </li>
-                  <li class="cl-menu-item cl-menu-item-level-1"><a href="/icons.html" class="active">Icons</a>
+                  <li class="cl-menu-item cl-menu-item-level-1"><a href="/component-library/icons.html">Icons</a>
                   </li>
                 </ul>
               </li>
@@ -51,6 +51,93 @@
       </div>
       <div id="cl-main">
         <div class="cl-content">
+          <!--ToDo: output appropriate header tag according to depth-->
+          <div class="cl">
+            <h1>Overview</h1>
+          </div>
+          <div class="cl-template">
+            <div class="cl">
+              <h3 class="cl-template-title">Colors</h3>
+            </div><ul class="cl-palette">
+    <li>
+        <h3>Blue Bayou</h3>
+        <div style="background-color: #50597B;" class="color"><span>#50597B</span></div>
+        <div style="background-color: #394264;" class="color"><span>#394264</span></div>
+    </li>
+    <li>
+        <h3>Midnight Blue</h3>
+        <div style="background-color: #272F4D;" class="color"><span>#272F4D</span></div>
+        <div style="background-color: #1F253D;" class="color"><span>#1F253D</span></div>
+    </li>
+    <li>
+        <h3>Aqua green</h3>
+        <div style="background-color: #1ABC9C;" class="color"><span>#1ABC9C</span></div>
+        <div style="background-color: #16A085;" class="color"><span>#16A085</span></div>
+    </li>
+    <li>
+        <h3>Athens grey</h3>
+        <div style="background-color: #EDEEF1; color: #777;" class="color"><span>#EDEEF1</span></div>
+        <div style="background-color: #BDC3C7;" class="color"><span>#BDC3C7</span></div>
+    </li>
+    <li>
+        <h3>Tomato red</h3>
+        <div style="background-color: #E74C3C;" class="color"><span>#E74C3C</span></div>
+        <div style="background-color: #B73729;" class="color"><span>#B73729</span></div>
+    </li>
+</ul>
+            <div class="cl cl-template-code">
+              <button class="btn btn-default btn-xs cl-template-code-toggle"><i class="cl-fa cl-fa-code"></i></button>
+              <pre class="cl-template-code-content"><code class="html">&lt;ul class=&quot;cl-palette&quot;&gt;
+    &lt;li&gt;
+        &lt;h3&gt;Blue Bayou&lt;/h3&gt;
+        &lt;div style=&quot;background-color: #50597B;&quot; class=&quot;color&quot;&gt;&lt;span&gt;#50597B&lt;/span&gt;&lt;/div&gt;
+        &lt;div style=&quot;background-color: #394264;&quot; class=&quot;color&quot;&gt;&lt;span&gt;#394264&lt;/span&gt;&lt;/div&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;h3&gt;Midnight Blue&lt;/h3&gt;
+        &lt;div style=&quot;background-color: #272F4D;&quot; class=&quot;color&quot;&gt;&lt;span&gt;#272F4D&lt;/span&gt;&lt;/div&gt;
+        &lt;div style=&quot;background-color: #1F253D;&quot; class=&quot;color&quot;&gt;&lt;span&gt;#1F253D&lt;/span&gt;&lt;/div&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;h3&gt;Aqua green&lt;/h3&gt;
+        &lt;div style=&quot;background-color: #1ABC9C;&quot; class=&quot;color&quot;&gt;&lt;span&gt;#1ABC9C&lt;/span&gt;&lt;/div&gt;
+        &lt;div style=&quot;background-color: #16A085;&quot; class=&quot;color&quot;&gt;&lt;span&gt;#16A085&lt;/span&gt;&lt;/div&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;h3&gt;Athens grey&lt;/h3&gt;
+        &lt;div style=&quot;background-color: #EDEEF1; color: #777;&quot; class=&quot;color&quot;&gt;&lt;span&gt;#EDEEF1&lt;/span&gt;&lt;/div&gt;
+        &lt;div style=&quot;background-color: #BDC3C7;&quot; class=&quot;color&quot;&gt;&lt;span&gt;#BDC3C7&lt;/span&gt;&lt;/div&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;h3&gt;Tomato red&lt;/h3&gt;
+        &lt;div style=&quot;background-color: #E74C3C;&quot; class=&quot;color&quot;&gt;&lt;span&gt;#E74C3C&lt;/span&gt;&lt;/div&gt;
+        &lt;div style=&quot;background-color: #B73729;&quot; class=&quot;color&quot;&gt;&lt;span&gt;#B73729&lt;/span&gt;&lt;/div&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+            </div>
+          </div>
+          <!--ToDo: output appropriate header tag according to depth-->
+          <div class="cl">
+            <h1>Form elements</h1>
+          </div>
+          <div class="cl-template">
+            <div class="cl">
+              <h3 class="cl-template-title">Input text</h3>
+            </div><input type="text" name="example">
+            <div class="cl cl-template-code">
+              <button class="btn btn-default btn-xs cl-template-code-toggle"><i class="cl-fa cl-fa-code"></i></button>
+              <pre class="cl-template-code-content"><code class="html">&lt;input type=&quot;text&quot; name=&quot;example&quot;&gt;</code></pre>
+            </div>
+          </div>
+          <div class="cl-template">
+            <div class="cl">
+              <h3 class="cl-template-title">Textarea</h3>
+            </div><textarea></textarea>
+            <div class="cl cl-template-code">
+              <button class="btn btn-default btn-xs cl-template-code-toggle"><i class="cl-fa cl-fa-code"></i></button>
+              <pre class="cl-template-code-content"><code class="html">&lt;textarea&gt;&lt;/textarea&gt;</code></pre>
+            </div>
+          </div>
           <div class="cl-template">
             <div class="cl">
               <h3 class="cl-template-title">Icons</h3>
@@ -5915,8 +6002,8 @@
         </div>
       </div>
     </div>
-    <script src="/vendor.js"></script>
-    <script src="/js/cl.js"></script>
+    <script src="/component-library/vendor.js"></script>
+    <script src="/component-library/js/cl.js"></script>
     <script src="/external.js"></script>
   </body>
 </html>
