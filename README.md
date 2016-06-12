@@ -9,7 +9,8 @@ Component library has been created as a special place to store and manage all th
 Requirements:
 * easy to install
 * easy to manage components
-* easy add into existing build process
+* easy to integrate with project's build process
+* absence of conflicts with project's JS and CSS
 
 ## Installation
 
