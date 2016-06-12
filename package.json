@@ -21,10 +21,10 @@
     "writefile": "^0.2.8"
   },
   "devDependencies": {
-    "http-server": "^0.9.0"
+    "local-web-server": "^1.2.6"
   },
   "scripts": {
     "prestart": "gulp compile --gulpfile demo/gulpfile.js",
-    "start": "http-server ./demo/public -a localhost -c-1"
+    "start": "node_modules/.bin/ws -d ./demo/public -c"
   }
 }
