@@ -1,0 +1,15 @@
+.cl-icon-list {
+    padding: 0;
+    text-align: center;
+
+    li {
+        display: inline-block;
+        min-width: 220px;
+        background-color: #ccc;
+        height: 40px;
+        line-height: 40px;
+        text-align: left;
+        padding-left: 15px;
+        margin-bottom: 5px;
+    }
+}

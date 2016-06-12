@@ -12,7 +12,8 @@ gulp.task('compile', function() {
             '/external.js'
         ],
         css: [
-            '/external.css'
+            '/external.css',
+            'https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css'
         ]
     });
 });
