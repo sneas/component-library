@@ -13,7 +13,7 @@ module.exports = function(options) {
         templatesDir: '',
         outputDir: '',
         baseUrl: '/',
-        title: 'Kitchen Sink',
+        title: 'Component Library',
         js: [],
         css: []
     });
@@ -75,16 +75,18 @@ module.exports = function(options) {
 
     //Generate vendors
     gulp.src([
-            'node_modules/jquery/dist/jquery.js'
+            __dirname + '/node_modules/jquery/dist/jquery.js'
         ])
         .pipe(concat('vendor.js'))
         .pipe(gulp.dest(options.outputDir));
 
     //Copy assets
-    gulp.src(['assets/**/*'])
+    gulp.src([
+            __dirname + '/assets/**/*'
+        ])
         .pipe(gulp.dest(options.outputDir));
 
     //Fonts
-    gulp.src('node_modules/font-awesome/fonts/**')
+    gulp.src(__dirname + '/node_modules/font-awesome/fonts/**')
         .pipe(gulp.dest(path.format({dir: options.outputDir, base: 'fonts'})))
 };
