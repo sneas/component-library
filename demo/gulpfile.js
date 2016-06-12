@@ -9,10 +9,10 @@ gulp.task('compile', function() {
         outputDir: path.format({dir: __dirname, base: 'public/component-library'}),
         baseUrl: '/component-library/',
         js: [
-            '/external.js'
+            '/component-library/external.js'
         ],
         css: [
-            '/external.css',
+            '/component-library/external.css',
             'https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css'
         ]
     });

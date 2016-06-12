@@ -24,7 +24,6 @@
     "local-web-server": "^1.2.6"
   },
   "scripts": {
-    "prestart": "gulp compile --gulpfile demo/gulpfile.js",
     "start": "ws -d ./demo/public -c"
   }
 }
