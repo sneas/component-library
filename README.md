@@ -1,5 +1,7 @@
 An easy way to create HTML component library for your project.
 
+Demo: http://sneas.github.io/component-library/index.html
+
 ## Motivation
 
 Most of web projects consist of components. It could be simple basic components like texts, icons, buttons or form inputs. Or it could be complex components like video player, sophisticated inputs (i.e. typeahead), menus, popovers, etc.
