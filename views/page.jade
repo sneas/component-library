@@ -6,6 +6,7 @@ doctype html
 html(lang="en")
   head
     title= title
+    !=favicon
     each cssFile in css
       link(href=cssFile, rel='stylesheet')
     link(href=baseUrl + 'css/cl.css', rel='stylesheet')

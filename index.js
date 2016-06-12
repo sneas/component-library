@@ -14,12 +14,13 @@ module.exports = function(options) {
         outputDir: '',
         baseUrl: '/',
         title: 'Component Library',
+        favicon: __dirname + '/views/favicon.html',
         js: [],
         css: []
     });
 
     var patternsTree = dirTree(options.templatesDir),
-        pageFilePath = path.format({dir: __dirname, base: 'jade/page.jade'}),
+        pageFilePath = path.format({dir: __dirname, base: 'views/page.jade'}),
         page = jade.compile(fs.readFileSync(pageFilePath), {
             filename: pageFilePath,
             pretty: true
@@ -55,6 +56,7 @@ module.exports = function(options) {
                 title: options.title,
                 js: options.js,
                 css: options.css,
+                favicon: fs.readFileSync(options.favicon),
                 templateRender: function (templatePath) {
                     return fs.readFileSync(path.format({dir: options.templatesDir, base: templatePath}));
                 }
