@@ -10,7 +10,7 @@ var _ = require('lodash'),
 
 module.exports = function(options) {
     _.defaults(options, {
-        patternsDir: '',
+        templatesDir: '',
         outputDir: '',
         baseUrl: '/',
         title: 'Kitchen Sink',
@@ -18,7 +18,7 @@ module.exports = function(options) {
         css: []
     });
 
-    var patternsTree = dirTree(options.patternsDir),
+    var patternsTree = dirTree(options.templatesDir),
         pageFilePath = path.format({dir: __dirname, base: 'jade/page.jade'}),
         page = jade.compile(fs.readFileSync(pageFilePath), {
             filename: pageFilePath,
@@ -29,7 +29,7 @@ module.exports = function(options) {
         //Remove firsts numbers and extensions
         var prettyName = item.name.replace(/^\d+\./, '').split('.').shift().replace('-', ' ');
         item.name = _.capitalize(prettyName);
-        item.path = path.relative(options.patternsDir, item.path);
+        item.path = path.relative(options.templatesDir, item.path);
 
         if (item.children) {
             item.path += (item.path ? '/' : '') +  'index.html';
@@ -56,7 +56,7 @@ module.exports = function(options) {
                 js: options.js,
                 css: options.css,
                 templateRender: function (templatePath) {
-                    return fs.readFileSync(path.format({dir: options.patternsDir, base: templatePath}));
+                    return fs.readFileSync(path.format({dir: options.templatesDir, base: templatePath}));
                 }
             }
         ));

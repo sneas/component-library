@@ -5,7 +5,7 @@ var gulp = require('gulp'),
 
 gulp.task('compile', function() {
     componentsLibrary({
-        patternsDir: path.format({dir: __dirname, base: 'templates'}),
+        templatesDir: path.format({dir: __dirname, base: 'templates'}),
         outputDir: path.format({dir: __dirname, base: 'public'}),
         baseUrl: '/',
         js: [
