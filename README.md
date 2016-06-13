@@ -8,7 +8,7 @@ Most of web projects consist of components. It could be simple basic components 
 Any large project reaches a certain point when it's hard to remember and control all the pages and it's components.
 Component library has been created as a special place to store and manage all the components of the web site in one place.
 
-Requirements:
+Features:
 * easy to install
 * easy to manage components
 * easy to integrate with project's build process
