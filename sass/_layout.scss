@@ -45,7 +45,7 @@ appears on the left side of the page.
     background: #191818;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
-    padding-top: 0.8em;
+    padding: 1em;
 }
 /*
 All anchors inside the menu should be styled like this.
@@ -138,4 +138,8 @@ Hides the menu at `48em`, but modify this based on your app's needs.
         position: relative;
         left: 150px;
     }
+}
+
+.cl-content {
+    padding: 0 1em;
 }
