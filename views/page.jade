@@ -1,5 +1,4 @@
 include mixins/navigation.jade
-include mixins/template.jade
 include mixins/tree.jade
 
 doctype html
@@ -21,10 +20,7 @@ html(lang="en")
               +navigation(tree, 0)
       div#cl-main
         .cl-content
-          if (current.children)
-            +tree(current, 1)
-          else
-            +template(current)
+          +tree(current, 1)
     script(src=baseUrl + 'vendor.js')
     script(src=baseUrl + 'js/cl.js')
     each jsFile in js

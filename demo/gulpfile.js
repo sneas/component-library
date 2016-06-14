@@ -19,5 +19,5 @@ gulp.task('compile', function() {
 });
 
 gulp.task('watch', ['compile'], function() {
-    gulp.watch(['templates/**/*', '../view/**/*', '../sass/**/*', '../assets/**/*'], ['compile']);
+    gulp.watch(['templates/**/*', '../views/**/*', '../sass/**/*', '../assets/**/*'], ['compile']);
 });

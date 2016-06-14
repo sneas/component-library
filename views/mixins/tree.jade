@@ -1,11 +1,17 @@
-include template.jade
-
 mixin tree(element, depth)
-  if (element.children)
-    //ToDo: output appropriate header tag according to depth
+  .cl-node(class='cl-node-level-' + depth + (element.children ? '' : ' cl-node-template'))
     .cl
-      h1=element.name
-    each child in element.children
-      +tree(child, depth + 1)
-  else
-    +template(element)
+      div(class='h' + depth)=element.name
+    if (element.children)
+      .cl-node-subtree
+        each child in element.children
+          +tree(child, depth + 1)
+    else
+      .cl-node-template-preview
+        !=templateRender(element.path)
+      .cl.cl-node-temaplate-code.js-template-code
+        button.btn.btn-default.btn-xs.js-template-code-toggle
+          i.cl-fa.cl-fa-code
+        pre.cl-node-template-code-content.js-template-code-content
+          code.html
+            =templateRender(element.path)

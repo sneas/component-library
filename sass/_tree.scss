@@ -1,0 +1,24 @@
+.cl-node-level-1 {
+    .cl-node-subtree {
+        padding: 10px;
+        border-top: 1px dotted #eaeaea;
+        border-left: 2px solid transparent;
+
+        &:hover {
+            border-left: 2px solid #eaeaea;
+        }
+    }
+}
+
+.cl-node-temaplate-code {
+    margin-top: 10px;
+
+    .cl-node-template-code-content {
+        margin-top: 10px;
+        display: none;
+
+        &.active {
+            display: block;
+        }
+    }
+}
