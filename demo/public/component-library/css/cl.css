@@ -7410,3 +7410,6 @@ Hides the menu at `48em`, but modify this based on your app's needs.
   margin: 0;
   overflow: visible;
   clip: auto; }
+
+.cl-show-grid div {
+  border: 1px solid #ccc; }

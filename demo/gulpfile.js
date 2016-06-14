@@ -24,11 +24,14 @@ gulp.task('compile', ['assets'], function() {
         outputDir: publicDir,
         baseUrl: '/component-library/',
         js: [
+            'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js',
             '/component-library/project.js'
         ],
         css: [
-            '/component-library/project.css',
-            'https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css'
+            'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css',
+            'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css',
+            'https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css',
+            '/component-library/project.css'
         ]
     });
 });
