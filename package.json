@@ -17,6 +17,7 @@
     "directory-tree": "^1.0.0",
     "font-awesome": "^4.6.3",
     "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
     "gulp-concat": "^2.6.0",
     "jade": "^1.11.0",
     "jquery": "^3.0.0",
