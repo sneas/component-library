@@ -5169,20 +5169,20 @@ Hides the menu at `48em`, but modify this based on your app's needs.
 .cl-menu-item-level-1 li {
   padding-left: 10px; }
 
-.cl-template {
-  margin-bottom: 20px;
+.cl-node-level-1 .cl-node-subtree {
   padding: 10px;
-  border: 1px solid #eaeaea;
-  border-radius: 10px; }
-  .cl-template .cl-template-title {
-    margin-top: 0; }
-  .cl-template .cl-template-code {
-    padding-top: 10px; }
-    .cl-template .cl-template-code .cl-template-code-content {
-      margin-top: 20px;
-      display: none; }
-      .cl-template .cl-template-code .cl-template-code-content.cl-template-code-content-show {
-        display: block; }
+  border-top: 1px dotted #eaeaea;
+  border-left: 2px solid transparent; }
+  .cl-node-level-1 .cl-node-subtree:hover {
+    border-left: 2px solid #eaeaea; }
+
+.cl-node-temaplate-code {
+  margin-top: 10px; }
+  .cl-node-temaplate-code .cl-node-template-code-content {
+    margin-top: 10px;
+    display: none; }
+    .cl-node-temaplate-code .cl-node-template-code-content.active {
+      display: block; }
 
 .cl-palette {
   padding: 0;

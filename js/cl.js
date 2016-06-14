@@ -37,17 +37,7 @@
 }(this, this.document));
 
 jQuery(function($) {
-    $('.cl-menu-toggle-button').click(function() {
-        function toggle(visible) {
-            $('#cl-navigation').toggleClass('cl-navigation-visible', !visible);
-        }
-
-        toggle($('#cl-navigation').is(':visible'));
-
-        return false;
-    });
-
-    $('.cl-template-code-toggle').click(function() {
-        $(this).next('.cl-template-code-content').toggleClass('cl-template-code-content-show');
+    $('.js-template-code-toggle').click(function() {
+        $(this).parents('.js-template-code:first').find('.js-template-code-content').toggleClass('active');
     });
 });
