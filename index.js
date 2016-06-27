@@ -36,7 +36,9 @@ module.exports = function(options) {
             item.path += (item.path ? '/' : '') +  'index.html';
         }
 
-        _.each(item.children, child => refinePatternsTree(child, item));
+        _.each(item.children, function(child) {
+            refinePatternsTree(child, item)
+        });
     }(patternsTree));
 
     patternsTree.name = 'Overview';
@@ -45,7 +47,9 @@ module.exports = function(options) {
         var outputPath = path.format({dir: options.outputDir, base: item.path});
 
         if (item.children) {
-            _.each(item.children, child => compile(child));
+            _.each(item.children, function(child) {
+                compile(child)
+            });
         }
 
         writefile(outputPath, page(
