@@ -1,5 +1,7 @@
 @import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/variables";
 
+$screen-sm: 768px;
+
 /*
 Add transition to containers so they can push in and out.
 */
@@ -106,7 +108,7 @@ small screens.
 /*
 Hides the menu at `48em`, but modify this based on your app's needs.
 */
-@media (min-width: 48em) {
+@media (min-width: $screen-sm) {
 
     #cl-layout {
         padding-left: 150px; /* left col width "#cl-menu" */
@@ -127,7 +129,7 @@ Hides the menu at `48em`, but modify this based on your app's needs.
     }
 }
 
-@media (max-width: 48em) {
+@media (max-width: $screen-sm) {
     /* Only apply this when the window is small. Otherwise, the following
     case results in extra padding on the left:
         * Make the window small.
