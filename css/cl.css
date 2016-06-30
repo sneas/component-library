@@ -5184,6 +5184,15 @@ small screens.
     .cl-node-temaplate-code .cl-node-template-code-content[cl-visible] {
       display: block; }
 
+.cl-node-header .cl-node-header-link {
+  margin-left: 0.5em;
+  color: inherit !important;
+  font-weight: normal !important;
+  visibility: hidden; }
+
+.cl-node-header:hover .cl-node-header-link {
+  visibility: visible; }
+
 .cl-palette {
   padding: 0;
   list-style: none;
