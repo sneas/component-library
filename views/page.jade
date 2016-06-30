@@ -22,7 +22,6 @@ html(lang="en")
       div#cl-main
         .cl-content
           +tree(current, 1)
-    script(src=baseUrl + 'vendor.js')
     script(src=baseUrl + 'js/cl.js')
     each jsFile in js
       script(src=jsFile)

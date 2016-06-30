@@ -9,9 +9,9 @@ mixin tree(element, depth)
     else
       .cl-node-template-preview
         !=templateRender(element.path)
-      .cl.cl-node-temaplate-code.js-template-code
-        button.btn.btn-default.btn-xs.js-template-code-toggle
+      .cl.cl-node-temaplate-code.cl-js-template-code
+        button.btn.btn-default.btn-xs.cl-js-template-code-toggle
           i.cl-fa.cl-fa-code
-        pre.cl-node-template-code-content.js-template-code-content
+        pre.cl-node-template-code-content.cl-js-template-code-content
           code.html
             =templateRender(element.path)

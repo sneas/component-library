@@ -5184,7 +5184,7 @@ Hides the menu at `48em`, but modify this based on your app's needs.
   .cl-node-temaplate-code .cl-node-template-code-content {
     margin-top: 10px;
     display: none; }
-    .cl-node-temaplate-code .cl-node-template-code-content.active {
+    .cl-node-temaplate-code .cl-node-template-code-content[cl-visible] {
       display: block; }
 
 .cl-palette {

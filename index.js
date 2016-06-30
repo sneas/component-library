@@ -79,13 +79,6 @@ module.exports = function(options) {
             }
         });
 
-    //Generate vendors
-    gulp.src([
-            __dirname + '/node_modules/jquery/dist/jquery.js'
-        ])
-        .pipe(concat('vendor.js'))
-        .pipe(gulp.dest(options.outputDir));
-
     //Copy assets
     gulp.src([
             __dirname + '/assets/**/*'
