@@ -34,10 +34,20 @@
         toggleClass(menuLink, active);
     };
 
-}(this, this.document));
+}(window, document));
 
-jQuery(function($) {
-    $('.js-template-code-toggle').click(function() {
-        $(this).parents('.js-template-code:first').find('.js-template-code-content').toggleClass('active');
+(function(document) {
+    document.addEventListener("DOMContentLoaded", function() {
+        document.querySelectorAll('.cl-js-template-code').forEach(function(templateBlock) {
+            var templateCode = templateBlock.querySelector('.cl-js-template-code-content'),
+                activeAttribute = 'cl-visible';
+            templateBlock.querySelector('.cl-js-template-code-toggle').onclick = function() {
+                if (templateCode.hasAttribute(activeAttribute)) {
+                    templateCode.removeAttribute(activeAttribute);
+                } else {
+                    templateCode.setAttribute(activeAttribute, true);
+                }
+            }
+        });
     });
-});
+})(document);
