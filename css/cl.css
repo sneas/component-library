@@ -5135,7 +5135,7 @@ small screens.
 /*
 Hides the menu at `48em`, but modify this based on your app's needs.
 */
-@media (min-width: 48em) {
+@media (min-width: 768px) {
   #cl-layout {
     padding-left: 150px;
     /* left col width "#cl-menu" */
@@ -5149,7 +5149,7 @@ Hides the menu at `48em`, but modify this based on your app's needs.
   #cl-layout.active .cl-menu-link {
     left: 150px; } }
 
-@media (max-width: 48em) {
+@media (max-width: 768px) {
   /* Only apply this when the window is small. Otherwise, the following
     case results in extra padding on the left:
         * Make the window small.
