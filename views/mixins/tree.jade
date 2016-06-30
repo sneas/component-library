@@ -1,7 +1,10 @@
 mixin tree(element, depth)
   .cl-node(class='cl-node-level-' + depth + (element.children ? '' : ' cl-node-template'))
     .cl
-      div(class='h' + depth)=element.name
+      div.cl-node-header(class='h' + depth)
+        =element.name
+        a.cl-node-header-link(href=baseUrl + element.path)
+          i.cl-fa.cl-fa-paragraph
     if (element.children)
       .cl-node-subtree
         each child in element.children
