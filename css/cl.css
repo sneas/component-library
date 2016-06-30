@@ -5196,6 +5196,7 @@ Hides the menu at `48em`, but modify this based on your app's needs.
     @media (min-width: 992px) {
       .cl-palette li {
         display: inline-block;
+        vertical-align: top;
         width: 19%; } }
   .cl-palette h3 {
     color: #333;
@@ -5204,10 +5205,13 @@ Hides the menu at `48em`, but modify this based on your app's needs.
     margin: 20px 0 10px 0; }
   .cl-palette .color {
     height: 120px;
-    border-radius: 5px 5px 0 0;
     padding-top: 1.5em; }
-    .cl-palette .color:last-child {
-      border-radius: 0 0 5px 5px; }
+    .cl-palette .color:first-of-type {
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px; }
+    .cl-palette .color:last-of-type {
+      border-bottom-right-radius: 5px;
+      border-bottom-left-radius: 5px; }
 
 .cl-icon-list {
   padding: 0;
