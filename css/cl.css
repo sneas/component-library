@@ -5132,9 +5132,6 @@ small screens.
   margin-top: 0.6em; }
 
 /* -- Responsive Styles (Media Queries) ------------------------------------- */
-/*
-Hides the menu at `48em`, but modify this based on your app's needs.
-*/
 @media (min-width: 768px) {
   #cl-layout {
     padding-left: 150px;
