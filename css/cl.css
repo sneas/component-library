@@ -5163,8 +5163,9 @@ small screens.
 .cl-menu-item > a, .cl-menu-item > span {
   display: block;
   padding: 0.2em 0 0.2em 0.2em; }
-  .cl-menu-item > a.active, .cl-menu-item > span.active {
-    font-weight: bold; }
+  .cl-menu-item > a[cl-selected], .cl-menu-item > span[cl-selected] {
+    font-weight: bold;
+    color: #fafafa !important; }
 
 .cl-menu-item-level-1 li {
   padding-left: 10px; }
