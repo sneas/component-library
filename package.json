@@ -1,6 +1,6 @@
 {
   "name": "component-library",
-  "version": "0.12.4",
+  "version": "0.13.0",
   "description": "An easy way to create HTML component library for your project.",
   "author": "Dima Snisarenko <snisarenkodima@gmail.com>",
   "license": "MIT",
