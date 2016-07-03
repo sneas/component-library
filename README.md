@@ -12,7 +12,7 @@ Features:
 * easy to install
 * easy to manage components
 * easy to integrate with project's build process
-* absence of conflicts with project's JS and CSS
+* absence of conflicts with your project's JS and CSS
 
 ## Installation
 
@@ -20,16 +20,17 @@ Features:
 npm install component-library
 ```
 
-## Demo
+## Integration with project
 
-```bash
-cd component-library
-npm start
-```
+### Components folder
 
-## Integration with build process
+Create an empty folder in your projects's file system and fill it with HTML files (components). One HTML file per one component.
 
-As a reference I've used Gulp but it's easy to add components library into any build process.
+See [demo/templates](demo/templates) as an example.
+
+### Add component library into your build process
+
+As a reference I've used Gulp but it's easy to add components library into any build system. All you need is to require component library, point it to your newly created components folder and give it links to your projects's CSS and JS files.
 
 ```javascript
 var gulp = require('gulp'),
