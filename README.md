@@ -22,13 +22,13 @@ npm install component-library
 
 ## Integration with project
 
-### Components folder
+### List of components
 
 Create an empty folder in your projects's file system and fill it with HTML files (components). One HTML file per one component.
 
 See [demo/templates](demo/templates) as an example.
 
-### Add component library into your build process
+### Integration with build process
 
 As a reference I've used Gulp but it's easy to add components library into any build system. All you need is to require component library, point it to your newly created components folder and give it links to your projects's CSS and JS files.
 
