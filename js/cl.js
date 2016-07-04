@@ -65,8 +65,7 @@
             visibleUrl,
             previous = urlNodes[0],
             inactiveSelectedLink,
-            activeUnselectedLink,
-            activeUnselectedLinkTop;
+            activeUnselectedLink;
 
         Array.prototype.some.call(urlNodes, function(node) {
             var top = node.getBoundingClientRect().top;
@@ -93,10 +92,6 @@
         activeUnselectedLink = document.querySelector('.cl-menu-item a[href="' + visibleUrl + '"]:not([cl-selected])');
         if (activeUnselectedLink) {
             activeUnselectedLink.setAttribute('cl-selected', true);
-            activeUnselectedLinkTop = activeUnselectedLink.getBoundingClientRect().top;
-            if (activeUnselectedLinkTop < 0 || activeUnselectedLinkTop > screenHeight) {
-                activeUnselectedLink.scrollIntoView({block: "end", behavior: "smooth"});
-            }
         }
     }
 })(window, document);
