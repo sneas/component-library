@@ -61,14 +61,16 @@
     scroll();
 
     function scroll() {
-        var visibleUrl,
+        var screenHeight = window.screen.height,
+            visibleUrl,
             previous = urlNodes[0],
             inactiveSelectedLink,
-            activeUnselectedLink;
+            activeUnselectedLink,
+            activeUnselectedLinkTop;
 
         Array.prototype.some.call(urlNodes, function(node) {
             var top = node.getBoundingClientRect().top;
-            if (top > 0 && top < window.screen.height) {
+            if (top > 0 && top < screenHeight) {
                 visibleUrl = node.getAttribute('cl-url');
                 return true;
             } else if (top > 0) {
@@ -91,8 +93,10 @@
         activeUnselectedLink = document.querySelector('.cl-menu-item a[href="' + visibleUrl + '"]:not([cl-selected])');
         if (activeUnselectedLink) {
             activeUnselectedLink.setAttribute('cl-selected', true);
-            activeUnselectedLink.focus();
-            activeUnselectedLink.blur();
+            activeUnselectedLinkTop = activeUnselectedLink.getBoundingClientRect().top;
+            if (activeUnselectedLinkTop < 0 || activeUnselectedLinkTop > screenHeight) {
+                activeUnselectedLink.scrollIntoView({block: "end", behavior: "smooth"});
+            }
         }
     }
 })(window, document);
