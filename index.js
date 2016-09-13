@@ -14,10 +14,13 @@ module.exports = function(options) {
         outputDir: '',
         baseUrl: '/',
         title: 'Component Library',
-        favicon: __dirname + '/views/favicon.html',
         js: [],
         css: []
     });
+    
+    if (options.favicon === undefined) {
+        options.favicon = options.baseUrl + 'favicons/favicon-32x32.png';
+    }
 
     var patternsTree = dirTree(options.templatesDir),
         pageFilePath = path.format({dir: __dirname, base: 'views/page.jade'}),
@@ -60,7 +63,7 @@ module.exports = function(options) {
                 title: options.title,
                 js: options.js,
                 css: options.css,
-                favicon: fs.readFileSync(options.favicon),
+                favicon: options.favicon,
                 templateRender: function (templatePath) {
                     return fs.readFileSync(path.format({dir: options.templatesDir, base: templatePath}));
                 }
