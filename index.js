@@ -19,7 +19,11 @@ module.exports = function(options) {
     });
     
     if (options.favicon === undefined) {
-        options.favicon = options.baseUrl + 'favicons/favicon-32x32.png';
+        options.favicon = {
+            href: options.baseUrl + 'favicons/favicon-32x32.png',
+            rel: 'icon',
+            type: 'image/component-library/favicons/png'
+        };
     }
 
     var patternsTree = dirTree(options.templatesDir),

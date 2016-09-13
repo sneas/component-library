@@ -6,7 +6,7 @@ html(lang="en")
   head
     meta(charset="utf-8")
     title= title
-    link(href=favicon, rel='icon', type='image/component-library/favicons/png')
+    link(href=favicon.href, rel=favicon.rel, type=favicon.type)
     each cssFile in css
       link(href=cssFile, rel='stylesheet')
     link(href=baseUrl + 'css/cl.css', rel='stylesheet')
