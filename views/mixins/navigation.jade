@@ -1,10 +1,10 @@
-mixin itemLink(element)
-  a(href=baseUrl + element.path, class=element.path === current.path ? 'active' : undefined)
+mixin itemLink(element, depth)
+  a(href=baseUrl + '#' + baseUrl + element.path, cl-href=baseUrl + element.path, class=(element.path === current.path && depth > 0) ? 'cl-active' : undefined)
     = element.name
 
 mixin navigation(element, depth)
   li(class='cl-menu-item cl-menu-item-level-' + depth)
-    +itemLink(element)
+    +itemLink(element, depth)
     if element.children
       ul.list-unstyled
         each child in element.children

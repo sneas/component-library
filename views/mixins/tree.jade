@@ -3,7 +3,7 @@ mixin tree(element, depth)
     .cl
       div.cl-node-header(class='h' + depth, cl-url=baseUrl + element.path)
         =element.name
-        a.cl-node-header-link(href=baseUrl + element.path)
+        a.cl-node-header-link(href=baseUrl + element.path, name=baseUrl + element.path)
           i.cl-fa.cl-fa-paragraph
     if (element.children)
       .cl-node-subtree
