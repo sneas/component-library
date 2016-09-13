@@ -5,17 +5,25 @@ $color-border-radius: 5px !default;
 .cl-palette {
     @extend .cl;
 
+    $media-screen-padding: 5px;
+
     padding: 0;
     list-style: none;
     text-align: center;
 
+    @media (min-width: $screen-md-min) {
+        margin-left: -$media-screen-padding;
+        margin-right: -$media-screen-padding;
+        li {
+            display: table-cell;
+            vertical-align: top;
+            width: 1%;
+            padding: 0 $media-screen-padding;
+        }
+    }
+
     li {
         color: #fff;
-        @media (min-width: $screen-md-min) {
-            display: inline-block;
-            vertical-align: top;
-            width: 19%;
-        }
     }
 
     h3 {

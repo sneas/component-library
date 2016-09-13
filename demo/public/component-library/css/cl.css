@@ -5198,13 +5198,17 @@ small screens.
   padding: 0;
   list-style: none;
   text-align: center; }
+  @media (min-width: 992px) {
+    .cl-palette {
+      margin-left: -5px;
+      margin-right: -5px; }
+      .cl-palette li {
+        display: table-cell;
+        vertical-align: top;
+        width: 1%;
+        padding: 0 5px; } }
   .cl-palette li {
     color: #fff; }
-    @media (min-width: 992px) {
-      .cl-palette li {
-        display: inline-block;
-        vertical-align: top;
-        width: 19%; } }
   .cl-palette h3 {
     color: #333;
     font-size: 14px;
