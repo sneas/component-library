@@ -1,5 +1,5 @@
 mixin itemLink(element, depth)
-  a(href=baseUrl + '#' + baseUrl + element.path, cl-href=baseUrl + element.path, class=(element.path === current.path && depth > 0) ? 'cl-active' : undefined)
+  a(href=baseUrl + 'index.html#' + baseUrl + element.path, cl-href=baseUrl + element.path, class=(element.path === current.path && depth > 0) ? 'cl-active' : undefined)
     = element.name
 
 mixin navigation(element, depth)
