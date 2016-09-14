@@ -41,7 +41,7 @@ gulp.task('cl', function() {
         templatesDir: '/project/templates/dir',
         outputDir: '/project/component-library/public',
         baseUrl: '/component-library/',
-        favicon: favicon: {
+        favicon: {
             href: '/project/favicon.ico',
             rel: 'shortcut icon',
             type: 'image/x-icon'
