@@ -15,9 +15,16 @@ html(lang="en")
       a#cl-menuLink.cl.cl-menu-link(href="#menu")
         i.cl-fa.cl-fa-bars
       div#cl-menu
+
+        div.form-group
+          div.input-group
+            div.input-group-addon
+              i.cl-fa.cl-fa-search
+            input.form-control(type='text', id='cl-search')
+
         .cl-navigation
           .cl.cl-menu
-            ul.list-unstyled
+            ul#cl-navigation-list.list-unstyled
               +navigation(tree, 0)
       div#cl-main
         .cl-content
