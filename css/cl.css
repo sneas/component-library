@@ -5170,6 +5170,9 @@ small screens.
 .cl-menu-item-level-1 li {
   padding-left: 10px; }
 
+.cl-menu [cl-hidden] {
+  display: none; }
+
 .cl-node-level-1 .cl-node-subtree {
   padding: 10px;
   border-top: 1px dotted #eaeaea;
