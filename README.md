@@ -1,4 +1,4 @@
-An easy way to create HTML component library for your project.
+An easy way to create HTML styleguide for your project.
 
 Demo: http://sneas.github.io/component-library/index.html
 
@@ -10,8 +10,8 @@ Component library has been created as a special place to store and manage all th
 
 Features:
 * easy to install
-* easy to manage components
-* easy to integrate existing project
+* easy to manage
+* easy to integrate with existing project
 * absence of conflicts with existing project's JS and CSS
 
 ## Installation
