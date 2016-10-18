@@ -16,6 +16,7 @@
   "dependencies": {
     "bootstrap-sass": "^3.3.6",
     "directory-tree": "^1.0.0",
+    "find-node-modules": "1.0.4",
     "font-awesome": "^4.6.3",
     "gulp": "^3.9.1",
     "gulp-clean": "^0.3.2",

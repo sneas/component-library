@@ -6,7 +6,7 @@ var _ = require('lodash'),
     writefile = require('writefile'),
     sass = require('node-sass'),
     gulp = require('gulp'),
-    concat = require('gulp-concat');
+    findNodeModules = require('find-node-modules');
 
 module.exports = function(options) {
     _.defaults(options, {
@@ -77,14 +77,15 @@ module.exports = function(options) {
 
     //Compile SASS
     sass.render({
-            file: path.format({dir: __dirname, base: 'sass/cl.scss'})
-        }, function (err, result) {
-            if (err) {
-                console.log(err);
-            } else {
-                writefile(path.format({dir: options.outputDir, base: 'css/cl.css'}), result.css);
-            }
-        });
+        includePaths: findNodeModules({cwd: './bootstrap-sass', relative: false}),
+        file: path.format({dir: __dirname, base: 'sass/cl.scss'})
+    }, function (err, result) {
+        if (err) {
+            console.log(err);
+        } else {
+            writefile(path.format({dir: options.outputDir, base: 'css/cl.css'}), result.css);
+        }
+    });
 
     //Copy assets
     gulp.src([
