@@ -1,8 +1,8 @@
 @charset "UTF-8";
 .cl, .cl-palette {
   /*!
- * Bootstrap v3.3.6 (http://getbootstrap.com)
- * Copyright 2011-2015 Twitter, Inc.
+ * Bootstrap v3.3.7 (http://getbootstrap.com)
+ * Copyright 2011-2016 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
   /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
@@ -772,7 +772,6 @@
       color: #23527c;
       text-decoration: underline; }
     .cl a:focus, .cl-palette a:focus {
-      outline: thin dotted;
       outline: 5px auto -webkit-focus-ring-color;
       outline-offset: -2px; }
   .cl figure, .cl-palette figure {
@@ -1825,7 +1824,6 @@
   .cl input[type="file"]:focus, .cl-palette input[type="file"]:focus,
   .cl input[type="radio"]:focus, .cl-palette input[type="radio"]:focus,
   .cl input[type="checkbox"]:focus, .cl-palette input[type="checkbox"]:focus {
-    outline: thin dotted;
     outline: 5px auto -webkit-focus-ring-color;
     outline-offset: -2px; }
   .cl output, .cl-palette output {
@@ -2250,7 +2248,6 @@
     -ms-user-select: none;
     user-select: none; }
     .cl .btn:focus, .cl-palette .btn:focus, .cl .btn.focus, .cl-palette .btn.focus, .cl .btn:active:focus, .cl-palette .btn:active:focus, .cl .btn:active.focus, .cl-palette .btn:active.focus, .cl .btn.active:focus, .cl-palette .btn.active:focus, .cl .btn.active.focus, .cl-palette .btn.active.focus {
-      outline: thin dotted;
       outline: 5px auto -webkit-focus-ring-color;
       outline-offset: -2px; }
     .cl .btn:hover, .cl-palette .btn:hover, .cl .btn:focus, .cl-palette .btn:focus, .cl .btn.focus, .cl-palette .btn.focus {
