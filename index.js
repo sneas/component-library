@@ -6,7 +6,7 @@ var _ = require('lodash'),
     writefile = require('writefile'),
     sass = require('node-sass'),
     gulp = require('gulp'),
-    findNodeModules = require('find-node-modules');
+    eyeglass = require("eyeglass");
 
 module.exports = function(options) {
     _.defaults(options, {
@@ -77,7 +77,9 @@ module.exports = function(options) {
 
     //Compile SASS
     sass.render({
-        includePaths: findNodeModules({cwd: './bootstrap-sass', relative: false}),
+        includePaths: [
+            require('bootstrap-sass/eyeglass-exports')(eyeglass, sass).sassDir
+        ],
         file: path.format({dir: __dirname, base: 'sass/cl.scss'})
     }, function (err, result) {
         if (err) {

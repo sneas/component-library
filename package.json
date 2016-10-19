@@ -14,7 +14,7 @@
     "styleguide"
   ],
   "dependencies": {
-    "bootstrap-sass": "^3.3.6",
+    "bootstrap-sass": "^3.3.7",
     "directory-tree": "^1.0.0",
     "find-node-modules": "1.0.4",
     "font-awesome": "^4.6.3",
