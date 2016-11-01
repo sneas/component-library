@@ -5239,15 +5239,15 @@ small screens.
     margin-bottom: 5px; }
 
 /*!
- *  Font Awesome 4.6.3 by @davegandy - http://fontawesome.io - @fontawesome
+ *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
  */
 /* FONT PATH
  * -------------------------- */
 @font-face {
   font-family: 'FontAwesome';
-  src: url("../fonts/fontawesome-webfont.eot?v=4.6.3");
-  src: url("../fonts/fontawesome-webfont.eot?#iefix&v=4.6.3") format("embedded-opentype"), url("../fonts/fontawesome-webfont.woff2?v=4.6.3") format("woff2"), url("../fonts/fontawesome-webfont.woff?v=4.6.3") format("woff"), url("../fonts/fontawesome-webfont.ttf?v=4.6.3") format("truetype"), url("../fonts/fontawesome-webfont.svg?v=4.6.3#fontawesomeregular") format("svg");
+  src: url("../fonts/fontawesome-webfont.eot?v=4.7.0");
+  src: url("../fonts/fontawesome-webfont.eot?#iefix&v=4.7.0") format("embedded-opentype"), url("../fonts/fontawesome-webfont.woff2?v=4.7.0") format("woff2"), url("../fonts/fontawesome-webfont.woff?v=4.7.0") format("woff"), url("../fonts/fontawesome-webfont.ttf?v=4.7.0") format("truetype"), url("../fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular") format("svg");
   font-weight: normal;
   font-style: normal; }
 
@@ -7065,6 +7065,7 @@ small screens.
   content: ""; }
 
 .cl-fa-battery-4:before,
+.cl-fa-battery:before,
 .cl-fa-battery-full:before {
   content: ""; }
 
@@ -7410,6 +7411,143 @@ small screens.
 .cl-fa-fa:before,
 .cl-fa-font-awesome:before {
   content: ""; }
+
+.cl-fa-handshake-o:before {
+  content: ""; }
+
+.cl-fa-envelope-open:before {
+  content: ""; }
+
+.cl-fa-envelope-open-o:before {
+  content: ""; }
+
+.cl-fa-linode:before {
+  content: ""; }
+
+.cl-fa-address-book:before {
+  content: ""; }
+
+.cl-fa-address-book-o:before {
+  content: ""; }
+
+.cl-fa-vcard:before,
+.cl-fa-address-card:before {
+  content: ""; }
+
+.cl-fa-vcard-o:before,
+.cl-fa-address-card-o:before {
+  content: ""; }
+
+.cl-fa-user-circle:before {
+  content: ""; }
+
+.cl-fa-user-circle-o:before {
+  content: ""; }
+
+.cl-fa-user-o:before {
+  content: ""; }
+
+.cl-fa-id-badge:before {
+  content: ""; }
+
+.cl-fa-drivers-license:before,
+.cl-fa-id-card:before {
+  content: ""; }
+
+.cl-fa-drivers-license-o:before,
+.cl-fa-id-card-o:before {
+  content: ""; }
+
+.cl-fa-quora:before {
+  content: ""; }
+
+.cl-fa-free-code-camp:before {
+  content: ""; }
+
+.cl-fa-telegram:before {
+  content: ""; }
+
+.cl-fa-thermometer-4:before,
+.cl-fa-thermometer:before,
+.cl-fa-thermometer-full:before {
+  content: ""; }
+
+.cl-fa-thermometer-3:before,
+.cl-fa-thermometer-three-quarters:before {
+  content: ""; }
+
+.cl-fa-thermometer-2:before,
+.cl-fa-thermometer-half:before {
+  content: ""; }
+
+.cl-fa-thermometer-1:before,
+.cl-fa-thermometer-quarter:before {
+  content: ""; }
+
+.cl-fa-thermometer-0:before,
+.cl-fa-thermometer-empty:before {
+  content: ""; }
+
+.cl-fa-shower:before {
+  content: ""; }
+
+.cl-fa-bathtub:before,
+.cl-fa-s15:before,
+.cl-fa-bath:before {
+  content: ""; }
+
+.cl-fa-podcast:before {
+  content: ""; }
+
+.cl-fa-window-maximize:before {
+  content: ""; }
+
+.cl-fa-window-minimize:before {
+  content: ""; }
+
+.cl-fa-window-restore:before {
+  content: ""; }
+
+.cl-fa-times-rectangle:before,
+.cl-fa-window-close:before {
+  content: ""; }
+
+.cl-fa-times-rectangle-o:before,
+.cl-fa-window-close-o:before {
+  content: ""; }
+
+.cl-fa-bandcamp:before {
+  content: ""; }
+
+.cl-fa-grav:before {
+  content: ""; }
+
+.cl-fa-etsy:before {
+  content: ""; }
+
+.cl-fa-imdb:before {
+  content: ""; }
+
+.cl-fa-ravelry:before {
+  content: ""; }
+
+.cl-fa-eercast:before {
+  content: ""; }
+
+.cl-fa-microchip:before {
+  content: ""; }
+
+.cl-fa-snowflake-o:before {
+  content: ""; }
+
+.cl-fa-superpowers:before {
+  content: ""; }
+
+.cl-fa-wpexplorer:before {
+  content: ""; }
+
+.cl-fa-meetup:before {
+  content: ""; }
 
 .sr-only {
   position: absolute;
