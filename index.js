@@ -4,9 +4,8 @@ var _ = require('lodash'),
     dirTree = require('directory-tree'),
     path = require('path'),
     writefile = require('writefile'),
-    sass = require('node-sass'),
-    gulp = require('gulp'),
-    eyeglass = require("eyeglass");
+    sass = require('npm-sass'),
+    gulp = require('gulp');
 
 module.exports = function(options) {
     _.defaults(options, {
@@ -76,12 +75,7 @@ module.exports = function(options) {
     }(patternsTree));
 
     //Compile SASS
-    sass.render({
-        includePaths: [
-            require('bootstrap-sass/eyeglass-exports')(eyeglass, sass).sassDir
-        ],
-        file: path.format({dir: __dirname, base: 'sass/cl.scss'})
-    }, function (err, result) {
+    sass(path.format({dir: __dirname, base: 'sass/cl.scss'}), function (err, result) {
         if (err) {
             console.log(err);
         } else {
