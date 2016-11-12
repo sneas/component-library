@@ -26,7 +26,7 @@ module.exports = function(options) {
     }
 
     var patternsTree = dirTree(options.templatesDir),
-        pageFilePath = path.format({dir: __dirname, base: 'views/page.jade'}),
+        pageFilePath = path.resolve(__dirname, 'views/page.jade'),
         page = jade.compile(fs.readFileSync(pageFilePath), {
             filename: pageFilePath,
             pretty: true
@@ -50,7 +50,7 @@ module.exports = function(options) {
     patternsTree.name = 'Overview';
 
     (function compile(item) {
-        var outputPath = path.format({dir: options.outputDir, base: item.path});
+        var outputPath = path.resolve(options.outputDir, item.path);
 
         if (item.children) {
             _.each(item.children, function(child) {
@@ -75,7 +75,7 @@ module.exports = function(options) {
     }(patternsTree));
 
     //Compile SASS
-    sass(path.format({dir: __dirname, base: 'sass/cl.scss'}), function (err, result) {
+    sass(path.resolve(__dirname, 'sass/cl.scss'), function (err, result) {
         if (err) {
             console.log(err);
         } else {
@@ -85,11 +85,11 @@ module.exports = function(options) {
 
     //Copy assets
     gulp.src([
-            __dirname + '/assets/**/*'
+            path.resolve(__dirname, 'assets/**/*')
         ])
         .pipe(gulp.dest(options.outputDir));
 
     //Fonts
-    gulp.src(__dirname + '/node_modules/font-awesome/fonts/**')
-        .pipe(gulp.dest(path.format({dir: options.outputDir, base: 'fonts'})))
+    gulp.src(path.resolve(require('node-modules-resolve')('font-awesome'), 'fonts/**'))
+        .pipe(gulp.dest(path.resolve(options.outputDir, 'fonts')))
 };
