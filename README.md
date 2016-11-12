@@ -1,4 +1,4 @@
-An easy way to create HTML styleguide for your project.
+An easy way to create HTML styleguide for a web project.
 
 Demo: http://sneas.github.io/component-library/index.html
 
@@ -6,6 +6,7 @@ Demo: http://sneas.github.io/component-library/index.html
 
 Most of web projects consist of components. It could be simple basic components like texts, icons, buttons or form inputs. Or complex components like video player, sophisticated inputs (i.e. typeahead), menus, popovers, etc.
 Any large project reaches a point when it's hard to remember and control all the pages and their components.
+
 Component library is a special place to store and manage all the HTML components of a web site in one place.
 
 Features:
