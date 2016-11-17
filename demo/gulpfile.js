@@ -2,7 +2,7 @@ var gulp = require('gulp'),
     path = require('path'),
     clean = require('gulp-clean'),
     //componentLibrary = require('component-library')
-    componentLibrary = require('../index.js');
+    componentLibrary = require('../dist/index.js');
 
 var publicDir = path.format({dir: __dirname, base: 'public/component-library'});
 
