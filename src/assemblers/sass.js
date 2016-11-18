@@ -1,5 +1,4 @@
 import sass from 'npm-sass';
-import path from 'path';
 import writefile from 'writefile';
 
 export default function(input, output) {
