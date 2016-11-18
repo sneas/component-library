@@ -1,6 +1,6 @@
+<!DOCTYPE html>
 {% from 'macro/navigation.njk' import navigation %}
 {% from 'macro/element-tree.njk' import elementTree %}
-<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
@@ -37,7 +37,7 @@
             </div>
         </div>
     </div>
-    <script src="{{ baseUrl + 'js/cl.js' }}"></script>
+    <script src="{{ baseUrl + 'assets/js/cl.js' }}"></script>
     {% for jsFile in js %}
         <script src="{{ jsFile }}"></script>
     {% endfor %}

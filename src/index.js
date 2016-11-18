@@ -1,8 +1,9 @@
 import _ from 'lodash';
-import htmlAssembler from './assemblers/html.js';
-import sassAssembler from './assemblers/sass.js';
-import iconsAssembler from './assemblers/icons.js';
-import assetsAssembler from './assemblers/assets.js';
+import assembleHtml from './assemblers/html.js';
+import assembleSass from './assemblers/sass.js';
+import assembleAssets from './assemblers/assets.js';
+import path from 'path';
+import nmResolve from 'node-modules-resolve';
 
 module.exports = function(options) {
     _.defaults(options, {
@@ -13,15 +14,14 @@ module.exports = function(options) {
         js: [],
         css: [],
         favicon: {
-            href: options.baseUrl + 'favicons/favicon-32x32.png',
+            href: options.baseUrl + 'assets/favicons/favicon-32x32.png',
             rel: 'icon',
             type: 'image/component-library/favicons/png'
         }
     });
 
-
-    htmlAssembler(options);
-    sassAssembler(options);
-    iconsAssembler(options);
-    assetsAssembler(options);
+    assembleHtml(options);
+    assembleSass(path.resolve(__dirname, '../sass/cl.scss'), path.resolve(options.outputDir, 'css/cl.css'));
+    assembleAssets(path.resolve(__dirname, '../assets'), path.resolve(options.outputDir, 'assets'));
+    assembleAssets(path.resolve(nmResolve('font-awesome'), 'fonts'), path.resolve(options.outputDir, 'fonts'));
 };
