@@ -19,7 +19,7 @@
     "posttest": "rimraf **/_tmp",
     "start": "ws -d ./demo/public -c",
     "prebuild": "rimraf dist",
-    "build": "babel --out-dir dist --ignore *.test.js src --copy-files",
+    "build": "babel --out-dir dist --ignore __tests__,*.test.js src --copy-files",
     "precompile": "npm run build",
     "compile": "gulp --gulpfile demo/gulpfile.js compile",
     "compile:watch": "watch 'npm run compile' ./src"
