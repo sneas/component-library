@@ -44,8 +44,9 @@ function compileTree(item, outputDir, tree, options = {}) {
                         reject(err);
                     }
 
-                    writefile(outputPath, res);
-                    resolve();
+                    writefile(outputPath, res, function() {
+                        resolve();
+                    });
                 }
             );
         })

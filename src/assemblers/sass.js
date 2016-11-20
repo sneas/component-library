@@ -7,8 +7,9 @@ export default function(input, output) {
             if (err) {
                 reject(err);
             } else {
-                writefile(output, result.css);
-                resolve();
+                writefile(output, result.css, function() {
+                    resolve();
+                });
             }
         })
     });

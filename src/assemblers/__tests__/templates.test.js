@@ -17,19 +17,12 @@ describe('templates assembler', function() {
             const overviewFile = path.join(outputDir, 'index.html');
             expect(outputDir).to.be.directory('Output templates dir has been created');
             expect(overviewFile).to.be.file('Overview file has been generated');
-            fs.readFile(overviewFile, 'utf8', function(err, data) {
-                if (err) {
-                    return done(err);
-                }
 
-                const $ = cheerio.load(data, {
-                    normalizeWhitespace: true
-                });
-
-                expect($('.cl-node-header.h1').text().trim()).to.be.equal('Overview');
-
-                done();
+            const $ = cheerio.load(fs.readFileSync(overviewFile, 'utf8'), {
+                normalizeWhitespace: true
             });
+            expect($('.cl-node-header.h1').text().trim()).to.be.equal('Overview');
+            done();
         });
     });
 });
