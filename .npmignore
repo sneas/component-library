@@ -1,3 +1,5 @@
+/.idea
+/.gitattributes
 /demo
 /src
 __tests__

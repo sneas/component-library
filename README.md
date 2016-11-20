@@ -2,6 +2,12 @@ An easy way to create HTML styleguide for a web project.
 
 Demo: http://sneas.github.io/component-library/index.html
 
+[![travis build](https://img.shields.io/travis/sneas/component-library.svg?style=flat-square&maxAge=2592000)](https://travis-ci.org/sneas/component-library)
+[![version](https://img.shields.io/npm/v/component-library.svg?style=flat-square)](http://npm.im/component-library)
+[![MIT License](https://img.shields.io/npm/l/component-library.svg?style=flat-square)](http://opensource.org/licenses/MIT)
+[![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg?style=flat-square)](https://github.com/semantic-release/semantic-release)
+
+
 ## Motivation
 
 Most of web projects consist of components. It could be simple basic components like texts, icons, buttons or form inputs. Or complex components like video player, sophisticated inputs (i.e. typeahead), menus, popovers, etc.
