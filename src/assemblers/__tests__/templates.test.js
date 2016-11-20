@@ -8,8 +8,6 @@ import fs from 'fs';
 chai.use(chaiFs);
 
 describe('templates assembler', function() {
-    this.timeout(15000);
-
     it('should successfully assemble templates', function(done) {
         const inputDir = path.join(__dirname, 'templates/input');
         const outputDir = path.join(__dirname, 'templates/_tmp/output');

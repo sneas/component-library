@@ -6,8 +6,6 @@ import path from 'path';
 chai.use(chaiFs);
 
 describe('assets assembler', function() {
-    this.timeout(15000);
-
     it('should assemble assets', function(done) {
         const outputDir = path.join(__dirname, 'assets/_tmp/asserts');
         assembleAssets(path.join(__dirname, 'assets/input'),
