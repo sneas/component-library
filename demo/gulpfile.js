@@ -2,9 +2,9 @@ var gulp = require('gulp'),
     path = require('path'),
     clean = require('gulp-clean'),
     //componentLibrary = require('component-library')
-    componentLibrary = require('../index.js');
+    componentLibrary = require('../dist/index.js');
 
-var publicDir = path.format({dir: __dirname, base: 'public/component-library'});
+var publicDir = path.join(__dirname, 'public/component-library');
 
 gulp.task('clean', function() {
     return gulp.src(publicDir, {read: false})
@@ -18,10 +18,9 @@ gulp.task('assets', ['clean'], function() {
     .pipe(gulp.dest(publicDir));
 });
 
-gulp.task('compile', ['assets'], function() {
-    componentLibrary({
-        templatesDir: path.format({dir: __dirname, base: 'templates'}),
-        outputDir: publicDir,
+gulp.task('compile', ['assets'], function(cb) {
+    var templatesDir = path.join(__dirname, 'templates');
+    componentLibrary(templatesDir, publicDir, {
         baseUrl: '/component-library/',
         js: [
             'https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js',
@@ -34,6 +33,10 @@ gulp.task('compile', ['assets'], function() {
             'https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css',
             '/component-library/project.css'
         ]
+    }).then(function() {
+        cb();
+    }).catch(function(err) {
+        cb(err);
     });
 });
 

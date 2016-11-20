@@ -37,24 +37,30 @@ As a reference I've used Gulp but it's easy to add components library into any b
 var gulp = require('gulp'),
     componentLibrary = require('component-library');
 
-gulp.task('cl', function() {
-    componentLibrary({
-        templatesDir: '/project/templates/dir',
-        outputDir: '/project/component-library/public',
-        baseUrl: '/component-library/',
-        favicon: {
-            href: '/project/favicon.ico',
-            rel: 'shortcut icon',
-            type: 'image/x-icon'
-        },
-        js: [
-            //List of your project's JS files goes here
-            '/project/js/file.js'
-        ],
-        css: [
-            //List of your project's CSS files goes here
-            '/project/css/file.css'
-        ]
+gulp.task('cl', function(cb) {
+    componentLibrary(
+        '/project/templates/dir',
+        '/project/public/component-library',
+        {
+            baseUrl: '/component-library/',
+            favicon: {
+                href: '/project/favicon.ico',
+                rel: 'shortcut icon',
+                type: 'image/x-icon'
+            },
+            js: [
+                //List of your project's JS files goes here
+                '/project/js/file.js'
+            ],
+            css: [
+                //List of your project's CSS files goes here
+                '/project/css/file.css'
+            ]
+        }
+    ).then(function() {
+        cb();
+    }).catch(function(er) {
+        cb(er);
     });
 });
 

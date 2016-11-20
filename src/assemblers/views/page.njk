@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+{% from 'macro/navigation.njk' import navigation %}
+{% from 'macro/element-tree.njk' import elementTree %}
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>{{ title }}</title>
+    <link href="{{ favicon.href }}" rel="{{ favicon.rel }}" type="{{ favicon.type }}">
+    {% for cssFile in css %}
+        <link href="{{ cssFile }}" rel="stylesheet">
+    {% endfor %}
+    <link href="{{ baseUrl + 'css/cl.css' }}" rel="stylesheet">
+</head>
+<body>
+    <div id="cl-layout">
+        <a href="#menu" id="cl-menuLink" class="cl cl-menu-link"><i class="cl-fa cl-fa-bars"></i></a>
+        <div id="cl-menu">
+            <div class="form-group">
+                <div class="input-group">
+                    <div class="input-group-addon">
+                        <i class="cl-fa cl-fa-search"></i>
+                    </div>
+                    <input type="text" id="cl-search" class="form-control input-sm"/>
+                </div>
+            </div>
+            <div class="cl-navigation">
+                <div class="cl cl-menu">
+                    <ul id="cl-navigation-list" class="list-unstyled">
+                        {{ navigation(tree, 0, baseUrl, current) }}
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="cl-main">
+            <div class="cl-content">
+                {{ elementTree(current, 1, baseUrl) }}
+            </div>
+        </div>
+    </div>
+    <script src="{{ baseUrl + 'assets/js/cl.js' }}"></script>
+    {% for jsFile in js %}
+        <script src="{{ jsFile }}"></script>
+    {% endfor %}
+</body>
+</html>
