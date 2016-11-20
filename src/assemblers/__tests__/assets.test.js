@@ -11,9 +11,9 @@ describe('assets assembler', function() {
         assembleAssets(path.join(__dirname, 'assets/input'),
             path.join(__dirname, 'assets/_tmp/asserts'))
             .then(function() {
-                expect(outputDir).to.be.directory();
-                expect(path.join(outputDir, 'test-asset.txt')).to.be.file();
-                expect(path.join(outputDir, 'folder/another-asset.txt')).to.be.file();
+                expect(outputDir).to.be.directory('Assets output directory has been created');
+                expect(path.join(outputDir, 'test-asset.txt')).to.be.file('Root file has been created');
+                expect(path.join(outputDir, 'folder/another-asset.txt')).to.be.file('Dir file has been created');
 
                 done();
             });

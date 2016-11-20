@@ -10,7 +10,7 @@ describe('sass assembler', function() {
         const output = path.resolve(__dirname, 'sass/_tmp/good.scss');
         assembleSass(path.resolve(__dirname, 'sass/input/good.scss'), output)
             .then(function() {
-                expect(output).to.be.file();
+                expect(output).to.be.file('Valid SCSS file has been compile');
                 done();
             });
     });
@@ -19,7 +19,7 @@ describe('sass assembler', function() {
         const output = path.resolve(__dirname, 'sass/_tmp/bad.scss');
         assembleSass(path.resolve(__dirname, 'sass/input/bad.scss'), output)
             .catch(function() {
-                expect(output).to.not.be.a.path();
+                expect(output).to.not.be.a.path('Erroneous SCSS file has not been compiled. Promise rejected');
                 done();
             });
     });

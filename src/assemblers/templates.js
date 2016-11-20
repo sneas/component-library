@@ -55,7 +55,7 @@ function compileTree(item, outputDir, tree, options = {}) {
 }
 
 export default function(inputDir, outputDir, options = {}) {
-    _.defaults(options, {
+    options = _.defaults({}, options, {
         baseUrl: '/',
         title: 'Component Library',
         js: [],
