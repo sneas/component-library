@@ -6,6 +6,8 @@ import path from 'path';
 chai.use(chaiFs);
 
 describe('sass assembler', function() {
+    this.timeout(15000);
+
     it('should successfully assemble sass', function(done) {
         const output = path.resolve(__dirname, 'sass/_tmp/good.scss');
         assembleSass(path.resolve(__dirname, 'sass/input/good.scss'), output)
