@@ -1,4 +1,5 @@
 /demo
 /src
 __tests__
+*.test.js
 /deploy-demo
