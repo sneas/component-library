@@ -1,12 +1,11 @@
 {
   "name": "component-library",
-  "version": "2.0.0",
   "description": "An easy way to create HTML styleguide for your project.",
   "author": "Dima Snisarenko <snisarenkodima@gmail.com>",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git://github.com/sneas/component-library.git"
+    "url": "https://github.com/sneas/component-library.git"
   },
   "keywords": [
     "ui",
@@ -15,6 +14,7 @@
   ],
   "main": "dist/index.js",
   "scripts": {
+    "commit": "git-cz",
     "test": "mocha src/**/*.test.js --compilers js:babel-register",
     "posttest": "rimraf **/_tmp",
     "prebuild": "rimraf dist",
@@ -22,7 +22,8 @@
     "precompile-demo": "npm run build",
     "compile-demo": "gulp --gulpfile demo/gulpfile.js compile",
     "predemo": "npm run compile-demo",
-    "demo": "ws -d ./demo/public -c"
+    "demo": "ws -d ./demo/public -c",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "dependencies": {
     "bootstrap-sass": "^3.3.7",
@@ -43,11 +44,23 @@
     "chai": "3.5.0",
     "chai-fs": "1.0.0",
     "cheerio": "0.22.0",
+    "commitizen": "2.8.6",
+    "cz-conventional-changelog": "1.2.0",
+    "ghooks": "1.3.2",
     "gulp-clean": "^0.3.2",
     "local-web-server": "^1.2.6",
     "mocha": "3.1.2",
     "rimraf": "2.5.4",
+    "semantic-release": "^6.3.2",
     "watch": "1.0.1"
+  },
+  "config": {
+    "ghooks": {
+      "pre-commit": "npm run test"
+    },
+    "commitizen": {
+      "path": "node_modules/cz-conventional-changelog"
+    }
   },
   "babel": {
     "presets": [
