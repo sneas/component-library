@@ -1,3 +1,4 @@
 #!/bin/bash
 
+npm run compile-demo
 git subtree push --prefix demo/public/component-library origin gh-pages

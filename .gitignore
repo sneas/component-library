@@ -1,4 +1,5 @@
 /.idea
+/demo/public/component-library
 /node_modules
 /.DS_Store
 /npm-debug.log
