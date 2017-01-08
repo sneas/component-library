@@ -41,5 +41,5 @@ gulp.task('compile', ['assets'], function(cb) {
 });
 
 gulp.task('watch', ['compile'], function() {
-    gulp.watch(['templates/**/*', 'assets/**/*', '../views/**/*', '../sass/**/*', '../assets/**/*'], ['compile']);
+    gulp.watch(['templates/**/*', 'assets/**/*', '../dist/assemblers/views/**/*', '../sass/**/*', '../assets/**/*'], ['compile']);
 });

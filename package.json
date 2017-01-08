@@ -19,6 +19,7 @@
     "posttest": "rimraf **/_tmp",
     "prebuild": "rimraf dist",
     "build": "babel --out-dir dist --ignore __tests__,*.test.js src --copy-files",
+    "build:watch": "watch 'npm run build' src sass",
     "precompile-demo": "npm run build",
     "compile-demo": "gulp --gulpfile demo/gulpfile.js compile",
     "predemo": "npm run compile-demo",
