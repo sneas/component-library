@@ -1,142 +1,23 @@
 @import "bootstrap-sass/assets/stylesheets/bootstrap/variables";
+@import "bootstrap-sass/assets/stylesheets/bootstrap/mixins/clearfix";
+@import "bootstrap-sass/assets/stylesheets/bootstrap/mixins/grid";
 
-/*
-Add transition to containers so they can push in and out.
-*/
-#cl-layout,
-#cl-menu,
-.cl-menu-link {
-    -webkit-transition: all 0.2s ease-out;
-    -moz-transition: all 0.2s ease-out;
-    -ms-transition: all 0.2s ease-out;
-    -o-transition: all 0.2s ease-out;
-    transition: all 0.2s ease-out;
+.cl-content-wrapper {
+    padding-top: $navbar-height;
 }
 
-/*
-This is the parent `<div>` that contains the menu and the content area.
-*/
-#cl-layout {
-    position: relative;
-    padding-left: 0;
-}
-#cl-layout.active #cl-menu {
-    left: 150px;
-    width: 150px;
-}
-
-#cl-layout.active .cl-menu-link {
-    left: 150px;
-}
-
-/*
-The `#cl-menu` `<div>` is the parent `<div>` that contains the `.pure-menu` that
-appears on the left side of the page.
-*/
-
-#cl-menu {
-    margin-left: -150px; /* "#cl-menu" width */
-    width: 150px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    z-index: 1000; /* so the menu or its navicon stays above all content */
-    background: #191818;
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
-    padding: 1em;
-}
-/*
-All anchors inside the menu should be styled like this.
-*/
-#cl-menu a {
-    color: #999;
-    border: none;
-}
-
-/*
-`.cl-menu-link` represents the responsive menu toggle that shows/hides on
-small screens.
-*/
-.cl-menu-link {
-    position: fixed;
-    display: block; /* show this only on small screens */
-    top: 0;
-    left: 0; /* "#cl-menu width" */
-    background: rgba(105, 105, 105, 0.7);
-    font-size: 10px; /* change this value to increase/decrease button size */
-    z-index: 10;
-    height: auto;
-    padding: 1em;
-}
-
-.cl-menu-link:hover,
-.cl-menu-link:focus {
-    background: rgba(47, 47, 47, 0.7);
-}
-
-.cl-menu-link span {
-    position: relative;
-    display: block;
-}
-
-.cl-menu-link span,
-.cl-menu-link span:before,
-.cl-menu-link span:after {
-    background-color: #fff;
-    width: 100%;
-    height: 0.2em;
-}
-
-.cl-menu-link span:before,
-.cl-menu-link span:after {
-    position: absolute;
-    margin-top: -0.6em;
-    content: " ";
-}
-
-.cl-menu-link span:after {
-    margin-top: 0.6em;
-}
-
-
-/* -- Responsive Styles (Media Queries) ------------------------------------- */
-
-@media (min-width: $screen-sm) {
-
-    #cl-layout {
-        padding-left: 150px; /* left col width "#cl-menu" */
-        left: 0;
-    }
-    #cl-menu {
-        left: 150px;
-    }
-
-    .cl-menu-link {
-        position: fixed;
-        left: 150px;
-        display: none;
-    }
-
-    #cl-layout.active .cl-menu-link {
-        left: 150px;
-    }
-}
-
-@media (max-width: $screen-sm) {
-    /* Only apply this when the window is small. Otherwise, the following
-    case results in extra padding on the left:
-        * Make the window small.
-        * Tap the menu to trigger the active state.
-        * Make the window large again.
-    */
-    #cl-layout.active {
-        position: relative;
-        left: 150px;
-    }
-}
-
+// By default .cl-contant mocks Bootstrap's container. Feel free to override this class in your css to fit your own
+// container
 .cl-content {
-    padding: 0 1em;
+    @include container-fixed;
+
+    @media (min-width: $screen-sm-min) {
+        width: $container-sm;
+    }
+    @media (min-width: $screen-md-min) {
+        width: $container-md;
+    }
+    @media (min-width: $screen-lg-min) {
+        width: $container-lg;
+    }
 }

@@ -1,9 +1,9 @@
 {% macro elementTree(element, depth, baseUrl) %}
-    <div class="cl-node cl-node-level-{{ depth }}{{ 'cl-node-template' if not element.children }}">
+    <div class="cl-node cl-node-level-{{ depth }}{{ 'cl-node-template' if not element.children }}" id="{{ baseUrl + element.relativePath }}">
         <div class="cl">
-            <div class="cl-node-header h{{ depth }}" cl-url="{{ baseUrl + element.relativePath }}">
+            <div class="cl-node-header h{{ depth }}">
                 {{ element.name }}
-                <a href="{{ baseUrl + element.relativePath }}" class="cl-node-header-link" name="{{ baseUrl + element.relativePath }}">
+                <a href="{{ baseUrl + element.relativePath }}" class="cl-node-header-link">
                     <i class="cl-fa cl-fa-paragraph"></i>
                 </a>
             </div>

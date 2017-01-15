@@ -1,5 +1,12 @@
 @import "bootstrap-sass/assets/stylesheets/bootstrap/variables";
 
+.cl-node {
+    $anchor-offset: $navbar-height + 50px;
+
+    padding-top:$anchor-offset;
+    margin-top:-$anchor-offset;
+}
+
 .cl-node-level-1 {
     .cl-node-subtree {
         padding: 10px;

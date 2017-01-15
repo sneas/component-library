@@ -1,14 +1,16 @@
-{% macro navigation(tree, depth, baseUrl, current) %}
-    <li class="cl-menu-item cl-menu-item-level-{{ depth }}">
-        <a href="{{ baseUrl + 'index.html#' + baseUrl + tree.relativePath }}"
-            cl-href="{{ baseUrl + tree.relativePath }}"
-            class="{{ 'cl-active' if (tree.relativePath == current.relativePath and depth > 0) }}">
+{% macro navigation(tree, baseUrl, current) %}
+    <li>
+        <a href="{{ baseUrl + 'index.html#' + baseUrl + tree.relativePath }}">
             {{ tree.name }}
+
+            {% if tree.children %}
+                <span class="caret"></span>
+            {% endif %}
         </a>
         {% if tree.children %}
-            <ul class="list-unstyled">
+            <ul class="dropdown-menu">
                 {% for child in tree.children %}
-                    {{ navigation(child, depth + 1, baseUrl, current) }}
+                    {{ navigation(child, baseUrl, current) }}
                 {% endfor %}
             </ul>
         {% endif %}
