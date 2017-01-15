@@ -7,4 +7,6 @@
     color: $text-color;
 
     @import "smartmenus/dist/addons/bootstrap/jquery.smartmenus.bootstrap";
+
+    @import "highlight.js/styles/github";
 }

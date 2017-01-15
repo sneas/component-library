@@ -22,7 +22,7 @@
                 <button class="btn btn-default btn-xs cl-js-template-code-toggle">
                     <i class="cl-fa cl-fa-code"></i>
                 </button>
-                <pre class="cl-node-template-code-content cl-js-template-code-content"><code class="html">{{ element.path | template }}</code></pre>
+                <pre class="cl-node-template-code-content cl-js-template-code-content"><code class="html">{{ element.path | template | highlight | safe }}</code></pre>
             </div>
         {% endif %}
     </div>

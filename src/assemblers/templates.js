@@ -4,6 +4,7 @@ import dirTree from 'directory-tree';
 import path from 'path';
 import writefile from 'writefile';
 import nunjucks from 'nunjucks';
+import hljs from 'highlight.js';
 
 function refineTree(item, rootDir) {
     //Remove firsts numbers and extensions
@@ -69,9 +70,8 @@ export default function(inputDir, outputDir, options = {}) {
     });
 
     (new nunjucks.configure(path.resolve(__dirname, 'views')))
-        .addFilter('template', function(path) {
-            return fs.readFileSync(path);
-    });
+        .addFilter('template', path => fs.readFileSync(path).toString())
+        .addFilter('highlight', code => hljs.highlight('htmlbars', code, true, false).value);
 
     const patternsTree = dirTree(inputDir);
     patternsTree.name = 'Overview';
