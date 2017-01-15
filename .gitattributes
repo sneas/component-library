@@ -1,2 +1,2 @@
 demo/* linguist-vendored
-demo/templates/* linguist-vendored
+*.njk linguist-language=Javascript
