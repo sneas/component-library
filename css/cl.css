@@ -23,7 +23,12 @@
   /* scrolling arrows for tall menus */
   /* add more indentation for 2+ level sub in collapsible mode - Bootstrap normally supports just 1 level sub menus */
   /* fix SmartMenus sub menus auto width (subMenusMinWidth and subMenusMaxWidth options) */
-  /* fix .navbar-right subs alignment */ }
+  /* fix .navbar-right subs alignment */
+  /*
+
+github.com style (c) Vasily Polovnyov <vast@whiteants.net>
+
+*/ }
   .cl html, .cl-palette html, #cl-menu html {
     font-family: sans-serif;
     -ms-text-size-adjust: 100%;
@@ -6139,6 +6144,82 @@
   .cl .navbar-right ul.dropdown-menu, .cl-palette .navbar-right ul.dropdown-menu, #cl-menu .navbar-right ul.dropdown-menu {
     left: 0;
     right: auto; }
+  .cl .hljs, .cl-palette .hljs, #cl-menu .hljs {
+    display: block;
+    overflow-x: auto;
+    padding: 0.5em;
+    color: #333;
+    background: #f8f8f8; }
+  .cl .hljs-comment, .cl-palette .hljs-comment,
+  .cl .hljs-quote, .cl-palette .hljs-quote, #cl-menu .hljs-comment,
+  #cl-menu .hljs-quote {
+    color: #998;
+    font-style: italic; }
+  .cl .hljs-keyword, .cl-palette .hljs-keyword,
+  .cl .hljs-selector-tag, .cl-palette .hljs-selector-tag,
+  .cl .hljs-subst, .cl-palette .hljs-subst, #cl-menu .hljs-keyword,
+  #cl-menu .hljs-selector-tag,
+  #cl-menu .hljs-subst {
+    color: #333;
+    font-weight: bold; }
+  .cl .hljs-number, .cl-palette .hljs-number,
+  .cl .hljs-literal, .cl-palette .hljs-literal,
+  .cl .hljs-variable, .cl-palette .hljs-variable,
+  .cl .hljs-template-variable, .cl-palette .hljs-template-variable,
+  .cl .hljs-tag .hljs-attr, .cl-palette .hljs-tag .hljs-attr, #cl-menu .hljs-number,
+  #cl-menu .hljs-literal,
+  #cl-menu .hljs-variable,
+  #cl-menu .hljs-template-variable,
+  #cl-menu .hljs-tag .hljs-attr {
+    color: #008080; }
+  .cl .hljs-string, .cl-palette .hljs-string,
+  .cl .hljs-doctag, .cl-palette .hljs-doctag, #cl-menu .hljs-string,
+  #cl-menu .hljs-doctag {
+    color: #d14; }
+  .cl .hljs-title, .cl-palette .hljs-title,
+  .cl .hljs-section, .cl-palette .hljs-section,
+  .cl .hljs-selector-id, .cl-palette .hljs-selector-id, #cl-menu .hljs-title,
+  #cl-menu .hljs-section,
+  #cl-menu .hljs-selector-id {
+    color: #900;
+    font-weight: bold; }
+  .cl .hljs-subst, .cl-palette .hljs-subst, #cl-menu .hljs-subst {
+    font-weight: normal; }
+  .cl .hljs-type, .cl-palette .hljs-type,
+  .cl .hljs-class .hljs-title, .cl-palette .hljs-class .hljs-title, #cl-menu .hljs-type,
+  #cl-menu .hljs-class .hljs-title {
+    color: #458;
+    font-weight: bold; }
+  .cl .hljs-tag, .cl-palette .hljs-tag,
+  .cl .hljs-name, .cl-palette .hljs-name,
+  .cl .hljs-attribute, .cl-palette .hljs-attribute, #cl-menu .hljs-tag,
+  #cl-menu .hljs-name,
+  #cl-menu .hljs-attribute {
+    color: #000080;
+    font-weight: normal; }
+  .cl .hljs-regexp, .cl-palette .hljs-regexp,
+  .cl .hljs-link, .cl-palette .hljs-link, #cl-menu .hljs-regexp,
+  #cl-menu .hljs-link {
+    color: #009926; }
+  .cl .hljs-symbol, .cl-palette .hljs-symbol,
+  .cl .hljs-bullet, .cl-palette .hljs-bullet, #cl-menu .hljs-symbol,
+  #cl-menu .hljs-bullet {
+    color: #990073; }
+  .cl .hljs-built_in, .cl-palette .hljs-built_in,
+  .cl .hljs-builtin-name, .cl-palette .hljs-builtin-name, #cl-menu .hljs-built_in,
+  #cl-menu .hljs-builtin-name {
+    color: #0086b3; }
+  .cl .hljs-meta, .cl-palette .hljs-meta, #cl-menu .hljs-meta {
+    color: #999;
+    font-weight: bold; }
+  .cl .hljs-deletion, .cl-palette .hljs-deletion, #cl-menu .hljs-deletion {
+    background: #fdd; }
+  .cl .hljs-addition, .cl-palette .hljs-addition, #cl-menu .hljs-addition {
+    background: #dfd; }
+  .cl .hljs-emphasis, .cl-palette .hljs-emphasis, #cl-menu .hljs-emphasis {
+    font-style: italic; }
+  .cl .hljs-strong, .cl-palette .hljs-strong, #cl-menu .hljs-strong {
+    font-weight: bold; }
 
 .cl-content-wrapper {
   padding-top: 50px; }
