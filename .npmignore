@@ -4,4 +4,4 @@
 /src
 __tests__
 *.test.js
-/deploy-demo
+.travis.yml
