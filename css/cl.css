@@ -6316,18 +6316,33 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       border-bottom-left-radius: 5px; }
 
 .cl-icon-list {
-  padding: 0;
-  text-align: center; }
-  .cl-icon-list li {
-    display: inline-block;
-    width: 220px;
-    white-space: nowrap;
-    background-color: #f5f5f5;
-    height: 40px;
-    line-height: 40px;
-    text-align: left;
-    padding-left: 15px;
-    margin-bottom: 5px; }
+  list-style: none;
+  padding: 0; }
+  .cl-icon-list:before, .cl-icon-list:after {
+    content: " ";
+    display: table; }
+  .cl-icon-list:after {
+    clear: both; }
+  .cl-icon-list > li {
+    float: left;
+    width: 25%;
+    height: 115px;
+    padding: 10px;
+    font-size: 10px;
+    line-height: 1.4;
+    text-align: center;
+    background-color: #f9f9f9;
+    border: 1px solid #fff; }
+    @media (min-width: 768px) {
+      .cl-icon-list > li {
+        width: 12.5%;
+        font-size: 12px; } }
+    .cl-icon-list > li > span:first-child {
+      font-size: 24px;
+      margin-bottom: 10px; }
+    .cl-icon-list > li > span:last-child {
+      display: block;
+      word-wrap: break-word; }
 
 /*!
  *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
