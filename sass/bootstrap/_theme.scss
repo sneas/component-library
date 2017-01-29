@@ -1,0 +1,23 @@
+.navbar-inverse {
+    background-image: none;
+}
+
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus {
+    background-image: none;
+    outline: none;
+}
+
+.navbar-toggle {
+    @include navbar-vertical-align(30px);
+}
+
+.navbar-nav {
+    @media (min-width: $grid-float-breakpoint) {
+        margin-left: -30px;
+    }
+}
+
+.navbar-form {
+    padding-right: 0px;
+}

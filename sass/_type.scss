@@ -1,5 +1,7 @@
 .cl, #cl-menu {
+    @import "variables";
     @import "bootstrap-sass/assets/stylesheets/bootstrap";
+    @import "bootstrap/_theme";
 
     font-family: $font-family-base;
     font-size: $font-size-base;
