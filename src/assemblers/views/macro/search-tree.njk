@@ -1,0 +1,13 @@
+{% macro searchTree(tree, baseUrl) %}
+    <li>
+        <a href="{{ baseUrl + 'index.html#' + baseUrl + tree.relativePath }}">
+            {{ tree.name }}
+        </a>
+    </li>
+
+    {% if tree.children %}
+        {% for child in tree.children %}
+            {{ searchTree(child, baseUrl) }}
+        {% endfor %}
+    {% endif %}
+{% endmacro %}

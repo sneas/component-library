@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 {% from 'macro/navigation.njk' import navigation %}
 {% from 'macro/element-tree.njk' import elementTree %}
+{% from 'macro/search-tree.njk' import searchTree %}
 <html>
 <head>
     <meta charset="utf-8">
@@ -30,6 +31,15 @@
                             {{ navigation(child, baseUrl, current) }}
                         {% endfor %}
                     </ul>
+
+                    <div class="navbar-form pull-right hidden-xs">
+                        <div class="dropdown">
+                            <input type="text" class="form-control form-control-sm" placeholder="Search" id="cl-search">
+                            <ul class="dropdown-menu">
+                                {{ searchTree(tree, baseUrl) }}
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
