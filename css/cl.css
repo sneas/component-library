@@ -860,7 +860,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
     line-height: 1.42857;
     background-color: #fff;
     border: 1px solid #ddd;
-    border-radius: 4px;
+    border-radius: 0px;
     -webkit-transition: all 0.2s ease-in-out;
     -o-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
@@ -1227,7 +1227,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
     font-size: 90%;
     color: #c7254e;
     background-color: #f9f2f4;
-    border-radius: 4px; }
+    border-radius: 0px; }
   .cl kbd, .cl-palette kbd, #cl-menu kbd {
     padding: 2px 4px;
     font-size: 90%;
@@ -1251,7 +1251,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
     color: #333333;
     background-color: #f5f5f5;
     border: 1px solid #ccc;
-    border-radius: 4px; }
+    border-radius: 0px; }
     .cl pre code, .cl-palette pre code, #cl-menu pre code {
       padding: 0;
       font-size: inherit;
@@ -2090,22 +2090,22 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
     outline-offset: -2px; }
   .cl output, .cl-palette output, #cl-menu output {
     display: block;
-    padding-top: 7px;
+    padding-top: 1px;
     font-size: 14px;
     line-height: 1.42857;
     color: #555555; }
   .cl .form-control, .cl-palette .form-control, #cl-menu .form-control {
     display: block;
     width: 100%;
-    height: 34px;
-    padding: 6px 12px;
+    height: 22px;
+    padding: 0px 12px;
     font-size: 14px;
     line-height: 1.42857;
     color: #555555;
     background-color: #fff;
     background-image: none;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 0px;
     -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
     -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
@@ -2149,7 +2149,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
     #cl-menu input[type="time"].form-control,
     #cl-menu input[type="datetime-local"].form-control,
     #cl-menu input[type="month"].form-control {
-      line-height: 34px; }
+      line-height: 22px; }
     .cl input[type="date"].input-sm, .cl-palette input[type="date"].input-sm, .cl .input-group-sm > input[type="date"].form-control, .cl-palette .input-group-sm > input[type="date"].form-control, .cl .input-group-sm > input[type="date"].input-group-addon, .cl-palette .input-group-sm > input[type="date"].input-group-addon, .cl .input-group-sm > .input-group-btn > input[type="date"].btn, .cl-palette .input-group-sm > .input-group-btn > input[type="date"].btn, .cl #cl-menu .input-group-sm > input[type="date"].form-control, #cl-menu .cl .input-group-sm > input[type="date"].form-control, .cl-palette #cl-menu .input-group-sm > input[type="date"].form-control, #cl-menu .cl-palette .input-group-sm > input[type="date"].form-control, .cl
     #cl-menu .input-group-sm > input[type="date"].input-group-addon,
     #cl-menu .cl .input-group-sm > input[type="date"].input-group-addon, .cl-palette
@@ -2439,8 +2439,8 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
   #cl-menu .checkbox label {
     cursor: not-allowed; }
   .cl .form-control-static, .cl-palette .form-control-static, #cl-menu .form-control-static {
-    padding-top: 7px;
-    padding-bottom: 7px;
+    padding-top: 1px;
+    padding-bottom: 1px;
     margin-bottom: 0;
     min-height: 34px; }
     .cl .form-control-static.input-lg, .cl-palette .form-control-static.input-lg, .cl .input-group-lg > .form-control-static.form-control, .cl-palette .input-group-lg > .form-control-static.form-control, .cl .input-group-lg > .form-control-static.input-group-addon, .cl-palette .input-group-lg > .form-control-static.input-group-addon, .cl .input-group-lg > .input-group-btn > .form-control-static.btn, .cl-palette .input-group-lg > .input-group-btn > .form-control-static.btn, .cl #cl-menu .input-group-lg > .form-control-static.form-control, #cl-menu .cl .input-group-lg > .form-control-static.form-control, .cl-palette #cl-menu .input-group-lg > .form-control-static.form-control, #cl-menu .cl-palette .input-group-lg > .form-control-static.form-control, .cl
@@ -2637,16 +2637,16 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
   .cl .has-feedback, .cl-palette .has-feedback, #cl-menu .has-feedback {
     position: relative; }
     .cl .has-feedback .form-control, .cl-palette .has-feedback .form-control, #cl-menu .has-feedback .form-control {
-      padding-right: 42.5px; }
+      padding-right: 27.5px; }
   .cl .form-control-feedback, .cl-palette .form-control-feedback, #cl-menu .form-control-feedback {
     position: absolute;
     top: 0;
     right: 0;
     z-index: 2;
     display: block;
-    width: 34px;
-    height: 34px;
-    line-height: 34px;
+    width: 22px;
+    height: 22px;
+    line-height: 22px;
     text-align: center;
     pointer-events: none; }
   .cl .input-lg + .form-control-feedback, .cl-palette .input-lg + .form-control-feedback, .cl .input-group-lg > .form-control + .form-control-feedback, .cl-palette .input-group-lg > .form-control + .form-control-feedback, .cl .input-group-lg > .input-group-addon + .form-control-feedback, .cl-palette .input-group-lg > .input-group-addon + .form-control-feedback, .cl .input-group-lg > .input-group-btn > .btn + .form-control-feedback, .cl-palette .input-group-lg > .input-group-btn > .btn + .form-control-feedback, .cl #cl-menu .input-group-lg > .form-control + .form-control-feedback, #cl-menu .cl .input-group-lg > .form-control + .form-control-feedback, .cl-palette #cl-menu .input-group-lg > .form-control + .form-control-feedback, #cl-menu .cl-palette .input-group-lg > .form-control + .form-control-feedback, .cl
@@ -2848,11 +2848,11 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
   #cl-menu .form-horizontal .checkbox-inline {
     margin-top: 0;
     margin-bottom: 0;
-    padding-top: 7px; }
+    padding-top: 1px; }
   .cl .form-horizontal .radio, .cl-palette .form-horizontal .radio,
   .cl .form-horizontal .checkbox, .cl-palette .form-horizontal .checkbox, #cl-menu .form-horizontal .radio,
   #cl-menu .form-horizontal .checkbox {
-    min-height: 27px; }
+    min-height: 21px; }
   .cl .form-horizontal .form-group, .cl-palette .form-horizontal .form-group, #cl-menu .form-horizontal .form-group {
     margin-left: -15px;
     margin-right: -15px; }
@@ -2865,7 +2865,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
     .cl .form-horizontal .control-label, .cl-palette .form-horizontal .control-label, #cl-menu .form-horizontal .control-label {
       text-align: right;
       margin-bottom: 0;
-      padding-top: 7px; } }
+      padding-top: 1px; } }
   .cl .form-horizontal .has-feedback .form-control-feedback, .cl-palette .form-horizontal .has-feedback .form-control-feedback, #cl-menu .form-horizontal .has-feedback .form-control-feedback {
     right: 15px; }
   @media (min-width: 768px) {
@@ -2887,10 +2887,10 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
     background-image: none;
     border: 1px solid transparent;
     white-space: nowrap;
-    padding: 6px 12px;
+    padding: 0px 12px;
     font-size: 14px;
     line-height: 1.42857;
-    border-radius: 4px;
+    border-radius: 0px;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -3341,7 +3341,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
     background-color: #fff;
     border: 1px solid #ccc;
     border: 1px solid rgba(0, 0, 0, 0.15);
-    border-radius: 4px;
+    border-radius: 0px;
     -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
     background-clip: padding-box; }
@@ -3548,15 +3548,15 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
   .cl .btn-group-vertical > .btn:not(:first-child):not(:last-child), .cl-palette .btn-group-vertical > .btn:not(:first-child):not(:last-child), #cl-menu .btn-group-vertical > .btn:not(:first-child):not(:last-child) {
     border-radius: 0; }
   .cl .btn-group-vertical > .btn:first-child:not(:last-child), .cl-palette .btn-group-vertical > .btn:first-child:not(:last-child), #cl-menu .btn-group-vertical > .btn:first-child:not(:last-child) {
-    border-top-right-radius: 4px;
-    border-top-left-radius: 4px;
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0; }
   .cl .btn-group-vertical > .btn:last-child:not(:first-child), .cl-palette .btn-group-vertical > .btn:last-child:not(:first-child), #cl-menu .btn-group-vertical > .btn:last-child:not(:first-child) {
     border-top-right-radius: 0;
     border-top-left-radius: 0;
-    border-bottom-right-radius: 4px;
-    border-bottom-left-radius: 4px; }
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px; }
   .cl .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn, .cl-palette .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn, #cl-menu .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn {
     border-radius: 0; }
   .cl .btn-group-vertical > .btn-group:first-child:not(:last-child) > .btn:last-child, .cl-palette .btn-group-vertical > .btn-group:first-child:not(:last-child) > .btn:last-child,
@@ -3627,7 +3627,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
     white-space: nowrap;
     vertical-align: middle; }
   .cl .input-group-addon, .cl-palette .input-group-addon, #cl-menu .input-group-addon {
-    padding: 6px 12px;
+    padding: 0px 12px;
     font-size: 14px;
     font-weight: normal;
     line-height: 1;
@@ -3635,7 +3635,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
     text-align: center;
     background-color: #eeeeee;
     border: 1px solid #ccc;
-    border-radius: 4px; }
+    border-radius: 0px; }
     .cl .input-group-addon.input-sm, .cl-palette .input-group-addon.input-sm, .cl .input-group-sm > .input-group-addon, .cl-palette .input-group-sm > .input-group-addon, .cl .input-group-sm > .input-group-btn > .input-group-addon.btn, .cl-palette .input-group-sm > .input-group-btn > .input-group-addon.btn, .cl
     #cl-menu .input-group-sm > .input-group-addon,
     #cl-menu .cl .input-group-sm > .input-group-addon, .cl-palette
@@ -3766,7 +3766,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
         margin-right: 2px;
         line-height: 1.42857;
         border: 1px solid transparent;
-        border-radius: 4px 4px 0 0; }
+        border-radius: 0px 0px 0 0; }
         .cl .nav-tabs > li > a:hover, .cl-palette .nav-tabs > li > a:hover, #cl-menu .nav-tabs > li > a:hover {
           border-color: #eeeeee #eeeeee #ddd; }
       .cl .nav-tabs > li.active > a, .cl-palette .nav-tabs > li.active > a, .cl .nav-tabs > li.active > a:hover, .cl-palette .nav-tabs > li.active > a:hover, .cl .nav-tabs > li.active > a:focus, .cl-palette .nav-tabs > li.active > a:focus, #cl-menu .nav-tabs > li.active > a, #cl-menu .nav-tabs > li.active > a:hover, #cl-menu .nav-tabs > li.active > a:focus {
@@ -3778,7 +3778,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
   .cl .nav-pills > li, .cl-palette .nav-pills > li, #cl-menu .nav-pills > li {
     float: left; }
     .cl .nav-pills > li > a, .cl-palette .nav-pills > li > a, #cl-menu .nav-pills > li > a {
-      border-radius: 4px; }
+      border-radius: 0px; }
     .cl .nav-pills > li + li, .cl-palette .nav-pills > li + li, #cl-menu .nav-pills > li + li {
       margin-left: 2px; }
     .cl .nav-pills > li.active > a, .cl-palette .nav-pills > li.active > a, .cl .nav-pills > li.active > a:hover, .cl-palette .nav-pills > li.active > a:hover, .cl .nav-pills > li.active > a:focus, .cl-palette .nav-pills > li.active > a:focus, #cl-menu .nav-pills > li.active > a, #cl-menu .nav-pills > li.active > a:hover, #cl-menu .nav-pills > li.active > a:focus {
@@ -3809,7 +3809,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
     border-bottom: 0; }
     .cl .nav-tabs-justified > li > a, .cl-palette .nav-tabs-justified > li > a, .cl .nav-tabs.nav-justified > li > a, .cl-palette .nav-tabs.nav-justified > li > a, .cl #cl-menu .nav-tabs.nav-justified > li > a, #cl-menu .cl .nav-tabs.nav-justified > li > a, .cl-palette #cl-menu .nav-tabs.nav-justified > li > a, #cl-menu .cl-palette .nav-tabs.nav-justified > li > a, #cl-menu .nav-tabs-justified > li > a, #cl-menu .cl .nav-tabs.nav-justified > li > a, #cl-menu .cl-palette .nav-tabs.nav-justified > li > a, #cl-menu .nav-tabs.nav-justified > li > a {
       margin-right: 0;
-      border-radius: 4px; }
+      border-radius: 0px; }
     .cl .nav-tabs-justified > .active > a, .cl-palette .nav-tabs-justified > .active > a, .cl .nav-tabs.nav-justified > .active > a, .cl-palette .nav-tabs.nav-justified > .active > a, .cl #cl-menu .nav-tabs.nav-justified > .active > a, #cl-menu .cl .nav-tabs.nav-justified > .active > a, .cl-palette #cl-menu .nav-tabs.nav-justified > .active > a, #cl-menu .cl-palette .nav-tabs.nav-justified > .active > a,
     .cl .nav-tabs-justified > .active > a:hover, .cl-palette .nav-tabs-justified > .active > a:hover, .cl .nav-tabs.nav-justified > .active > a:hover, .cl-palette .nav-tabs.nav-justified > .active > a:hover,
     .cl #cl-menu .nav-tabs.nav-justified > .active > a:hover, #cl-menu
@@ -3823,7 +3823,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
     @media (min-width: 768px) {
       .cl .nav-tabs-justified > li > a, .cl-palette .nav-tabs-justified > li > a, .cl .nav-tabs.nav-justified > li > a, .cl-palette .nav-tabs.nav-justified > li > a, .cl #cl-menu .nav-tabs.nav-justified > li > a, #cl-menu .cl .nav-tabs.nav-justified > li > a, .cl-palette #cl-menu .nav-tabs.nav-justified > li > a, #cl-menu .cl-palette .nav-tabs.nav-justified > li > a, #cl-menu .nav-tabs-justified > li > a, #cl-menu .cl .nav-tabs.nav-justified > li > a, #cl-menu .cl-palette .nav-tabs.nav-justified > li > a, #cl-menu .nav-tabs.nav-justified > li > a {
         border-bottom: 1px solid #ddd;
-        border-radius: 4px 4px 0 0; }
+        border-radius: 0px 0px 0 0; }
       .cl .nav-tabs-justified > .active > a, .cl-palette .nav-tabs-justified > .active > a, .cl .nav-tabs.nav-justified > .active > a, .cl-palette .nav-tabs.nav-justified > .active > a, .cl #cl-menu .nav-tabs.nav-justified > .active > a, #cl-menu .cl .nav-tabs.nav-justified > .active > a, .cl-palette #cl-menu .nav-tabs.nav-justified > .active > a, #cl-menu .cl-palette .nav-tabs.nav-justified > .active > a,
       .cl .nav-tabs-justified > .active > a:hover, .cl-palette .nav-tabs-justified > .active > a:hover, .cl .nav-tabs.nav-justified > .active > a:hover, .cl-palette .nav-tabs.nav-justified > .active > a:hover,
       .cl #cl-menu .nav-tabs.nav-justified > .active > a:hover, #cl-menu
@@ -3844,7 +3844,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
     border-top-left-radius: 0; }
   .cl .navbar, .cl-palette .navbar, #cl-menu .navbar {
     position: relative;
-    min-height: 50px;
+    min-height: 30px;
     margin-bottom: 20px;
     border: 1px solid transparent; }
     .cl .navbar:before, .cl-palette .navbar:before, .cl .navbar:after, .cl-palette .navbar:after, #cl-menu .navbar:before, #cl-menu .navbar:after {
@@ -3854,7 +3854,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       clear: both; }
     @media (min-width: 768px) {
       .cl .navbar, .cl-palette .navbar, #cl-menu .navbar {
-        border-radius: 4px; } }
+        border-radius: 0px; } }
   .cl .navbar-header:before, .cl-palette .navbar-header:before, .cl .navbar-header:after, .cl-palette .navbar-header:after, #cl-menu .navbar-header:before, #cl-menu .navbar-header:after {
     content: " ";
     display: table; }
@@ -3953,10 +3953,10 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
     border-width: 1px 0 0; }
   .cl .navbar-brand, .cl-palette .navbar-brand, #cl-menu .navbar-brand {
     float: left;
-    padding: 15px 15px;
+    padding: 5px 15px;
     font-size: 18px;
     line-height: 20px;
-    height: 50px; }
+    height: 30px; }
     .cl .navbar-brand:hover, .cl-palette .navbar-brand:hover, .cl .navbar-brand:focus, .cl-palette .navbar-brand:focus, #cl-menu .navbar-brand:hover, #cl-menu .navbar-brand:focus {
       text-decoration: none; }
     .cl .navbar-brand > img, .cl-palette .navbar-brand > img, #cl-menu .navbar-brand > img {
@@ -3972,12 +3972,12 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
     float: right;
     margin-right: 15px;
     padding: 9px 10px;
-    margin-top: 8px;
-    margin-bottom: 8px;
+    margin-top: -2px;
+    margin-bottom: -2px;
     background-color: transparent;
     background-image: none;
     border: 1px solid transparent;
-    border-radius: 4px; }
+    border-radius: 0px; }
     .cl .navbar-toggle:focus, .cl-palette .navbar-toggle:focus, #cl-menu .navbar-toggle:focus {
       outline: 0; }
     .cl .navbar-toggle .icon-bar, .cl-palette .navbar-toggle .icon-bar, #cl-menu .navbar-toggle .icon-bar {
@@ -3991,7 +3991,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       .cl .navbar-toggle, .cl-palette .navbar-toggle, #cl-menu .navbar-toggle {
         display: none; } }
   .cl .navbar-nav, .cl-palette .navbar-nav, #cl-menu .navbar-nav {
-    margin: 7.5px -15px; }
+    margin: 2.5px -15px; }
     .cl .navbar-nav > li > a, .cl-palette .navbar-nav > li > a, #cl-menu .navbar-nav > li > a {
       padding-top: 10px;
       padding-bottom: 10px;
@@ -4020,8 +4020,8 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
         .cl .navbar-nav > li, .cl-palette .navbar-nav > li, #cl-menu .navbar-nav > li {
           float: left; }
           .cl .navbar-nav > li > a, .cl-palette .navbar-nav > li > a, #cl-menu .navbar-nav > li > a {
-            padding-top: 15px;
-            padding-bottom: 15px; } }
+            padding-top: 5px;
+            padding-bottom: 5px; } }
   .cl .navbar-form, .cl-palette .navbar-form, #cl-menu .navbar-form {
     margin-left: -15px;
     margin-right: -15px;
@@ -4030,8 +4030,8 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
     border-bottom: 1px solid transparent;
     -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
-    margin-top: 8px;
-    margin-bottom: 8px; }
+    margin-top: 4px;
+    margin-bottom: 4px; }
     @media (min-width: 768px) {
       .cl .navbar-form .form-group, .cl-palette .navbar-form .form-group, #cl-menu .navbar-form .form-group {
         display: inline-block;
@@ -4096,22 +4096,22 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
     border-top-left-radius: 0; }
   .cl .navbar-fixed-bottom .navbar-nav > li > .dropdown-menu, .cl-palette .navbar-fixed-bottom .navbar-nav > li > .dropdown-menu, #cl-menu .navbar-fixed-bottom .navbar-nav > li > .dropdown-menu {
     margin-bottom: 0;
-    border-top-right-radius: 4px;
-    border-top-left-radius: 4px;
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0; }
   .cl .navbar-btn, .cl-palette .navbar-btn, #cl-menu .navbar-btn {
-    margin-top: 8px;
-    margin-bottom: 8px; }
+    margin-top: 4px;
+    margin-bottom: 4px; }
     .cl .navbar-btn.btn-sm, .cl-palette .navbar-btn.btn-sm, .cl .btn-group-sm > .navbar-btn.btn, .cl-palette .btn-group-sm > .navbar-btn.btn, .cl #cl-menu .btn-group-sm > .navbar-btn.btn, #cl-menu .cl .btn-group-sm > .navbar-btn.btn, .cl-palette #cl-menu .btn-group-sm > .navbar-btn.btn, #cl-menu .cl-palette .btn-group-sm > .navbar-btn.btn, #cl-menu .navbar-btn.btn-sm, #cl-menu .cl .btn-group-sm > .navbar-btn.btn, #cl-menu .cl-palette .btn-group-sm > .navbar-btn.btn, #cl-menu .btn-group-sm > .navbar-btn.btn {
-      margin-top: 10px;
-      margin-bottom: 10px; }
+      margin-top: 0px;
+      margin-bottom: 0px; }
     .cl .navbar-btn.btn-xs, .cl-palette .navbar-btn.btn-xs, .cl .btn-group-xs > .navbar-btn.btn, .cl-palette .btn-group-xs > .navbar-btn.btn, .cl #cl-menu .btn-group-xs > .navbar-btn.btn, #cl-menu .cl .btn-group-xs > .navbar-btn.btn, .cl-palette #cl-menu .btn-group-xs > .navbar-btn.btn, #cl-menu .cl-palette .btn-group-xs > .navbar-btn.btn, #cl-menu .navbar-btn.btn-xs, #cl-menu .cl .btn-group-xs > .navbar-btn.btn, #cl-menu .cl-palette .btn-group-xs > .navbar-btn.btn, #cl-menu .btn-group-xs > .navbar-btn.btn {
-      margin-top: 14px;
-      margin-bottom: 14px; }
+      margin-top: 4px;
+      margin-bottom: 4px; }
   .cl .navbar-text, .cl-palette .navbar-text, #cl-menu .navbar-text {
-    margin-top: 15px;
-    margin-bottom: 15px; }
+    margin-top: 5px;
+    margin-bottom: 5px; }
     @media (min-width: 768px) {
       .cl .navbar-text, .cl-palette .navbar-text, #cl-menu .navbar-text {
         float: left;
@@ -4188,8 +4188,8 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       fieldset[disabled] #cl-menu .navbar-default .btn-link:focus {
         color: #ccc; }
   .cl .navbar-inverse, .cl-palette .navbar-inverse, #cl-menu .navbar-inverse {
-    background-color: #222;
-    border-color: #090909; }
+    background-color: #333333;
+    border-color: #1a1a1a; }
     .cl .navbar-inverse .navbar-brand, .cl-palette .navbar-inverse .navbar-brand, #cl-menu .navbar-inverse .navbar-brand {
       color: #9d9d9d; }
       .cl .navbar-inverse .navbar-brand:hover, .cl-palette .navbar-inverse .navbar-brand:hover, .cl .navbar-inverse .navbar-brand:focus, .cl-palette .navbar-inverse .navbar-brand:focus, #cl-menu .navbar-inverse .navbar-brand:hover, #cl-menu .navbar-inverse .navbar-brand:focus {
@@ -4204,7 +4204,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
         background-color: transparent; }
     .cl .navbar-inverse .navbar-nav > .active > a, .cl-palette .navbar-inverse .navbar-nav > .active > a, .cl .navbar-inverse .navbar-nav > .active > a:hover, .cl-palette .navbar-inverse .navbar-nav > .active > a:hover, .cl .navbar-inverse .navbar-nav > .active > a:focus, .cl-palette .navbar-inverse .navbar-nav > .active > a:focus, #cl-menu .navbar-inverse .navbar-nav > .active > a, #cl-menu .navbar-inverse .navbar-nav > .active > a:hover, #cl-menu .navbar-inverse .navbar-nav > .active > a:focus {
       color: #fff;
-      background-color: #090909; }
+      background-color: #1a1a1a; }
     .cl .navbar-inverse .navbar-nav > .disabled > a, .cl-palette .navbar-inverse .navbar-nav > .disabled > a, .cl .navbar-inverse .navbar-nav > .disabled > a:hover, .cl-palette .navbar-inverse .navbar-nav > .disabled > a:hover, .cl .navbar-inverse .navbar-nav > .disabled > a:focus, .cl-palette .navbar-inverse .navbar-nav > .disabled > a:focus, #cl-menu .navbar-inverse .navbar-nav > .disabled > a, #cl-menu .navbar-inverse .navbar-nav > .disabled > a:hover, #cl-menu .navbar-inverse .navbar-nav > .disabled > a:focus {
       color: #444;
       background-color: transparent; }
@@ -4217,15 +4217,15 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
     .cl .navbar-inverse .navbar-collapse, .cl-palette .navbar-inverse .navbar-collapse,
     .cl .navbar-inverse .navbar-form, .cl-palette .navbar-inverse .navbar-form, #cl-menu .navbar-inverse .navbar-collapse,
     #cl-menu .navbar-inverse .navbar-form {
-      border-color: #101010; }
+      border-color: #212121; }
     .cl .navbar-inverse .navbar-nav > .open > a, .cl-palette .navbar-inverse .navbar-nav > .open > a, .cl .navbar-inverse .navbar-nav > .open > a:hover, .cl-palette .navbar-inverse .navbar-nav > .open > a:hover, .cl .navbar-inverse .navbar-nav > .open > a:focus, .cl-palette .navbar-inverse .navbar-nav > .open > a:focus, #cl-menu .navbar-inverse .navbar-nav > .open > a, #cl-menu .navbar-inverse .navbar-nav > .open > a:hover, #cl-menu .navbar-inverse .navbar-nav > .open > a:focus {
-      background-color: #090909;
+      background-color: #1a1a1a;
       color: #fff; }
     @media (max-width: 767px) {
       .cl .navbar-inverse .navbar-nav .open .dropdown-menu > .dropdown-header, .cl-palette .navbar-inverse .navbar-nav .open .dropdown-menu > .dropdown-header, #cl-menu .navbar-inverse .navbar-nav .open .dropdown-menu > .dropdown-header {
-        border-color: #090909; }
+        border-color: #1a1a1a; }
       .cl .navbar-inverse .navbar-nav .open .dropdown-menu .divider, .cl-palette .navbar-inverse .navbar-nav .open .dropdown-menu .divider, #cl-menu .navbar-inverse .navbar-nav .open .dropdown-menu .divider {
-        background-color: #090909; }
+        background-color: #1a1a1a; }
       .cl .navbar-inverse .navbar-nav .open .dropdown-menu > li > a, .cl-palette .navbar-inverse .navbar-nav .open .dropdown-menu > li > a, #cl-menu .navbar-inverse .navbar-nav .open .dropdown-menu > li > a {
         color: #9d9d9d; }
         .cl .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:hover, .cl-palette .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:hover, .cl .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:focus, .cl-palette .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:focus, #cl-menu .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:hover, #cl-menu .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:focus {
@@ -4233,7 +4233,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
           background-color: transparent; }
       .cl .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a, .cl-palette .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a, .cl .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a:hover, .cl-palette .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a:hover, .cl .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a:focus, .cl-palette .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a:focus, #cl-menu .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a, #cl-menu .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a:hover, #cl-menu .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a:focus {
         color: #fff;
-        background-color: #090909; }
+        background-color: #1a1a1a; }
       .cl .navbar-inverse .navbar-nav .open .dropdown-menu > .disabled > a, .cl-palette .navbar-inverse .navbar-nav .open .dropdown-menu > .disabled > a, .cl .navbar-inverse .navbar-nav .open .dropdown-menu > .disabled > a:hover, .cl-palette .navbar-inverse .navbar-nav .open .dropdown-menu > .disabled > a:hover, .cl .navbar-inverse .navbar-nav .open .dropdown-menu > .disabled > a:focus, .cl-palette .navbar-inverse .navbar-nav .open .dropdown-menu > .disabled > a:focus, #cl-menu .navbar-inverse .navbar-nav .open .dropdown-menu > .disabled > a, #cl-menu .navbar-inverse .navbar-nav .open .dropdown-menu > .disabled > a:hover, #cl-menu .navbar-inverse .navbar-nav .open .dropdown-menu > .disabled > a:focus {
         color: #444;
         background-color: transparent; } }
@@ -4258,7 +4258,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
     margin-bottom: 20px;
     list-style: none;
     background-color: #f5f5f5;
-    border-radius: 4px; }
+    border-radius: 0px; }
     .cl .breadcrumb > li, .cl-palette .breadcrumb > li, #cl-menu .breadcrumb > li {
       display: inline-block; }
       .cl .breadcrumb > li + li:before, .cl-palette .breadcrumb > li + li:before, #cl-menu .breadcrumb > li + li:before {
@@ -4271,7 +4271,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
     display: inline-block;
     padding-left: 0;
     margin: 20px 0;
-    border-radius: 4px; }
+    border-radius: 0px; }
     .cl .pagination > li, .cl-palette .pagination > li, #cl-menu .pagination > li {
       display: inline; }
       .cl .pagination > li > a, .cl-palette .pagination > li > a,
@@ -4279,7 +4279,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       #cl-menu .pagination > li > span {
         position: relative;
         float: left;
-        padding: 6px 12px;
+        padding: 0px 12px;
         line-height: 1.42857;
         text-decoration: none;
         color: #337ab7;
@@ -4290,13 +4290,13 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       .cl .pagination > li:first-child > span, .cl-palette .pagination > li:first-child > span, #cl-menu .pagination > li:first-child > a,
       #cl-menu .pagination > li:first-child > span {
         margin-left: 0;
-        border-bottom-left-radius: 4px;
-        border-top-left-radius: 4px; }
+        border-bottom-left-radius: 0px;
+        border-top-left-radius: 0px; }
       .cl .pagination > li:last-child > a, .cl-palette .pagination > li:last-child > a,
       .cl .pagination > li:last-child > span, .cl-palette .pagination > li:last-child > span, #cl-menu .pagination > li:last-child > a,
       #cl-menu .pagination > li:last-child > span {
-        border-bottom-right-radius: 4px;
-        border-top-right-radius: 4px; }
+        border-bottom-right-radius: 0px;
+        border-top-right-radius: 0px; }
     .cl .pagination > li > a:hover, .cl-palette .pagination > li > a:hover, .cl .pagination > li > a:focus, .cl-palette .pagination > li > a:focus,
     .cl .pagination > li > span:hover, .cl-palette .pagination > li > span:hover,
     .cl .pagination > li > span:focus, .cl-palette .pagination > li > span:focus, #cl-menu .pagination > li > a:hover, #cl-menu .pagination > li > a:focus,
@@ -4538,7 +4538,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
     line-height: 1.42857;
     background-color: #fff;
     border: 1px solid #ddd;
-    border-radius: 4px;
+    border-radius: 0px;
     -webkit-transition: border 0.2s ease-in-out;
     -o-transition: border 0.2s ease-in-out;
     transition: border 0.2s ease-in-out; }
@@ -4563,7 +4563,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
     padding: 15px;
     margin-bottom: 20px;
     border: 1px solid transparent;
-    border-radius: 4px; }
+    border-radius: 0px; }
     .cl .alert h4, .cl-palette .alert h4, #cl-menu .alert h4 {
       margin-top: 0;
       color: inherit; }
@@ -4635,7 +4635,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
     height: 20px;
     margin-bottom: 20px;
     background-color: #f5f5f5;
-    border-radius: 4px;
+    border-radius: 0px;
     -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
     box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1); }
   .cl .progress-bar, .cl-palette .progress-bar, #cl-menu .progress-bar {
@@ -4740,12 +4740,12 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
     background-color: #fff;
     border: 1px solid #ddd; }
     .cl .list-group-item:first-child, .cl-palette .list-group-item:first-child, #cl-menu .list-group-item:first-child {
-      border-top-right-radius: 4px;
-      border-top-left-radius: 4px; }
+      border-top-right-radius: 0px;
+      border-top-left-radius: 0px; }
     .cl .list-group-item:last-child, .cl-palette .list-group-item:last-child, #cl-menu .list-group-item:last-child {
       margin-bottom: 0;
-      border-bottom-right-radius: 4px;
-      border-bottom-left-radius: 4px; }
+      border-bottom-right-radius: 0px;
+      border-bottom-left-radius: 0px; }
   .cl a.list-group-item, .cl-palette a.list-group-item,
   .cl button.list-group-item, .cl-palette button.list-group-item, #cl-menu a.list-group-item,
   #cl-menu button.list-group-item {
@@ -4916,7 +4916,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
     margin-bottom: 20px;
     background-color: #fff;
     border: 1px solid transparent;
-    border-radius: 4px;
+    border-radius: 0px;
     -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05); }
   .cl .panel-body, .cl-palette .panel-body, #cl-menu .panel-body {
@@ -4929,8 +4929,8 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
   .cl .panel-heading, .cl-palette .panel-heading, #cl-menu .panel-heading {
     padding: 10px 15px;
     border-bottom: 1px solid transparent;
-    border-top-right-radius: 3px;
-    border-top-left-radius: 3px; }
+    border-top-right-radius: -1px;
+    border-top-left-radius: -1px; }
     .cl .panel-heading > .dropdown .dropdown-toggle, .cl-palette .panel-heading > .dropdown .dropdown-toggle, #cl-menu .panel-heading > .dropdown .dropdown-toggle {
       color: inherit; }
   .cl .panel-title, .cl-palette .panel-title, #cl-menu .panel-title {
@@ -4952,8 +4952,8 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
     padding: 10px 15px;
     background-color: #f5f5f5;
     border-top: 1px solid #ddd;
-    border-bottom-right-radius: 3px;
-    border-bottom-left-radius: 3px; }
+    border-bottom-right-radius: -1px;
+    border-bottom-left-radius: -1px; }
   .cl .panel > .list-group, .cl-palette .panel > .list-group,
   .cl .panel > .panel-collapse > .list-group, .cl-palette .panel > .panel-collapse > .list-group, #cl-menu .panel > .list-group,
   #cl-menu .panel > .panel-collapse > .list-group {
@@ -4967,14 +4967,14 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
     .cl .panel > .panel-collapse > .list-group:first-child .list-group-item:first-child, .cl-palette .panel > .panel-collapse > .list-group:first-child .list-group-item:first-child, #cl-menu .panel > .list-group:first-child .list-group-item:first-child,
     #cl-menu .panel > .panel-collapse > .list-group:first-child .list-group-item:first-child {
       border-top: 0;
-      border-top-right-radius: 3px;
-      border-top-left-radius: 3px; }
+      border-top-right-radius: -1px;
+      border-top-left-radius: -1px; }
     .cl .panel > .list-group:last-child .list-group-item:last-child, .cl-palette .panel > .list-group:last-child .list-group-item:last-child,
     .cl .panel > .panel-collapse > .list-group:last-child .list-group-item:last-child, .cl-palette .panel > .panel-collapse > .list-group:last-child .list-group-item:last-child, #cl-menu .panel > .list-group:last-child .list-group-item:last-child,
     #cl-menu .panel > .panel-collapse > .list-group:last-child .list-group-item:last-child {
       border-bottom: 0;
-      border-bottom-right-radius: 3px;
-      border-bottom-left-radius: 3px; }
+      border-bottom-right-radius: -1px;
+      border-bottom-left-radius: -1px; }
   .cl .panel > .panel-heading + .panel-collapse > .list-group .list-group-item:first-child, .cl-palette .panel > .panel-heading + .panel-collapse > .list-group .list-group-item:first-child, #cl-menu .panel > .panel-heading + .panel-collapse > .list-group .list-group-item:first-child {
     border-top-right-radius: 0;
     border-top-left-radius: 0; }
@@ -4998,8 +4998,8 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
   .cl .panel > .table:first-child, .cl-palette .panel > .table:first-child,
   .cl .panel > .table-responsive:first-child > .table:first-child, .cl-palette .panel > .table-responsive:first-child > .table:first-child, #cl-menu .panel > .table:first-child,
   #cl-menu .panel > .table-responsive:first-child > .table:first-child {
-    border-top-right-radius: 3px;
-    border-top-left-radius: 3px; }
+    border-top-right-radius: -1px;
+    border-top-left-radius: -1px; }
     .cl .panel > .table:first-child > thead:first-child > tr:first-child, .cl-palette .panel > .table:first-child > thead:first-child > tr:first-child,
     .cl .panel > .table:first-child > tbody:first-child > tr:first-child, .cl-palette .panel > .table:first-child > tbody:first-child > tr:first-child,
     .cl .panel > .table-responsive:first-child > .table:first-child > thead:first-child > tr:first-child, .cl-palette .panel > .table-responsive:first-child > .table:first-child > thead:first-child > tr:first-child,
@@ -5007,8 +5007,8 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
     #cl-menu .panel > .table:first-child > tbody:first-child > tr:first-child,
     #cl-menu .panel > .table-responsive:first-child > .table:first-child > thead:first-child > tr:first-child,
     #cl-menu .panel > .table-responsive:first-child > .table:first-child > tbody:first-child > tr:first-child {
-      border-top-left-radius: 3px;
-      border-top-right-radius: 3px; }
+      border-top-left-radius: -1px;
+      border-top-right-radius: -1px; }
       .cl .panel > .table:first-child > thead:first-child > tr:first-child td:first-child, .cl-palette .panel > .table:first-child > thead:first-child > tr:first-child td:first-child,
       .cl .panel > .table:first-child > thead:first-child > tr:first-child th:first-child, .cl-palette .panel > .table:first-child > thead:first-child > tr:first-child th:first-child,
       .cl .panel > .table:first-child > tbody:first-child > tr:first-child td:first-child, .cl-palette .panel > .table:first-child > tbody:first-child > tr:first-child td:first-child,
@@ -5024,7 +5024,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       #cl-menu .panel > .table-responsive:first-child > .table:first-child > thead:first-child > tr:first-child th:first-child,
       #cl-menu .panel > .table-responsive:first-child > .table:first-child > tbody:first-child > tr:first-child td:first-child,
       #cl-menu .panel > .table-responsive:first-child > .table:first-child > tbody:first-child > tr:first-child th:first-child {
-        border-top-left-radius: 3px; }
+        border-top-left-radius: -1px; }
       .cl .panel > .table:first-child > thead:first-child > tr:first-child td:last-child, .cl-palette .panel > .table:first-child > thead:first-child > tr:first-child td:last-child,
       .cl .panel > .table:first-child > thead:first-child > tr:first-child th:last-child, .cl-palette .panel > .table:first-child > thead:first-child > tr:first-child th:last-child,
       .cl .panel > .table:first-child > tbody:first-child > tr:first-child td:last-child, .cl-palette .panel > .table:first-child > tbody:first-child > tr:first-child td:last-child,
@@ -5040,12 +5040,12 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       #cl-menu .panel > .table-responsive:first-child > .table:first-child > thead:first-child > tr:first-child th:last-child,
       #cl-menu .panel > .table-responsive:first-child > .table:first-child > tbody:first-child > tr:first-child td:last-child,
       #cl-menu .panel > .table-responsive:first-child > .table:first-child > tbody:first-child > tr:first-child th:last-child {
-        border-top-right-radius: 3px; }
+        border-top-right-radius: -1px; }
   .cl .panel > .table:last-child, .cl-palette .panel > .table:last-child,
   .cl .panel > .table-responsive:last-child > .table:last-child, .cl-palette .panel > .table-responsive:last-child > .table:last-child, #cl-menu .panel > .table:last-child,
   #cl-menu .panel > .table-responsive:last-child > .table:last-child {
-    border-bottom-right-radius: 3px;
-    border-bottom-left-radius: 3px; }
+    border-bottom-right-radius: -1px;
+    border-bottom-left-radius: -1px; }
     .cl .panel > .table:last-child > tbody:last-child > tr:last-child, .cl-palette .panel > .table:last-child > tbody:last-child > tr:last-child,
     .cl .panel > .table:last-child > tfoot:last-child > tr:last-child, .cl-palette .panel > .table:last-child > tfoot:last-child > tr:last-child,
     .cl .panel > .table-responsive:last-child > .table:last-child > tbody:last-child > tr:last-child, .cl-palette .panel > .table-responsive:last-child > .table:last-child > tbody:last-child > tr:last-child,
@@ -5053,8 +5053,8 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
     #cl-menu .panel > .table:last-child > tfoot:last-child > tr:last-child,
     #cl-menu .panel > .table-responsive:last-child > .table:last-child > tbody:last-child > tr:last-child,
     #cl-menu .panel > .table-responsive:last-child > .table:last-child > tfoot:last-child > tr:last-child {
-      border-bottom-left-radius: 3px;
-      border-bottom-right-radius: 3px; }
+      border-bottom-left-radius: -1px;
+      border-bottom-right-radius: -1px; }
       .cl .panel > .table:last-child > tbody:last-child > tr:last-child td:first-child, .cl-palette .panel > .table:last-child > tbody:last-child > tr:last-child td:first-child,
       .cl .panel > .table:last-child > tbody:last-child > tr:last-child th:first-child, .cl-palette .panel > .table:last-child > tbody:last-child > tr:last-child th:first-child,
       .cl .panel > .table:last-child > tfoot:last-child > tr:last-child td:first-child, .cl-palette .panel > .table:last-child > tfoot:last-child > tr:last-child td:first-child,
@@ -5070,7 +5070,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       #cl-menu .panel > .table-responsive:last-child > .table:last-child > tbody:last-child > tr:last-child th:first-child,
       #cl-menu .panel > .table-responsive:last-child > .table:last-child > tfoot:last-child > tr:last-child td:first-child,
       #cl-menu .panel > .table-responsive:last-child > .table:last-child > tfoot:last-child > tr:last-child th:first-child {
-        border-bottom-left-radius: 3px; }
+        border-bottom-left-radius: -1px; }
       .cl .panel > .table:last-child > tbody:last-child > tr:last-child td:last-child, .cl-palette .panel > .table:last-child > tbody:last-child > tr:last-child td:last-child,
       .cl .panel > .table:last-child > tbody:last-child > tr:last-child th:last-child, .cl-palette .panel > .table:last-child > tbody:last-child > tr:last-child th:last-child,
       .cl .panel > .table:last-child > tfoot:last-child > tr:last-child td:last-child, .cl-palette .panel > .table:last-child > tfoot:last-child > tr:last-child td:last-child,
@@ -5086,7 +5086,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       #cl-menu .panel > .table-responsive:last-child > .table:last-child > tbody:last-child > tr:last-child th:last-child,
       #cl-menu .panel > .table-responsive:last-child > .table:last-child > tfoot:last-child > tr:last-child td:last-child,
       #cl-menu .panel > .table-responsive:last-child > .table:last-child > tfoot:last-child > tr:last-child th:last-child {
-        border-bottom-right-radius: 3px; }
+        border-bottom-right-radius: -1px; }
   .cl .panel > .panel-body + .table, .cl-palette .panel > .panel-body + .table,
   .cl .panel > .panel-body + .table-responsive, .cl-palette .panel > .panel-body + .table-responsive,
   .cl .panel > .table + .panel-body, .cl-palette .panel > .table + .panel-body,
@@ -5190,7 +5190,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
     margin-bottom: 20px; }
     .cl .panel-group .panel, .cl-palette .panel-group .panel, #cl-menu .panel-group .panel {
       margin-bottom: 0;
-      border-radius: 4px; }
+      border-radius: 0px; }
       .cl .panel-group .panel + .panel, .cl-palette .panel-group .panel + .panel, #cl-menu .panel-group .panel + .panel {
         margin-top: 5px; }
     .cl .panel-group .panel-heading, .cl-palette .panel-group .panel-heading, #cl-menu .panel-group .panel-heading {
@@ -5313,7 +5313,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
     margin-bottom: 20px;
     background-color: #f5f5f5;
     border: 1px solid #e3e3e3;
-    border-radius: 4px;
+    border-radius: 0px;
     -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05); }
     .cl .well blockquote, .cl-palette .well blockquote, #cl-menu .well blockquote {
@@ -5497,7 +5497,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
     color: #fff;
     text-align: center;
     background-color: #000;
-    border-radius: 4px; }
+    border-radius: 0px; }
   .cl .tooltip-arrow, .cl-palette .tooltip-arrow, #cl-menu .tooltip-arrow {
     position: absolute;
     width: 0;
@@ -6051,6 +6051,21 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
   @media print {
     .cl .hidden-print, .cl-palette .hidden-print, #cl-menu .hidden-print {
       display: none !important; } }
+  .cl .navbar-inverse, .cl-palette .navbar-inverse, #cl-menu .navbar-inverse {
+    background-image: none; }
+  .cl .dropdown-menu > li > a:hover, .cl-palette .dropdown-menu > li > a:hover,
+  .cl .dropdown-menu > li > a:focus, .cl-palette .dropdown-menu > li > a:focus, #cl-menu .dropdown-menu > li > a:hover,
+  #cl-menu .dropdown-menu > li > a:focus {
+    background-image: none;
+    outline: none; }
+  .cl .navbar-toggle, .cl-palette .navbar-toggle, #cl-menu .navbar-toggle {
+    margin-top: 0px;
+    margin-bottom: 0px; }
+  @media (min-width: 768px) {
+    .cl .navbar-nav, .cl-palette .navbar-nav, #cl-menu .navbar-nav {
+      margin-left: -30px; } }
+  .cl .navbar-form, .cl-palette .navbar-form, #cl-menu .navbar-form {
+    padding-right: 0px; }
   .cl .navbar-nav:not(.sm-collapsible) ul .caret, .cl-palette .navbar-nav:not(.sm-collapsible) ul .caret, #cl-menu .navbar-nav:not(.sm-collapsible) ul .caret {
     position: absolute;
     right: 0;
