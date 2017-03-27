@@ -1,6 +1,6 @@
 {% macro searchTree(tree, baseUrl) %}
-    <li>
-        <a href="{{ baseUrl + 'index.html#' + baseUrl + tree.relativePath }}">
+    <li class="cl-bs-tag-li">
+        <a class="cl-bs-tag-a" href="{{ baseUrl + 'index.html#' + baseUrl + tree.relativePath }}">
             {{ tree.name }}
         </a>
     </li>

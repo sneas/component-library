@@ -10,34 +10,35 @@
     {% for cssFile in css %}
         <link href="{{ cssFile }}" rel="stylesheet">
     {% endfor %}
-    <link href="{{ baseUrl + 'css/cl.css' }}" rel="stylesheet">
+    <link href="{{ baseUrl + '_assets/css/cl.css' }}" rel="stylesheet">
 </head>
 <body>
-    <div id="cl-menu">
-        <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle cl-navigation-toggle">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    {#<a class="navbar-brand" href="{{ baseUrl + 'index.html#' + baseUrl + tree.relativePath }}">{{ title }}</a>#}
-                </div>
-                <div class="navbar-collapse collapse cl-navigation-collapse">
-                    <ul class="nav navbar-nav">
-                        {% for child in tree.children %}
-                            {{ navigation(child, baseUrl, current) }}
-                        {% endfor %}
-                    </ul>
+    <div class="cl-bs-tag-html">
+        <div class="cl-bs-tag-body">
+            <div class="cl-bs-navbar cl-bs-navbar-inverse cl-bs-navbar-fixed-top" role="navigation">
+                <div class="cl-bs-container">
+                    <div class="cl-bs-navbar-header">
+                        <button type="button" class="cl-bs-navbar-toggle cl-bs-tag-button cl-navigation-toggle">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="cl-bs-icon-bar"></span>
+                            <span class="cl-bs-icon-bar"></span>
+                            <span class="cl-bs-icon-bar"></span>
+                        </button>
+                    </div>
+                    <div class="cl-bs-navbar-collapse cl-bs-collapse cl-navigation-collapse">
+                        <ul class="cl-bs-tag-ul cl-bs-nav cl-bs-navbar-nav">
+                            {% for child in tree.children %}
+                                {{ navigation(child, baseUrl, current) }}
+                            {% endfor %}
+                        </ul>
 
-                    <div class="navbar-form pull-right hidden-xs">
-                        <div class="dropdown">
-                            <input type="text" class="form-control form-control-sm" placeholder="Search" id="cl-search">
-                            <ul class="dropdown-menu">
-                                {{ searchTree(tree, baseUrl) }}
-                            </ul>
+                        <div class="cl-bs-navbar-form cl-bs-pull-right cl-bs-hidden-xs">
+                            <div class="cl-bs-dropdown">
+                                <input type="text" class="cl-bs-tag-input cl-bs-form-control cl-bs-form-control-sm" placeholder="Search" id="cl-search">
+                                <ul class="cl-bs-dropdown-menu">
+                                    {{ searchTree(tree, baseUrl) }}
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -51,10 +52,15 @@
         </div>
     </div>
 
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.smartmenus/1.0.1/jquery.smartmenus.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.smartmenus/1.0.1/addons/bootstrap/jquery.smartmenus.bootstrap.min.js"></script>
-    <script src="{{ baseUrl + 'assets/js/cl.js' }}"></script>
+    <script>
+        BOOTSTRAP_NAMESPACE = 'cl-bs';
+    </script>
+
+    <script src="{{ baseUrl + '_assets/jquery/jquery.js' }}"></script>
+    <script src="{{ baseUrl + '_assets/smartmenus-namespace/jquery.smartmenus.js' }}"></script>
+    <script src="{{ baseUrl + '_assets/smartmenus-namespace/addons/bootstrap/jquery.smartmenus.bootstrap.js' }}"></script>
+    <script src="{{ baseUrl + '_assets/assets/js/cl.js' }}"></script>
+    <script src="{{ baseUrl + '_assets/bootstrap-namespace/dropdown.js' }}"></script>
 
     {% for jsFile in js %}
         <script src="{{ jsFile }}"></script>

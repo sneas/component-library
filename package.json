@@ -29,16 +29,17 @@
     "publish-demo": "gh-pages -d demo/public/component-library"
   },
   "dependencies": {
-    "bootstrap-sass": "^3.3.7",
+    "bootstrap-sass-namespace": "3.3.7-alpha.3",
     "directory-tree": "^1.0.0",
     "font-awesome": "^4.6.3",
     "gulp": "^3.9.1",
     "highlight.js": "9.9.0",
+    "jquery": "^3.2.1",
     "lodash": "^4.13.1",
     "node-modules-resolve": "^1.3.0",
     "npm-sass": "^1.3.0",
     "nunjucks": "3.0.0",
-    "smartmenus": "1.0.0",
+    "smartmenus-namespace": "1.0.1-alpha.4",
     "writefile": "^0.2.8"
   },
   "devDependencies": {

@@ -1,14 +1,6 @@
-.cl, #cl-menu {
-    @import "variables";
-    @import "bootstrap-sass/assets/stylesheets/bootstrap";
-    @import "bootstrap/_theme";
+@import "bootstrap-sass-namespace/assets/stylesheets/_bootstrap.scss";
+@import "smartmenus-namespace/dist/addons/bootstrap/jquery.smartmenus.bootstrap";
 
-    font-family: $font-family-base;
-    font-size: $font-size-base;
-    line-height: $line-height-base;
-    color: $text-color;
-
-    @import "smartmenus/dist/addons/bootstrap/jquery.smartmenus.bootstrap";
-
+.cl {
     @import "highlight.js/styles/github";
 }
