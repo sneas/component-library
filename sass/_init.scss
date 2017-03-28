@@ -1,6 +1,9 @@
+@import "bootstrap/variables";
 @import "bootstrap-sass-namespace/assets/stylesheets/_bootstrap.scss";
 @import "smartmenus-namespace/dist/addons/bootstrap/jquery.smartmenus.bootstrap";
 
 .cl {
     @import "highlight.js/styles/github";
 }
+
+@import "bootstrap/theme";
