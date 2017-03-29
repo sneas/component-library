@@ -63,7 +63,7 @@ export default function(inputDir, outputDir, options = {}) {
         js: [],
         css: [],
         favicon: {
-            href: options.baseUrl + '_assets/assets/favicons/favicon-32x32.png',
+            href: options.baseUrl + 'assets_/assets/favicons/favicon-32x32.png',
             rel: 'icon',
             type: 'image/component-library/favicons/png'
         }
