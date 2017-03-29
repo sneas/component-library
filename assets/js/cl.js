@@ -8,7 +8,7 @@
 
     function toggle() {
         collapsible.slideToggle('fast', function() {
-            collapsible.toggleClass('in');
+            collapsible.toggleClass('cl-bs-in');
         });
     }
 
@@ -21,11 +21,11 @@
             return;
         }
 
-        if ($(e.target).is('.navbar-toggle')) {
+        if ($(e.target).is('.cl-bs-navbar-toggle')) {
             return;
         }
 
-        if ($(this).is('.has-submenu.highlighted') || !$(this).is('.has-submenu')) {
+        if ($(this).is('.cl-bs-has-submenu.cl-bs-highlighted') || !$(this).is('cl-bs-.has-submenu')) {
             toggle();
         }
     });
@@ -37,8 +37,8 @@
  */
 (function($) {
     var input = $('#cl-search');
-    var wrapper = input.parents('.dropdown:first');
-    var dropdown = wrapper.find('.dropdown-menu');
+    var wrapper = input.parents('.cl-bs-dropdown:first');
+    var dropdown = wrapper.find('.cl-bs-dropdown-menu');
     var likelyIn = 0;
     var outTimeout = false;
     var upStrikesOnFirstItem = 0;
@@ -53,7 +53,7 @@
         outTimeout = setTimeout(function() {
             outTimeout = false;
             if (likelyIn <= 0) {
-                wrapper.removeClass('open');
+                wrapper.removeClass('cl-bs-open');
                 likelyIn = 0;
             } else {
                 showWhenNeeded();
@@ -69,14 +69,14 @@
     input.keyup(function(event) {
         // Arrow down pressed
         if (event.keyCode === 40) {
-            dropdown.find('li:not(.hidden):first a').focus();
+            dropdown.find('li:not(.cl-bs-hidden):first a').focus();
             upStrikesOnFirstItem = 1;
             return;
         }
 
         var searchString = input.val().toLowerCase();
         dropdown.find('li').each(function() {
-            $(this).toggleClass('hidden', $(this).text().toLowerCase().indexOf(searchString) === -1);
+            $(this).toggleClass('cl-bs-hidden', $(this).text().toLowerCase().indexOf(searchString) === -1);
         });
 
         showWhenNeeded();
@@ -103,10 +103,10 @@
     });
 
     function showWhenNeeded() {
-        if (input.val().length === 0 || dropdown.find('li:not(.hidden)').length === 0) {
-            wrapper.removeClass('open');
+        if (input.val().length === 0 || dropdown.find('li:not(.cl-bs-hidden)').length === 0) {
+            wrapper.removeClass('cl-bs-open');
         } else {
-            wrapper.addClass('open');
+            wrapper.addClass('cl-bs-open');
         }
     }
 })(jQuery);

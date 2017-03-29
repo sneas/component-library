@@ -1,23 +1,34 @@
-.navbar-inverse {
+.#{$class-prefix}-navbar-inverse {
     background-image: none;
 }
 
-.dropdown-menu > li > a:hover,
-.dropdown-menu > li > a:focus {
+.#{$class-prefix}-dropdown-menu > .#{$class-prefix}-tag-li > .#{$class-prefix}-tag-a:hover,
+.#{$class-prefix}-dropdown-menu > .#{$class-prefix}-tag-li > .#{$class-prefix}-tag-a:focus {
     background-image: none;
     outline: none;
 }
 
-.navbar-toggle {
+.#{$class-prefix}-navbar-toggle {
     @include navbar-vertical-align(30px);
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
-.navbar-nav {
+.#{$class-prefix}-navbar-nav {
     @media (min-width: $grid-float-breakpoint) {
         margin-left: -30px;
     }
 }
 
-.navbar-form {
+.#{$class-prefix}-navbar-form {
     padding-right: 0px;
+}
+
+.#{$class-prefix}-nav .#{$class-prefix}-open > .#{$class-prefix}-tag-a,
+.#{$class-prefix}-nav .#{$class-prefix}-open > .#{$class-prefix}-tag-a:hover,
+.#{$class-prefix}-nav .#{$class-prefix}-open > .#{$class-prefix}-tag-a:focus {
+    @media (max-width: $grid-float-breakpoint) {
+        background-color: transparent;
+        border-color: transparent;
+    }
 }

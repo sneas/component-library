@@ -1,14 +1,14 @@
 {% macro navigation(tree, baseUrl, current) %}
-    <li>
-        <a href="{{ baseUrl + 'index.html#' + baseUrl + tree.relativePath }}">
+    <li class="cl-bs-tag-li">
+        <a class="cl-bs-tag-a" href="{{ baseUrl + 'index.html#' + baseUrl + tree.relativePath }}">
             {{ tree.name }}
 
             {% if tree.children %}
-                <span class="caret"></span>
+                <span class="cl-bs-caret"></span>
             {% endif %}
         </a>
         {% if tree.children %}
-            <ul class="dropdown-menu">
+            <ul class="cl-bs-tag-ul cl-bs-dropdown-menu">
                 {% for child in tree.children %}
                     {{ navigation(child, baseUrl, current) }}
                 {% endfor %}

@@ -1,0 +1,17 @@
+// Initialize Bootstrap
+@import "bootstrap/variables";
+@import "bootstrap-sass-namespace/assets/stylesheets/_bootstrap.scss";
+@import "bootstrap/theme";
+
+// Initialize highlight.js
+.cl {
+    @import "highlight.js/styles/github";
+}
+
+// Initialize Smartmenus
+@import "smartmenus-namespace/dist/addons/bootstrap/jquery.smartmenus.bootstrap";
+
+// Initialize Font Awesome
+$fa-font-path:        "../fonts" !default;
+$fa-css-prefix:       cl-fa !default;
+@import "font-awesome/scss/font-awesome";
