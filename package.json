@@ -30,6 +30,7 @@
   },
   "dependencies": {
     "bootstrap-sass-namespace": "3.3.7-alpha.3",
+    "cheerio": "^0.22.0",
     "directory-tree": "^1.0.0",
     "font-awesome": "^4.6.3",
     "gulp": "^3.9.1",

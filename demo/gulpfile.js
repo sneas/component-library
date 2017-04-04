@@ -19,9 +19,10 @@ gulp.task('assets', ['clean'], function() {
 });
 
 gulp.task('compile', ['assets'], function(cb) {
-    var templatesDir = path.join(__dirname, 'templates');
+    var templatesDir = path.join(__dirname, 'src/templates');
     componentLibrary(templatesDir, publicDir, {
         baseUrl: '/component-library/',
+        layout: path.join(__dirname, 'src/layout.html'),
         js: [
             'https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js',
             'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js',
@@ -41,5 +42,5 @@ gulp.task('compile', ['assets'], function(cb) {
 });
 
 gulp.task('watch', ['compile'], function() {
-    gulp.watch(['templates/**/*', 'assets/**/*', '../dist/assemblers/views/**/*', '../sass/**/*', '../assets/**/*'], ['compile']);
+    gulp.watch(['src/**/*', 'assets/**/*', '../dist/assemblers/views/**/*', '../sass/**/*', '../assets/**/*'], ['compile']);
 });
