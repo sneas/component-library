@@ -1,5 +1,5 @@
 /*!
- * SmartMenus jQuery Plugin Bootstrap Addon - v0.3.1 - March 27, 2017
+ * SmartMenus jQuery Plugin Bootstrap Addon - v0.3.1 - April 4, 2017
  * http://www.smartmenus.org/
  *
  * Copyright Vasil Dinkov, Vadikom Web Ltd.
@@ -27,7 +27,7 @@
 		keydownFix: false,
 		init: function() {
 			// init all navbars that don't have the "data-sm-skip" attribute set
-			var $navbars = $('.' + classPrefix + '-tag-ul.' + classPrefix + '-navbar-nav:not([data-sm-skip])');
+			var $navbars = $('.' + classPrefix + '-html-ul.' + classPrefix + '-navbar-nav:not([data-sm-skip])');
 			$navbars.each(function() {
 				var $this = $(this),
 					obj = $this.data('smartmenus');
@@ -63,9 +63,9 @@
 
 					function onInit() {
 						// set Bootstrap's "active" class to SmartMenus "current" items (should someone decide to enable markCurrentItem: true)
-						$this.find('.' + classPrefix + '-tag-a.' + classPrefix + '-current').parent().addClass(classPrefix + '-active');
+						$this.find('.' + classPrefix + '-html-a.' + classPrefix + '-current').parent().addClass(classPrefix + '-active');
 						// remove any Bootstrap required attributes that might cause conflicting issues with the SmartMenus script
-						$this.find('.' + classPrefix + '-tag-a.' + classPrefix + '-has-submenu').each(function() {
+						$this.find('.' + classPrefix + '-html-a.' + classPrefix + '-has-submenu').each(function() {
 							var $this = $(this);
 							if ($this.is('[data-toggle="dropdown"]')) {
 								$this.dataSM('bs-data-toggle-dropdown', true).removeAttr('data-toggle');
@@ -79,8 +79,8 @@
 					onInit();
 
 					function onBeforeDestroy() {
-						$this.find('.' + classPrefix + '-tag-a.' + classPrefix + '-current').parent().removeClass(classPrefix + '-active');
-						$this.find('.' + classPrefix + '-tag-a.' + classPrefix + '-has-submenu').each(function() {
+						$this.find('.' + classPrefix + '-html-a.' + classPrefix + '-current').parent().removeClass(classPrefix + '-active');
+						$this.find('.' + classPrefix + '-html-a.' + classPrefix + '-has-submenu').each(function() {
 							var $this = $(this);
 							if ($this.dataSM('bs-data-toggle-dropdown')) {
 								$this.attr('data-toggle', 'dropdown').removeDataSM('bs-data-toggle-dropdown');

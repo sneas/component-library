@@ -15,7 +15,7 @@
 
   var classPrefix = BOOTSTRAP_NAMESPACE || 'z';
 
-  var backdrop = '.dropdown-backdrop'
+  var backdrop = '.' + classPrefix + '-dropdown-backdrop'
   var toggle   = '[data-toggle="dropdown"]'
   var Dropdown = function (element) {
     $(element).on('click.bs.dropdown', this.toggle)
@@ -111,7 +111,7 @@
       return $this.trigger('click')
     }
 
-    var desc = ' .' + classPrefix + '-tag-li:not(.' + classPrefix + '-disabled):visible .' + classPrefix + '-tag-a'
+    var desc = ' .' + classPrefix + '-html-li:not(.' + classPrefix + '-disabled):visible .' + classPrefix + '-html-a'
     var $items = $parent.find('.' + classPrefix + '-dropdown-menu' + desc)
 
     if (!$items.length) return

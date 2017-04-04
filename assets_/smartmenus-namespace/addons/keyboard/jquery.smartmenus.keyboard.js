@@ -1,5 +1,5 @@
 /*!
- * SmartMenus jQuery Plugin Keyboard Addon - v0.3.1 - March 27, 2017
+ * SmartMenus jQuery Plugin Keyboard Addon - v0.3.1 - April 4, 2017
  * http://www.smartmenus.org/
  *
  * Copyright Vasil Dinkov, Vadikom Web Ltd.

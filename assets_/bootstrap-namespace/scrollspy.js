@@ -19,7 +19,7 @@
     this.$body          = $(document.body)
     this.$scrollElement = $(element).is(document.body) ? $(window) : $(element)
     this.options        = $.extend({}, ScrollSpy.DEFAULTS, options)
-    this.selector       = (this.options.target || '') + ' .nav .' + classPrefix + '-tag-li > .' + classPrefix + '-tag-a'
+    this.selector       = (this.options.target || '') + ' .nav .' + classPrefix + '-html-li > .' + classPrefix + '-html-a'
     this.offsets        = []
     this.targets        = []
     this.activeTarget   = null
@@ -113,12 +113,12 @@
       this.selector + '[href="' + target + '"]'
 
     var active = $(selector)
-      .parents('li')
+      .parents('.' + classPrefix + '-html-li')
       .addClass(classPrefix + '-active')
 
     if (active.parent('.' + classPrefix + '-dropdown-menu').length) {
       active = active
-        .closest('li.dropdown')
+        .closest('.' + classPrefix + '-html-li.' + classPrefix + '-dropdown')
         .addClass(classPrefix + '-active')
     }
 

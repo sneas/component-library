@@ -5,7 +5,7 @@
  These are theme independent and should work with any Bootstrap 3 theme mod.
 */
 /* sub menus arrows on desktop */
-.#{$class-prefix}-navbar-nav:not(.#{$class-prefix}-sm-collapsible) .#{$class-prefix}-tag-ul .#{$class-prefix}-caret {
+.#{$class-prefix}-navbar-nav:not(.#{$class-prefix}-sm-collapsible) .#{$class-prefix}-html-ul .#{$class-prefix}-caret {
 	position: absolute;
 	right: 0;
 	margin-top: 6px;
@@ -14,11 +14,11 @@
 	border-bottom: 4px solid transparent;
 	border-left: 4px dashed;
 }
-.#{$class-prefix}-navbar-nav:not(.#{$class-prefix}-sm-collapsible) .#{$class-prefix}-tag-ul .#{$class-prefix}-tag-a.#{$class-prefix}-has-submenu {
+.#{$class-prefix}-navbar-nav:not(.#{$class-prefix}-sm-collapsible) .#{$class-prefix}-html-ul .#{$class-prefix}-html-a.#{$class-prefix}-has-submenu {
 	padding-right: 30px;
 }
 /* make sub menu arrows look like +/- buttons in collapsible mode */
-.#{$class-prefix}-navbar-nav.#{$class-prefix}-sm-collapsible .#{$class-prefix}-caret, .#{$class-prefix}-navbar-nav.#{$class-prefix}-sm-collapsible .#{$class-prefix}-tag-ul .#{$class-prefix}-caret {
+.#{$class-prefix}-navbar-nav.#{$class-prefix}-sm-collapsible .#{$class-prefix}-caret, .#{$class-prefix}-navbar-nav.#{$class-prefix}-sm-collapsible .#{$class-prefix}-html-ul .#{$class-prefix}-caret {
 	position: absolute;
 	right: 0;
 	margin: -3px 15px 0 0;
@@ -35,14 +35,14 @@
 	font-family: monospace;
 	font-weight: bold;
 }
-.#{$class-prefix}-navbar-nav.#{$class-prefix}-sm-collapsible .#{$class-prefix}-open > .#{$class-prefix}-tag-a > .#{$class-prefix}-caret:before {
+.#{$class-prefix}-navbar-nav.#{$class-prefix}-sm-collapsible .#{$class-prefix}-open > .#{$class-prefix}-html-a > .#{$class-prefix}-caret:before {
 	content: '-';
 }
-.#{$class-prefix}-navbar-nav.#{$class-prefix}-sm-collapsible .#{$class-prefix}-tag-a.#{$class-prefix}-has-submenu {
+.#{$class-prefix}-navbar-nav.#{$class-prefix}-sm-collapsible .#{$class-prefix}-html-a.#{$class-prefix}-has-submenu {
 	padding-right: 50px;
 }
-/* revert to Bootstrap's default carets in collapsible mode when the "data-sm-skip-collapsible-behavior" attribute is set to the .#{$class-prefix}-tag-ul.#{$class-prefix}-navbar-nav */
-.#{$class-prefix}-navbar-nav.#{$class-prefix}-sm-collapsible[data-sm-skip-collapsible-behavior] .#{$class-prefix}-caret, .#{$class-prefix}-navbar-nav.#{$class-prefix}-sm-collapsible[data-sm-skip-collapsible-behavior] .#{$class-prefix}-tag-ul .#{$class-prefix}-caret {
+/* revert to Bootstrap's default carets in collapsible mode when the "data-sm-skip-collapsible-behavior" attribute is set to the .#{$class-prefix}-html-ul.#{$class-prefix}-navbar-nav */
+.#{$class-prefix}-navbar-nav.#{$class-prefix}-sm-collapsible[data-sm-skip-collapsible-behavior] .#{$class-prefix}-caret, .#{$class-prefix}-navbar-nav.#{$class-prefix}-sm-collapsible[data-sm-skip-collapsible-behavior] .#{$class-prefix}-html-ul .#{$class-prefix}-caret {
 	position: static;
 	margin: 0 0 0 2px;
 	padding: 0;
@@ -56,7 +56,7 @@
 .#{$class-prefix}-navbar-nav.#{$class-prefix}-sm-collapsible[data-sm-skip-collapsible-behavior] .#{$class-prefix}-caret:before {
 	content: '' !important;
 }
-.#{$class-prefix}-navbar-nav.#{$class-prefix}-sm-collapsible[data-sm-skip-collapsible-behavior] .#{$class-prefix}-tag-a.#{$class-prefix}-has-submenu {
+.#{$class-prefix}-navbar-nav.#{$class-prefix}-sm-collapsible[data-sm-skip-collapsible-behavior] .#{$class-prefix}-html-a.#{$class-prefix}-has-submenu {
 	padding-right: 15px;
 }
 /* scrolling arrows for tall menus */
@@ -89,34 +89,34 @@
 	border-left: 7px dashed transparent;
 }
 /* add more indentation for 2+ level sub in collapsible mode - Bootstrap normally supports just 1 level sub menus */
-.#{$class-prefix}-navbar-nav.#{$class-prefix}-sm-collapsible .#{$class-prefix}-tag-ul .#{$class-prefix}-dropdown-menu > .#{$class-prefix}-tag-li > .#{$class-prefix}-tag-a,
-.#{$class-prefix}-navbar-nav.#{$class-prefix}-sm-collapsible .#{$class-prefix}-tag-ul .#{$class-prefix}-dropdown-menu .#{$class-prefix}-dropdown-header {
+.#{$class-prefix}-navbar-nav.#{$class-prefix}-sm-collapsible .#{$class-prefix}-html-ul .#{$class-prefix}-dropdown-menu > .#{$class-prefix}-html-li > .#{$class-prefix}-html-a,
+.#{$class-prefix}-navbar-nav.#{$class-prefix}-sm-collapsible .#{$class-prefix}-html-ul .#{$class-prefix}-dropdown-menu .#{$class-prefix}-dropdown-header {
 	padding-left: 35px;
 }
-.#{$class-prefix}-navbar-nav.#{$class-prefix}-sm-collapsible .#{$class-prefix}-tag-ul .#{$class-prefix}-tag-ul .#{$class-prefix}-dropdown-menu > .#{$class-prefix}-tag-li > .#{$class-prefix}-tag-a,
-.#{$class-prefix}-navbar-nav.#{$class-prefix}-sm-collapsible .#{$class-prefix}-tag-ul .#{$class-prefix}-tag-ul .#{$class-prefix}-dropdown-menu .#{$class-prefix}-dropdown-header {
+.#{$class-prefix}-navbar-nav.#{$class-prefix}-sm-collapsible .#{$class-prefix}-html-ul .#{$class-prefix}-html-ul .#{$class-prefix}-dropdown-menu > .#{$class-prefix}-html-li > .#{$class-prefix}-html-a,
+.#{$class-prefix}-navbar-nav.#{$class-prefix}-sm-collapsible .#{$class-prefix}-html-ul .#{$class-prefix}-html-ul .#{$class-prefix}-dropdown-menu .#{$class-prefix}-dropdown-header {
 	padding-left: 45px;
 }
-.#{$class-prefix}-navbar-nav.#{$class-prefix}-sm-collapsible .#{$class-prefix}-tag-ul .#{$class-prefix}-tag-ul .#{$class-prefix}-tag-ul .#{$class-prefix}-dropdown-menu > .#{$class-prefix}-tag-li > .#{$class-prefix}-tag-a,
-.#{$class-prefix}-navbar-nav.#{$class-prefix}-sm-collapsible .#{$class-prefix}-tag-ul .#{$class-prefix}-tag-ul .#{$class-prefix}-tag-ul .#{$class-prefix}-dropdown-menu .#{$class-prefix}-dropdown-header {
+.#{$class-prefix}-navbar-nav.#{$class-prefix}-sm-collapsible .#{$class-prefix}-html-ul .#{$class-prefix}-html-ul .#{$class-prefix}-html-ul .#{$class-prefix}-dropdown-menu > .#{$class-prefix}-html-li > .#{$class-prefix}-html-a,
+.#{$class-prefix}-navbar-nav.#{$class-prefix}-sm-collapsible .#{$class-prefix}-html-ul .#{$class-prefix}-html-ul .#{$class-prefix}-html-ul .#{$class-prefix}-dropdown-menu .#{$class-prefix}-dropdown-header {
 	padding-left: 55px;
 }
-.#{$class-prefix}-navbar-nav.#{$class-prefix}-sm-collapsible .#{$class-prefix}-tag-ul .#{$class-prefix}-tag-ul .#{$class-prefix}-tag-ul .#{$class-prefix}-tag-ul .#{$class-prefix}-dropdown-menu > .#{$class-prefix}-tag-li > .#{$class-prefix}-tag-a,
-.#{$class-prefix}-navbar-nav.#{$class-prefix}-sm-collapsible .#{$class-prefix}-tag-ul .#{$class-prefix}-tag-ul .#{$class-prefix}-tag-ul .#{$class-prefix}-tag-ul .#{$class-prefix}-dropdown-menu .#{$class-prefix}-dropdown-header {
+.#{$class-prefix}-navbar-nav.#{$class-prefix}-sm-collapsible .#{$class-prefix}-html-ul .#{$class-prefix}-html-ul .#{$class-prefix}-html-ul .#{$class-prefix}-html-ul .#{$class-prefix}-dropdown-menu > .#{$class-prefix}-html-li > .#{$class-prefix}-html-a,
+.#{$class-prefix}-navbar-nav.#{$class-prefix}-sm-collapsible .#{$class-prefix}-html-ul .#{$class-prefix}-html-ul .#{$class-prefix}-html-ul .#{$class-prefix}-html-ul .#{$class-prefix}-dropdown-menu .#{$class-prefix}-dropdown-header {
 	padding-left: 65px;
 }
 /* fix SmartMenus sub menus auto width (subMenusMinWidth and subMenusMaxWidth options) */
-.#{$class-prefix}-navbar-nav .#{$class-prefix}-dropdown-menu > .#{$class-prefix}-tag-li > .#{$class-prefix}-tag-a {
+.#{$class-prefix}-navbar-nav .#{$class-prefix}-dropdown-menu > .#{$class-prefix}-html-li > .#{$class-prefix}-html-a {
 	white-space: normal;
 }
-.#{$class-prefix}-navbar-nav .#{$class-prefix}-tag-ul.#{$class-prefix}-sm-nowrap > .#{$class-prefix}-tag-li > .#{$class-prefix}-tag-a {
+.#{$class-prefix}-navbar-nav .#{$class-prefix}-html-ul.#{$class-prefix}-sm-nowrap > .#{$class-prefix}-html-li > .#{$class-prefix}-html-a {
 	white-space: nowrap;
 }
-.#{$class-prefix}-navbar-nav.#{$class-prefix}-sm-collapsible .#{$class-prefix}-tag-ul.#{$class-prefix}-sm-nowrap > .#{$class-prefix}-tag-li > .#{$class-prefix}-tag-a {
+.#{$class-prefix}-navbar-nav.#{$class-prefix}-sm-collapsible .#{$class-prefix}-html-ul.#{$class-prefix}-sm-nowrap > .#{$class-prefix}-html-li > .#{$class-prefix}-html-a {
 	white-space: normal;
 }
 /* fix .#{$class-prefix}-navbar-right subs alignment */
-.#{$class-prefix}-navbar-right .#{$class-prefix}-tag-ul.#{$class-prefix}-dropdown-menu {
+.#{$class-prefix}-navbar-right .#{$class-prefix}-html-ul.#{$class-prefix}-dropdown-menu {
 	left: 0;
 	right: auto;
 }
