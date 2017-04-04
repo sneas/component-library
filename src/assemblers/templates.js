@@ -5,6 +5,7 @@ import path from 'path';
 import writefile from 'writefile';
 import nunjucks from 'nunjucks';
 import hljs from 'highlight.js';
+import cheerio from 'cheerio';
 
 function refineTree(item, rootDir) {
     //Remove firsts numbers and extensions
@@ -34,22 +35,49 @@ function compileTree(item, outputDir, tree, options = {}) {
 
     renderers.push(
         new Promise(function(resolve, reject) {
-            nunjucks.render(
-                'page.njk',
-                _.extend({}, options, {
-                    tree: tree,
-                    current: item
-                }),
-                function(err, res) {
-                    if (err) {
-                        reject(err);
-                    }
+            const params = _.extend({}, options, {
+                tree: tree,
+                current: item
+            });
 
-                    writefile(outputPath, res, function() {
-                        resolve();
-                    });
-                }
-            );
+            const navigationHtml = nunjucks.render('navigation.njk', params);
+            const contentHtml = nunjucks.render('content.njk', params);
+            const layoutHtml = nunjucks.render(options.layout, {content: contentHtml});
+
+            const $ = cheerio.load(layoutHtml);
+            const head = $('head');
+            const body = $('body');
+
+            head.prepend(nunjucks.render('css.njk', params));
+
+            if (head.find('title').length === 0) {
+                head.prepend($('<title></title>').text(options.title));
+            }
+
+            _.forEach(options.css, function(cssLink) {
+                head.append($('<link rel="stylesheet">').attr('href', cssLink));
+            });
+
+            if (head.find('meta[charset]').length === 0) {
+                head.prepend('<meta charset="utf-8">');
+            }
+
+            if (head.find('link[rel=icon]').length === 0) {
+                head.append($('<link />').attr('href', options.favicon.href)
+                    .attr('rel', options.favicon.rel)
+                    .attr('type', options.favicon.type));
+            }
+
+            body.prepend(navigationHtml);
+            body.append(nunjucks.render('js.njk', params));
+
+            _.forEach(options.js, function(jsLink) {
+                body.append($('<script></script>').attr('src', jsLink));
+            });
+
+            writefile(outputPath, $.html(), function() {
+                resolve();
+            });
         })
     );
 
@@ -62,6 +90,7 @@ export default function(inputDir, outputDir, options = {}) {
         title: 'Component Library',
         js: [],
         css: [],
+        layout: path.join(__dirname, 'views/layout.njk'),
         favicon: {
             href: options.baseUrl + 'assets_/assets/favicons/favicon-32x32.png',
             rel: 'icon',
@@ -69,7 +98,7 @@ export default function(inputDir, outputDir, options = {}) {
         }
     });
 
-    (new nunjucks.configure(path.resolve(__dirname, 'views')))
+    (new nunjucks.configure([path.join(__dirname, 'views'), '']))
         .addFilter('template', path => fs.readFileSync(path).toString())
         .addFilter('highlight', code => hljs.highlight('htmlbars', code, true, false).value);
 

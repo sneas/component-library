@@ -2,8 +2,8 @@
     background-image: none;
 }
 
-.#{$class-prefix}-dropdown-menu > .#{$class-prefix}-tag-li > .#{$class-prefix}-tag-a:hover,
-.#{$class-prefix}-dropdown-menu > .#{$class-prefix}-tag-li > .#{$class-prefix}-tag-a:focus {
+.#{$class-prefix}-dropdown-menu > .#{$class-prefix}-html-li > .#{$class-prefix}-html-a:hover,
+.#{$class-prefix}-dropdown-menu > .#{$class-prefix}-html-li > .#{$class-prefix}-html-a:focus {
     background-image: none;
     outline: none;
 }
@@ -24,11 +24,15 @@
     padding-right: 0px;
 }
 
-.#{$class-prefix}-nav .#{$class-prefix}-open > .#{$class-prefix}-tag-a,
-.#{$class-prefix}-nav .#{$class-prefix}-open > .#{$class-prefix}-tag-a:hover,
-.#{$class-prefix}-nav .#{$class-prefix}-open > .#{$class-prefix}-tag-a:focus {
+.#{$class-prefix}-nav .#{$class-prefix}-open > .#{$class-prefix}-html-a,
+.#{$class-prefix}-nav .#{$class-prefix}-open > .#{$class-prefix}-html-a:hover,
+.#{$class-prefix}-nav .#{$class-prefix}-open > .#{$class-prefix}-html-a:focus {
     @media (max-width: $grid-float-breakpoint) {
         background-color: transparent;
         border-color: transparent;
     }
+}
+
+.cl-navbar-placeholder {
+    min-height: $navbar-height;
 }

@@ -1,8 +1,8 @@
 {% macro elementTree(element, depth, baseUrl) %}
     <div class="cl-node cl-node-level-{{ depth }}{{ 'cl-node-template' if not element.children }}" id="{{ baseUrl + element.relativePath }}">
-        <div class="cl-bs-tag-html">
-            <div class="cl-bs-tag-body">
-                <div class="cl-node-header cl-bs-tag-h{{ depth }}">
+        <div class="cl-bs-html-html">
+            <div class="cl-bs-html-body">
+                <div class="cl-node-header cl-bs-html-h{{ depth }}">
                     {{ element.name }}
                     <a href="{{ baseUrl + element.relativePath }}" class="cl-node-header-link">
                         <i class="cl-fa cl-fa-paragraph"></i>
@@ -20,13 +20,13 @@
             <div class="cl-node-template-preview">
                 {{ element.path | template | safe }}
             </div>
-            <div class="cl cl-bs-tag-html">
-                <div class="cl-bs-tag-body">
+            <div class="cl cl-bs-html-html">
+                <div class="cl-bs-html-body">
                     <div class="cl-node-temaplate-code cl-js-template-code">
-                        <button class="cl-bs-tag-button cl-bs-btn cl-bs-btn-default cl-bs-btn-xs cl-js-template-code-toggle">
+                        <button class="cl-bs-html-button cl-bs-btn cl-bs-btn-default cl-bs-btn-xs cl-js-template-code-toggle">
                             <i class="cl-fa cl-fa-code"></i>
                         </button>
-                        <pre class="cl-bs-tag-pre cl-node-template-code-content cl-js-template-code-content"><code class="html">{{ element.path | template | highlight | safe }}</code></pre>
+                        <pre class="cl-bs-html-pre cl-node-template-code-content cl-js-template-code-content"><code class="html">{{ element.path | template | highlight | safe }}</code></pre>
                     </div>
                 </div>
             </div>
