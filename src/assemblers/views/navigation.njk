@@ -1,11 +1,11 @@
 {% from 'macro/navigation.njk' import navigation %}
 {% from 'macro/search-tree.njk' import searchTree %}
-<div class="cl-bs-tag-html">
-    <div class="cl-bs-tag-body">
+<div class="cl-bs-html-html">
+    <div class="cl-bs-html-body">
         <div class="cl-bs-navbar cl-bs-navbar-inverse cl-bs-navbar-fixed-top" role="navigation">
             <div class="cl-bs-container">
                 <div class="cl-bs-navbar-header">
-                    <button type="button" class="cl-bs-navbar-toggle cl-bs-tag-button cl-navigation-toggle">
+                    <button type="button" class="cl-bs-navbar-toggle cl-bs-html-button cl-navigation-toggle">
                         <span class="sr-only">Toggle navigation</span>
                         <span class="cl-bs-icon-bar"></span>
                         <span class="cl-bs-icon-bar"></span>
@@ -13,7 +13,7 @@
                     </button>
                 </div>
                 <div class="cl-bs-navbar-collapse cl-bs-collapse cl-navigation-collapse">
-                    <ul class="cl-bs-tag-ul cl-bs-nav cl-bs-navbar-nav">
+                    <ul class="cl-bs-html-ul cl-bs-nav cl-bs-navbar-nav">
                         {% for child in tree.children %}
                             {{ navigation(child, baseUrl, current) }}
                         {% endfor %}
@@ -21,7 +21,7 @@
 
                     <div class="cl-bs-navbar-form cl-bs-pull-right cl-bs-hidden-xs">
                         <div class="cl-bs-dropdown">
-                            <input type="text" class="cl-bs-tag-input cl-bs-form-control cl-bs-form-control-sm" placeholder="Search" id="cl-search">
+                            <input type="text" class="cl-bs-html-input cl-bs-form-control cl-bs-form-control-sm" placeholder="Search" id="cl-search">
                             <ul class="cl-bs-dropdown-menu">
                                 {{ searchTree(tree, baseUrl) }}
                             </ul>

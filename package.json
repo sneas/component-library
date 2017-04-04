@@ -29,7 +29,7 @@
     "publish-demo": "gh-pages -d demo/public/component-library"
   },
   "dependencies": {
-    "bootstrap-sass-namespace": "3.3.7-alpha.4",
+    "bootstrap-sass-namespace": "3.3.7-alpha.5",
     "cheerio": "^0.22.0",
     "directory-tree": "^1.0.0",
     "font-awesome": "^4.6.3",
@@ -40,7 +40,7 @@
     "node-modules-resolve": "^1.3.0",
     "npm-sass": "^1.3.0",
     "nunjucks": "3.0.0",
-    "smartmenus-namespace": "1.0.1-alpha.4",
+    "smartmenus-namespace": "1.0.1-alpha.5",
     "writefile": "^0.2.8"
   },
   "devDependencies": {

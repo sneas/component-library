@@ -19,7 +19,7 @@ describe('templates assembler', function() {
             const $ = cheerio.load(fs.readFileSync(overviewFile, 'utf8'), {
                 normalizeWhitespace: true
             });
-            expect($('.cl-node-header.cl-bs-tag-h1').text().trim()).to.be.equal('Overview');
+            expect($('.cl-node-header.cl-bs-html-h1').text().trim()).to.be.equal('Overview');
             done();
         });
     });

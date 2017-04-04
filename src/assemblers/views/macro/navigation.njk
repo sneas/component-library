@@ -1,6 +1,6 @@
 {% macro navigation(tree, baseUrl, current) %}
-    <li class="cl-bs-tag-li">
-        <a class="cl-bs-tag-a" href="{{ baseUrl + 'index.html#' + baseUrl + tree.relativePath }}">
+    <li class="cl-bs-html-li">
+        <a class="cl-bs-html-a" href="{{ baseUrl + 'index.html#' + baseUrl + tree.relativePath }}">
             {{ tree.name }}
 
             {% if tree.children %}
@@ -8,7 +8,7 @@
             {% endif %}
         </a>
         {% if tree.children %}
-            <ul class="cl-bs-tag-ul cl-bs-dropdown-menu">
+            <ul class="cl-bs-html-ul cl-bs-dropdown-menu">
                 {% for child in tree.children %}
                     {{ navigation(child, baseUrl, current) }}
                 {% endfor %}
