@@ -89,7 +89,7 @@ Create you own layout file by copying minimum HTML required:
 </html>
 ```
 
-Add your own code to it. **NB:** You can add only the required code. All the CSS links and JS scripts will be added automatically.
+Add your custom code to it. **NB:** You can add only the required code. All the CSS links and JS scripts will be added automatically.
 Add the `layout` param to the configuration object. Example:
 ```javascript
 var componentLibrary = require('component-library');
