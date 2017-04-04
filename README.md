@@ -33,7 +33,7 @@ npm install component-library
 
 Create an empty folder in your projects's file system and fill it with HTML files (components). One HTML file per one component.
 
-See [demo/templates](demo/templates) as an example.
+See [demo/src/templates](demo/src/templates) as an example.
 
 ### Integration with build process
 
@@ -74,6 +74,50 @@ gulp.task('cl:watch', ['cl'], function() {
     gulp.watch(['/project/templates/dir'], ['cl']);
 });
 ```
+
+## FAQ
+### What if my project has a custom initialization logic in layout?
+Create you own layout file by copying minimum HTML required:
+
+```html
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+    {{ content | safe }}
+</body>
+</html>
+```
+
+Add your own code to it. **NB:** You can add only the required code. All the CSS links and JS scripts will be added automatically.
+Add the `layout` param to the configuration object. Example:
+```javascript
+var componentLibrary = require('component-library');
+
+componentLibrary(
+    '/project/component-library/templates/dir',
+    '/project/public/component-library',
+    {
+        layout: '/project/component-library/your-layout.html',
+        baseUrl: '/component-library/',
+        favicon: {
+            href: '/project/favicon.ico',
+            rel: 'shortcut icon',
+            type: 'image/x-icon'
+        },
+        js: [
+            //List of your project's JS files goes here
+            '/project/js/file.js'
+        ],
+        css: [
+            //List of your project's CSS files goes here
+            '/project/css/file.css'
+        ]
+    }
+);
+```
+
+See [demo/src/layout.html](demo/src/layout.html) as an example.
 
 ## License
 
