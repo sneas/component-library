@@ -1,4 +1,18 @@
 <script>
+    // Save original jQuery
+    var clOriginalJquery,
+        clOriginal$;
+
+    if (jQuery) {
+        clOriginalJquery = jQuery;
+    }
+
+    if ($) {
+        clOriginal$ = $;
+    }
+</script>
+
+<script>
     BOOTSTRAP_NAMESPACE = 'cl-bs';
 </script>
 
@@ -7,3 +21,15 @@
 <script src="{{ baseUrl + 'assets_/smartmenus-namespace/addons/bootstrap/jquery.smartmenus.bootstrap.js' }}"></script>
 <script src="{{ baseUrl + 'assets_/assets/js/cl.js' }}"></script>
 <script src="{{ baseUrl + 'assets_/bootstrap-namespace/dropdown.js' }}"></script>
+<script>
+    $.noConflict();
+
+    // Restore original jQuery
+    if (clOriginalJquery) {
+        jQuery = clOriginalJquery;
+    }
+
+    if (clOriginal$) {
+        $ = clOriginal$;
+    }
+</script>
