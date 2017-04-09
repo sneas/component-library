@@ -1,12 +1,13 @@
-import gulp from 'gulp';
-import path from 'path';
+import copyDir from 'copy-dir';
 
 export default function(inputDir, outputDir) {
     return new Promise(function(resolve) {
-        gulp.src(path.resolve(inputDir, '**/*'), {
-                base: inputDir
-            })
-            .pipe(gulp.dest(outputDir))
-            .on('end', resolve);
+        copyDir(inputDir, outputDir, function(err) {
+            if (err) {
+                throw err;
+            }
+
+            resolve();
+        });
     });
 }
