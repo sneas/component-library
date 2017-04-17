@@ -5827,6 +5827,10 @@
 .cl-navbar-placeholder {
   min-height: 30px; }
 
+.cl-search-menu {
+  left: auto;
+  right: 0; }
+
 .cl, .cl-palette {
   /*
 

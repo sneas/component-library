@@ -76,7 +76,8 @@
 
         var searchString = input.val().toLowerCase();
         dropdown.find('li').each(function() {
-            $(this).toggleClass('cl-bs-hidden', $(this).text().toLowerCase().indexOf(searchString) === -1);
+            $(this).toggleClass('cl-bs-hidden', $(this).find('.cl-js-search-in')
+                .text().toLowerCase().indexOf(searchString) === -1);
         });
 
         showWhenNeeded();
@@ -117,6 +118,6 @@
  */
 (function($) {
     $('.cl-js-template-code-toggle').click(function() {
-        $(this).next('.cl-js-template-code-content').toggle();
+        $(this).parent().find('.cl-js-template-code-content').slideToggle('fast');
     });
 })(jQuery);
