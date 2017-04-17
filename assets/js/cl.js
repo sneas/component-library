@@ -117,6 +117,6 @@
  */
 (function($) {
     $('.cl-js-template-code-toggle').click(function() {
-        $(this).next('.cl-js-template-code-content').toggle();
+        $(this).parent().find('.cl-js-template-code-content').slideToggle('fast');
     });
 })(jQuery);
