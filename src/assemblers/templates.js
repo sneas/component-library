@@ -88,6 +88,8 @@ export default function(inputDir, outputDir, options = {}) {
     options = _.defaults({}, options, {
         baseUrl: '/',
         title: 'Component Library',
+        overview: 'Overview',
+        search: 'Search',
         js: [],
         css: [],
         layout: path.join(__dirname, 'views/layout.njk'),
@@ -103,7 +105,7 @@ export default function(inputDir, outputDir, options = {}) {
         .addFilter('highlight', code => hljs.highlight('htmlbars', code, true, false).value);
 
     const patternsTree = dirTree(inputDir);
-    patternsTree.name = 'Overview';
+    patternsTree.name = options.overview;
     refineTree(patternsTree, inputDir);
 
     return compileTree(patternsTree, outputDir, patternsTree, options);

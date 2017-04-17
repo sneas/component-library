@@ -23,4 +23,35 @@ describe('templates assembler', function() {
             done();
         });
     });
+
+    it('should set custom overview lable', function(done) {
+        const inputDir = path.join(__dirname, 'templates/input');
+        const outputDir = path.join(__dirname, 'templates/_tmp/output');
+        assembleTemplates(inputDir, outputDir, {
+            overview: 'Outline'
+        }).then(function() {
+            const overviewFile = path.join(outputDir, 'index.html');
+            const $ = cheerio.load(fs.readFileSync(overviewFile, 'utf8'), {
+                normalizeWhitespace: true
+            });
+            expect($('.cl-node-header.cl-bs-html-h1').text().trim()).to.be.equal('Outline');
+            expect($('#cl-search').attr('placeholder')).to.be.equal('Search');
+            done();
+        });
+    });
+
+    it('should set custom search placeholder', function(done) {
+        const inputDir = path.join(__dirname, 'templates/input');
+        const outputDir = path.join(__dirname, 'templates/_tmp/output');
+        assembleTemplates(inputDir, outputDir, {
+            search: 'Find'
+        }).then(function() {
+            const overviewFile = path.join(outputDir, 'index.html');
+            const $ = cheerio.load(fs.readFileSync(overviewFile, 'utf8'), {
+                normalizeWhitespace: true
+            });
+            expect($('#cl-search').attr('placeholder')).to.be.equal('Find');
+            done();
+        });
+    });
 });
