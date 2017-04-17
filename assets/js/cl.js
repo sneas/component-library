@@ -76,7 +76,8 @@
 
         var searchString = input.val().toLowerCase();
         dropdown.find('li').each(function() {
-            $(this).toggleClass('cl-bs-hidden', $(this).text().toLowerCase().indexOf(searchString) === -1);
+            $(this).toggleClass('cl-bs-hidden', $(this).find('.cl-js-search-in')
+                .text().toLowerCase().indexOf(searchString) === -1);
         });
 
         showWhenNeeded();

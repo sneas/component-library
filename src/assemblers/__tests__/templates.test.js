@@ -54,4 +54,43 @@ describe('templates assembler', function() {
             done();
         });
     });
+
+    it('should create search menu', function(done) {
+        const inputDir = path.join(__dirname, 'templates/input');
+        const outputDir = path.join(__dirname, 'templates/_tmp/output');
+        assembleTemplates(inputDir, outputDir).then(function() {
+            const overviewFile = path.join(outputDir, 'index.html');
+            const $ = cheerio.load(fs.readFileSync(overviewFile, 'utf8'), {
+                normalizeWhitespace: true
+            });
+            expect($('.cl-search-menu').find('li:nth-child(1) .cl-js-not-search-in').text().trim()).to.be.equal('');
+            expect($('.cl-search-menu').find('li:nth-child(1) .cl-js-search-in').text().trim()).to.be.equal('Overview');
+
+            expect($('.cl-search-menu').find('li:nth-child(2) .cl-js-not-search-in').text().trim()).to.be.equal('');
+            expect($('.cl-search-menu').find('li:nth-child(2) .cl-js-search-in').text().trim()).to.be.equal('Atoms');
+
+            expect($('.cl-search-menu').find('li:nth-child(3) .cl-js-not-search-in').text().trim()).to.be.equal('Atoms →');
+            expect($('.cl-search-menu').find('li:nth-child(3) .cl-js-search-in').text().trim()).to.be.equal('Colors');
+
+            expect($('.cl-search-menu').find('li:nth-child(4) .cl-js-not-search-in').text().trim()).to.be.equal('Atoms → Colors →');
+            expect($('.cl-search-menu').find('li:nth-child(4) .cl-js-search-in').text().trim()).to.be.equal('Palette');
+
+            expect($('.cl-search-menu').find('li:nth-child(5) .cl-js-not-search-in').text().trim()).to.be.equal('Atoms → Colors →');
+            expect($('.cl-search-menu').find('li:nth-child(5) .cl-js-search-in').text().trim()).to.be.equal('Color classes');
+
+            expect($('.cl-search-menu').find('li:nth-child(6) .cl-js-not-search-in').text().trim()).to.be.equal('Atoms → Colors →');
+            expect($('.cl-search-menu').find('li:nth-child(6) .cl-js-search-in').text().trim()).to.be.equal('Background utilities');
+
+            expect($('.cl-search-menu').find('li:nth-child(7) .cl-js-not-search-in').text().trim()).to.be.equal('Atoms →');
+            expect($('.cl-search-menu').find('li:nth-child(7) .cl-js-search-in').text().trim()).to.be.equal('Alerts');
+
+            expect($('.cl-search-menu').find('li:nth-child(8) .cl-js-not-search-in').text().trim()).to.be.equal('');
+            expect($('.cl-search-menu').find('li:nth-child(8) .cl-js-search-in').text().trim()).to.be.equal('Molecules');
+
+            expect($('.cl-search-menu').find('li:nth-child(9) .cl-js-not-search-in').text().trim()).to.be.equal('Molecules →');
+            expect($('.cl-search-menu').find('li:nth-child(9) .cl-js-search-in').text().trim()).to.be.equal('Breadcrumbs');
+
+            done();
+        });
+    });
 });

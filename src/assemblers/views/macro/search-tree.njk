@@ -1,13 +1,16 @@
-{% macro searchTree(tree, baseUrl) %}
+{% macro searchTree(tree, baseUrl, parent, level) %}
     <li class="cl-bs-html-li">
         <a class="cl-bs-html-a" href="{{ baseUrl + 'index.html#' + baseUrl + tree.relativePath }}">
-            {{ tree.name }}
+            <small class="cl-bs-html-small cl-bs-text-muted cl-js-not-search-in">{{ parent }}</small><span class="cl-js-search-in">{{ tree.name }}</span>
         </a>
     </li>
 
     {% if tree.children %}
+        {% if level > 0 %}
+            {% set parent = parent ~ tree.name ~ ' → ' %}
+        {% endif %}
         {% for child in tree.children %}
-            {{ searchTree(child, baseUrl) }}
+            {{ searchTree(child, baseUrl, parent, level + 1) }}
         {% endfor %}
     {% endif %}
 {% endmacro %}

@@ -22,8 +22,8 @@
                     <div class="cl-bs-navbar-form cl-bs-pull-right cl-bs-hidden-xs">
                         <div class="cl-bs-dropdown">
                             <input type="text" class="cl-bs-html-input cl-bs-form-control cl-bs-form-control-sm" placeholder="{{ search }}" id="cl-search">
-                            <ul class="cl-bs-dropdown-menu">
-                                {{ searchTree(tree, baseUrl) }}
+                            <ul class="cl-bs-dropdown-menu cl-search-menu">
+                                {{ searchTree(tree, baseUrl, '', 0) }}
                             </ul>
                         </div>
                     </div>
