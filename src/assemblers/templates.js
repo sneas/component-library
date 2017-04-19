@@ -44,7 +44,9 @@ function compileTree(item, outputDir, tree, options = {}) {
             const contentHtml = nunjucks.render('content.njk', params);
             const layoutHtml = nunjucks.render(options.layout, {content: contentHtml});
 
-            const $ = cheerio.load(layoutHtml);
+            const $ = cheerio.load(layoutHtml, {
+                decodeEntities: false
+            });
             const head = $('head');
             const body = $('body');
 
