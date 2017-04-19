@@ -84,7 +84,7 @@ Create you own layout file by copying minimum HTML required:
 <html>
 <head></head>
 <body>
-    {{ content | safe }}
+    {{ content }}
 </body>
 </html>
 ```

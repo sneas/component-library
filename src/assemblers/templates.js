@@ -7,6 +7,8 @@ import nunjucks from 'nunjucks';
 import hljs from 'highlight.js';
 import cheerio from 'cheerio';
 
+let nunjucksEnv;
+
 function refineTree(item, rootDir) {
     //Remove firsts numbers and extensions
     var prettyName = item.name.replace(/^\d+\./, '').split('.').shift().replace('-', ' ');
@@ -40,9 +42,11 @@ function compileTree(item, outputDir, tree, options = {}) {
                 current: item
             });
 
-            const navigationHtml = nunjucks.render('navigation.njk', params);
-            const contentHtml = nunjucks.render('content.njk', params);
-            const layoutHtml = nunjucks.render(options.layout, {content: contentHtml});
+            const navigationHtml = nunjucksEnv.render('navigation.njk', params);
+            const contentHtml = nunjucksEnv.render('content.njk', params);
+            nunjucksEnv.opts.autoescape = false;
+            const layoutHtml = nunjucksEnv.render(options.layout, {content: contentHtml});
+            nunjucksEnv.opts.autoescape = true;
 
             const $ = cheerio.load(layoutHtml, {
                 decodeEntities: false
@@ -50,7 +54,7 @@ function compileTree(item, outputDir, tree, options = {}) {
             const head = $('head');
             const body = $('body');
 
-            head.prepend(nunjucks.render('css.njk', params));
+            head.prepend(nunjucksEnv.render('css.njk', params));
 
             if (head.find('title').length === 0) {
                 head.prepend($('<title></title>').text(options.title));
@@ -102,7 +106,7 @@ export default function(inputDir, outputDir, options = {}) {
         }
     });
 
-    (new nunjucks.configure([path.join(__dirname, 'views'), '']))
+    nunjucksEnv = (new nunjucks.configure([path.join(__dirname, 'views'), '']))
         .addFilter('template', path => fs.readFileSync(path).toString())
         .addFilter('highlight', code => hljs.highlight('htmlbars', code, true, false).value);
 
