@@ -3,11 +3,11 @@
     var clOriginalJquery,
         clOriginal$;
 
-    if (jQuery) {
+    if (typeof jQuery !== 'undefined') {
         clOriginalJquery = jQuery;
     }
 
-    if ($) {
+    if (typeof $ !== 'undefined') {
         clOriginal$ = $;
     }
 </script>
